@@ -121,13 +121,13 @@
 
     <div id="step1" class="card active">
         <h2>Find Your Perfect Match</h2>
-        <p>Expertly curated massage chairs for your home or business in Indore.</p>
+        <p>Curated massage chairs for your home or business in Indore.</p>
         <button class="btn" onclick="nextStep('personal')">For Personal Use</button>
         <button class="btn" onclick="nextStep('commercial')">For Commercial Use</button>
     </div>
 
     <div id="step2" class="card">
-        <h2 id="question-text">Select your preference:</h2>
+        <h2 id="question-text">Select your goal:</h2>
         <div id="options-container"></div>
     </div>
 
@@ -148,4 +148,67 @@
         999 Khatiwala Tank, Indore, MP<br><br>
         <a href="tel:+918319950609" style="text-decoration:none; color: var(--primary-color); font-weight: bold; font-size: 18px;">+91 83199-50609</a><br>
         <a href="https://wa.me/918319950609?text=Hi%20AMTY%20Indore,%20I%20used%20your%20selection%20tool%20and%20want%20to%20know%20more." class="btn btn-whatsapp">💬 Chat on WhatsApp</a>
-        
+    </div>
+</div>
+
+<script>
+    const products = {
+        'MonsterX': {
+            name: "Monster X Massage Chair",
+            desc: "The ultimate 7D premium experience. Designed for those who want the absolute best in luxury and deep-tissue therapy.",
+            img: "https://www.amtyglobal.com/wp-content/uploads/2023/12/Monster-X-1.webp",
+            link: "https://www.amtyglobal.com/products/monster-x-massage-chair"
+        },
+        'R10': {
+            name: "R10 4D Massage Chair",
+            desc: "Smart AI scanning technology. Perfect for stress relief and daily relaxation with voice control features.",
+            img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/R-10-1.webp",
+            link: "https://www.amtyglobal.com/products/r-10-massage-chair"
+        },
+        'RX5': {
+            name: "RX-5 Elite",
+            desc: "Built for endurance. Ideal for high-traffic areas like gyms, clinics, or office wellness rooms.",
+            img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/RX-5-Elite-1.webp",
+            link: "https://www.amtyglobal.com/products/rx-5-elite-massage-chair"
+        }
+    };
+
+    function nextStep(choice) {
+        document.getElementById('step1').classList.remove('active');
+        document.getElementById('step2').classList.add('active');
+        const container = document.getElementById('options-container');
+        const qText = document.getElementById('question-text');
+
+        if(choice === 'personal') {
+            qText.innerText = "What is your main priority?";
+            container.innerHTML = `
+                <button class="btn" onclick="showFinal('MonsterX')">Premium Luxury Therapy</button>
+                <button class="btn" onclick="showFinal('R10')">Modern Daily Relaxation</button>
+            `;
+        } else {
+            qText.innerText = "Business Usage:";
+            container.innerHTML = `
+                <button class="btn" onclick="showFinal('RX5')">Gym / Health Center</button>
+                <button class="btn" onclick="showFinal('MonsterX')">Executive Office Lounge</button>
+            `;
+        }
+    }
+
+    function showFinal(modelKey) {
+        document.getElementById('step2').classList.remove('active');
+        document.getElementById('step3').classList.add('active');
+
+        const item = products[modelKey];
+        document.getElementById('product-display').innerHTML = `
+            <div class="product-card">
+                <img src="${item.img}" alt="${item.name}" onerror="this.style.display='none'">
+                <h3>${item.name}</h3>
+                <p>${item.desc}</p>
+                <a href="${item.link}" target="_blank" style="color: var(--primary-color); font-weight: bold; text-decoration: underline;">View Full Specs on Website →</a>
+            </div>
+        `;
+    }
+</script>
+
+</body>
+</html>
