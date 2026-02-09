@@ -5,54 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AMTY Global - Indore Branch</title>
     <style>
-        :root {
-            --primary-color: #003366; 
-            --accent-color: #d4af37; 
-            --bg-color: #f4f4f9;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            background-color: var(--bg-color);
-            display: flex; justify-content: center;
-        }
-        #app-container {
-            width: 100%; max-width: 500px; background: white;
-            min-height: 100vh; box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            position: relative; padding: 20px;
-            display: flex; flex-direction: column; box-sizing: border-box;
-        }
-        .header { 
-            text-align: center; padding: 20px 0;
-            border-bottom: 2px solid var(--accent-color); margin-bottom: 20px;
-        }
+        :root { --primary-color: #003366; --accent-color: #d4af37; --bg-color: #f4f4f9; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: var(--bg-color); display: flex; justify-content: center; }
+        #app-container { width: 100%; max-width: 500px; background: white; min-height: 100vh; padding: 20px; display: flex; flex-direction: column; box-sizing: border-box; }
+        .header { text-align: center; padding: 20px 0; border-bottom: 2px solid var(--accent-color); margin-bottom: 20px; }
         .header h1 { margin: 0; color: var(--primary-color); font-size: 24px; }
         .card { display: none; text-align: center; animation: fadeIn 0.4s ease-in-out; }
         .card.active { display: block; }
-        h2 { color: var(--primary-color); margin-bottom: 15px; }
-        p { color: #555; line-height: 1.6; }
-        .btn {
-            display: block; width: 100%; padding: 18px; margin: 12px 0;
-            background-color: var(--primary-color); color: white;
-            border: none; border-radius: 8px; font-size: 17px;
-            font-weight: bold; cursor: pointer; text-decoration: none;
-            box-sizing: border-box;
-        }
-        .btn-call { background-color: var(--accent-color); color: #000; }
-        .btn-whatsapp { background-color: #25D366; font-size: 16px; }
-        .product-card {
-            border: 1px solid #ddd; padding: 15px; border-radius: 12px;
-            margin: 20px 0; background: #fff; text-align: left;
-        }
-        .reason-box {
-            background: #fff8e1; border-left: 4px solid var(--accent-color);
-            padding: 10px; margin-bottom: 15px; font-style: italic; font-size: 14px;
-        }
-        .product-card img { width: 100%; border-radius: 8px; margin-bottom: 15px; display: block; background: #eee; }
-        .contact-footer {
-            margin-top: auto; padding: 20px; border-top: 1px solid #ddd;
-            font-size: 15px; background: #fdfdfd; text-align: center;
-        }
+        .btn { display: block; width: 100%; padding: 16px; margin: 10px 0; background: var(--primary-color); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; text-decoration: none; box-sizing: border-box; }
+        .btn-call { background: var(--accent-color); color: #000; }
+        .btn-whatsapp { background: #25D366; }
+        .product-card { border: 1px solid #ddd; padding: 15px; border-radius: 12px; margin: 20px 0; text-align: left; }
+        .reason-box { background: #fff8e1; border-left: 4px solid var(--accent-color); padding: 10px; margin-bottom: 15px; font-size: 14px; color: #444; }
+        .product-card img { width: 100%; border-radius: 8px; margin-bottom: 10px; }
+        .contact-footer { margin-top: auto; padding: 20px; border-top: 1px solid #ddd; font-size: 14px; text-align: center; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
@@ -66,7 +32,7 @@
 
     <div id="step1" class="card active">
         <h2>Find Your Perfect Match</h2>
-        <p>Answer 2 quick questions to see which of our 15 models fits you best.</p>
+        <p>Explore our full range of 15 premium models.</p>
         <button class="btn" onclick="nextStep('personal')">For Personal Use</button>
         <button class="btn" onclick="nextStep('commercial')">For Commercial Use</button>
     </div>
@@ -77,31 +43,39 @@
     </div>
 
     <div id="step3" class="card">
-        <h2 style="color: var(--accent-color);">Our Recommendation</h2>
+        <h2 style="color: var(--accent-color);">Our Expert Recommendation</h2>
         <div id="product-display"></div>
-        <div style="background: #f0f4f8; padding: 20px; border-radius: 10px; margin-top: 10px; border-left: 5px solid var(--accent-color);">
-            <p style="font-weight: bold; color: #333;">Visit us at Khatiwala Tank for a live trial!</p>
-            <a href="tel:+918319950609" class="btn btn-call">📞 Call Now for Assistance</a>
+        <div style="background: #f0f4f8; padding: 15px; border-radius: 10px; margin-top: 10px;">
+            <p style="font-weight: bold;">Visit Khatiwala Tank for a Demo!</p>
+            <a href="tel:+918319950609" class="btn btn-call">📞 Call Now for Price & Info</a>
         </div>
-        <button class="btn" onclick="location.reload()" style="background:#888; font-size: 14px; margin-top: 25px;">Restart Quiz</button>
+        <button class="btn" onclick="location.reload()" style="background:#888; margin-top: 15px;">Restart Quiz</button>
     </div>
 
     <div class="contact-footer">
-        <strong>📍 Indore Showroom:</strong><br>
-        999 Khatiwala Tank, Indore, MP<br><br>
+        <strong>Showroom:</strong> 999 Khatiwala Tank, Indore<br>
         <a href="tel:+918319950609" style="text-decoration:none; color: var(--primary-color); font-weight: bold;">+91 83199-50609</a><br>
-        <a href="https://wa.me/918319950609?text=Hi%20AMTY%20Indore,%20I'm%20inquiring%20about%20a%20massage%20chair." class="btn btn-whatsapp">💬 Chat on WhatsApp</a>
+        <a href="https://wa.me/918319950609?text=Inquiry%20from%20Indore%20App" class="btn btn-whatsapp">💬 WhatsApp Chat</a>
     </div>
 </div>
 
 <script>
     const products = {
-        'MonsterX': { name: "Monster X", reason: "Since you want the ultimate luxury experience, the 7D Monster X provides the deepest therapeutic massage available.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/12/Monster-X-1.webp", link: "monster-x-massage-chair" },
-        'R10': { name: "R10 4D", reason: "Because you value smart technology, the R10's AI body scanning and voice control offer the most modern relaxation experience.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/R-10-1.webp", link: "r-10-massage-chair" },
-        'Q7': { name: "Q7 Model", reason: "For a space-saving and value-driven home setup, the Q7 offers full-body relief without a large footprint.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/Q7-1.webp", link: "q7-massage-chair" },
-        'RX5Elite': { name: "RX-5 Elite", reason: "For high-traffic commercial use, the RX-5 Elite is built for durability with specialized leg-stretching for multiple users.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/RX-5-Elite-1.webp", link: "rx-5-elite-massage-chair" },
-        'Q7-2': { name: "Q7 2.0", reason: "Perfect for lounges; the built-in TikTok/Reels controller and touchscreen make it an interactive hit for clients.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/Q7-2.0-1.webp", link: "q7-2-0-massage-chair" },
-        'DeepTissue': { name: "Deep Tissue", reason: "To provide professional spa-level relief to your customers, this model focuses on intense muscle recovery.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/Deep-Tissue-1.webp", link: "deep-tissue-massage-chair" }
+        'MonsterX': { name: "Monster X", reason: "The 7D Monster X is our flagship model for those in Indore seeking the absolute ultimate in luxury therapy.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/12/Monster-X-1.webp", link: "monster-x-massage-chair" },
+        'R10': { name: "R10 4D", reason: "Perfect if you love AI and voice control. It features advanced body scanning for a precision massage.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/R-10-1.webp", link: "r-10-massage-chair" },
+        'R9': { name: "R9 7D", reason: "A top-tier 7D model that focuses on replicating the exact feel of human hands.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/R9-1.webp", link: "r9-massage-chair" },
+        'RX7': { name: "RX 7 Capsule", reason: "Futuristic capsule design for those who want a completely immersive, zero-gravity experience.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/11/RX-7-1.webp", link: "rx-7-massage-capsule" },
+        'Moonwalker': { name: "Moonwalker M", reason: "Unique individual leg movement technology. It's unlike any other chair in the 15-model range.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/11/Moonwalker-M-1.webp", link: "moonwalker-m-capsule" },
+        'R8Pro': { name: "R8 Pro", reason: "Great for athletes or active users, featuring enhanced thigh and calf massage zones.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/R8-Pro-1.webp", link: "r8-pro-massage-chair" },
+        'R7Neo': { name: "R7 Neo", reason: "A stylish, metal-framed 4D chair that looks as good in an Indore living room as it feels.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/R7-Neo-1.webp", link: "r7-neo-massage-chair" },
+        'R6': { name: "R6 4D", reason: "Combines the warmth of a wooden frame with powerful 4D relief mechanisms.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/R6-1.webp", link: "r6-massage-chair" },
+        'Q7-2': { name: "Q7 2.0", reason: "Interactive tech at its best. Control your entertainment while enjoying a full-body massage.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/Q7-2.0-1.webp", link: "q7-2-0-massage-chair" },
+        'RX5Elite': { name: "RX-5 Elite", reason: "The commercial workhorse. Designed for heavy use in Indore's gyms and wellness centers.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/RX-5-Elite-1.webp", link: "rx-5-elite-massage-chair" },
+        'RX3': { name: "RX-3 7D", reason: "Dual SL track system that covers from neck to under-thigh with 7D precision.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/RX-3-1.webp", link: "rx-3-massage-chair" },
+        'Q7': { name: "Q7 Model", reason: "Our most popular budget-friendly full-body chair. Efficient and effective.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/Q7-1.webp", link: "q7-massage-chair" },
+        'BackPain': { name: "Chronic Back Pain Model", reason: "Specifically engineered for users suffering from persistent spinal and lumbar discomfort.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/Back-Pain-1.webp", link: "massage-chair-for-chronic-back-pain" },
+        'Compact': { name: "Compact Portable", reason: "Perfect for Indore apartments where space is a priority without losing quality.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/Compact-1.webp", link: "compact-portable-massage-chair" },
+        'R5': { name: "R5 Model", reason: "Reliable SL-Track performance for consistent daily stress relief.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/08/Amty-Global-Logo.png", link: "r-5-massage-chair" }
     };
 
     function nextStep(choice) {
@@ -111,18 +85,52 @@
         const qText = document.getElementById('question-text');
 
         if(choice === 'personal') {
-            qText.innerText = "What is your main priority?";
+            qText.innerText = "What is your main goal?";
             container.innerHTML = `
-                <button class="btn" onclick="showFinal('MonsterX')">Full Body Ultra Luxury</button>
-                <button class="btn" onclick="showFinal('R10')">AI Features & Smart Tech</button>
-                <button class="btn" onclick="showFinal('Q7')">Value & Compact Design</button>
+                <button class="btn" onclick="showBranch('luxury')">Ultra Luxury & 7D</button>
+                <button class="btn" onclick="showBranch('tech')">Smart Tech & AI</button>
+                <button class="btn" onclick="showBranch('health')">Medical & Back Pain</button>
+                <button class="btn" onclick="showBranch('budget')">Value & Compact</button>
             `;
         } else {
-            qText.innerText = "Commercial Environment:";
+            qText.innerText = "Commercial Type:";
             container.innerHTML = `
-                <button class="btn" onclick="showFinal('RX5Elite')">Gym / Health Clinic</button>
-                <button class="btn" onclick="showFinal('Q7-2')">Lounge & Entertainment</button>
-                <button class="btn" onclick="showFinal('DeepTissue')">Spa & Recovery Center</button>
+                <button class="btn" onclick="showFinal('RX5Elite')">Gym / Clinic (Heavy Duty)</button>
+                <button class="btn" onclick="showFinal('Q7-2')">Hotel / Office Lounge</button>
+                <button class="btn" onclick="showFinal('R6')">Wellness Center (Wooden)</button>
+            `;
+        }
+    }
+
+    function showBranch(type) {
+        const container = document.getElementById('options-container');
+        if(type === 'luxury') {
+            container.innerHTML = `
+                <button class="btn" onclick="showFinal('MonsterX')">Monster X (Ultimate)</button>
+                <button class="btn" onclick="showFinal('R9')">R9 (Human Touch)</button>
+                <button class="btn" onclick="showBranch('capsule')">View Capsule Models</button>
+            `;
+        } else if(type === 'capsule') {
+            container.innerHTML = `
+                <button class="btn" onclick="showFinal('RX7')">RX 7 Capsule</button>
+                <button class="btn" onclick="showFinal('Moonwalker')">Moonwalker M</button>
+            `;
+        } else if(type === 'tech') {
+            container.innerHTML = `
+                <button class="btn" onclick="showFinal('R10')">R10 (AI Scan)</button>
+                <button class="btn" onclick="showFinal('RX3')">RX-3 (Dual SL Track)</button>
+                <button class="btn" onclick="showFinal('R7Neo')">R7 Neo (Sleek Metal)</button>
+            `;
+        } else if(type === 'health') {
+            container.innerHTML = `
+                <button class="btn" onclick="showFinal('BackPain')">Chronic Back Pain Model</button>
+                <button class="btn" onclick="showFinal('R8Pro')">R8 Pro (Leg Recovery)</button>
+            `;
+        } else if(type === 'budget') {
+            container.innerHTML = `
+                <button class="btn" onclick="showFinal('Q7')">Q7 Model (Value)</button>
+                <button class="btn" onclick="showFinal('Compact')">Compact Portable</button>
+                <button class="btn" onclick="showFinal('R5')">R5 Series</button>
             `;
         }
     }
@@ -136,7 +144,7 @@
                 <div class="reason-box"><strong>Why this fits you:</strong> ${item.reason}</div>
                 <img src="${item.img}" alt="${item.name}" onerror="this.src='https://www.amtyglobal.com/wp-content/uploads/2023/08/Amty-Global-Logo.png'">
                 <h3>${item.name}</h3>
-                <a href="https://www.amtyglobal.com/products/${item.link}" target="_blank" style="color: var(--primary-color); font-weight: bold;">View Full Specs →</a>
+                <a href="https://www.amtyglobal.com/products/${item.link}" target="_blank" style="color: var(--primary-color); font-weight: bold;">Official Product Specs →</a>
             </div>
         `;
     }
