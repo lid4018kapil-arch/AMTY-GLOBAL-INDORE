@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZGDVCSH4HR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZGDVCSH4HR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZGDVCSH4HR');
+    </script>
 
-  gtag('config', 'G-ZGDVCSH4HR');
-</script>
     <meta property="og:url" content="https://lid4018kapil-arch.github.io/AMTY-GLOBAL-INDORE/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="AMTY Global - Indore Massage Chair Selector">
-<meta property="og:description" content="Find the perfect massage chair for your home or business in Indore. 15+ models available at Khatiwala Tank.">
-<meta property="og:image" content="https://www.amtyglobal.com/wp-content/uploads/2023/08/Amty-Global-Logo.png">
-    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AMTY Global - Indore Massage Chair Selector">
+    <meta property="og:description" content="Find the perfect massage chair in Indore. 15+ models available at Khatiwala Tank.">
+    <meta property="og:image" content="https://www.amtyglobal.com/wp-content/uploads/2023/08/Amty-Global-Logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AMTY Global - Indore Branch</title>
@@ -62,7 +63,7 @@
         <div id="product-display"></div>
         <div style="background: #f0f4f8; padding: 15px; border-radius: 10px; margin-top: 10px;">
             <p style="font-weight: bold; margin: 0 0 10px 0;">Visit 999 Khatiwala Tank for a Demo!</p>
-            <a href="tel:+918319950609" class="btn btn-call">📞 Call Now for Price & Info</a>
+            <a href="tel:+918319950609" onclick="gtag('event', 'click_call', {'branch': 'Indore'});" class="btn btn-call">📞 Call Now for Price & Info</a>
         </div>
         <button class="btn" onclick="location.reload()" style="background:#888; margin-top: 15px;">Restart Quiz</button>
     </div>
@@ -70,34 +71,27 @@
     <div class="contact-footer">
         <strong>Showroom:</strong> 999 Khatiwala Tank, Indore<br>
         <a href="tel:+918319950609" style="text-decoration:none; color: var(--primary-color); font-weight: bold;">+91 83199-50609</a><br>
-        <a href="https://wa.me/918319950609?text=Inquiry%20from%20Indore%20App" class="btn btn-whatsapp">💬 WhatsApp Chat</a>
+        <a href="https://wa.me/918319950609?text=Inquiry%20from%20Indore%20App" onclick="gtag('event', 'click_whatsapp', {'branch': 'Indore'});" class="btn btn-whatsapp">💬 WhatsApp Chat</a>
     </div>
 </div>
 
 <script>
     const products = {
-        // Luxury Models
-        'MonsterX': { name: "Monster X", reason: "Our flagship 7D luxury model for those seeking the ultimate premium therapy.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/12/Monster-X-1.webp", link: "monster-x-massage-chair" },
-        'Moonwalker': { name: "Moonwalker M", reason: "A top-tier luxury capsule with revolutionary independent leg movement.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/11/Moonwalker-M-1.webp", link: "moonwalker-m-capsule" },
-        'RX7': { name: "RX 7 Capsule", reason: "Futuristic luxury capsule design providing a fully immersive zero-gravity experience.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/11/RX-7-1.webp", link: "rx-7-massage-capsule" },
-        'RXTwister': { name: "RX Twister", reason: "Advanced luxury model focusing on unique twisting and stretching relief.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/RX-3-1.webp", link: "rx-3-massage-chair" },
-        'RX5Elite': { name: "RX-5 Elite", reason: "The gold standard for durability and performance in high-end personal use.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/RX-5-Elite-1.webp", link: "rx-5-elite-massage-chair" },
-        
-        // Value Models
-        'RX3': { name: "RX-3 7D", reason: "Best value for 7D technology, featuring an advanced dual SL track system.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/RX-3-1.webp", link: "rx-3-massage-chair" },
-        'Q9Sonic': { name: "Q9 Sonic", reason: "High-performance value model with focused sonic-vibration relief features.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/Q7-2.0-1.webp", link: "q7-2-0-massage-chair" },
-        'Q7-2': { name: "Q7 2.0", reason: "Great value for entertainment lovers, featuring a touchscreen and app controls.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/Q7-2.0-1.webp", link: "q7-2-0-massage-chair" },
-        'R10': { name: "R10 4D", reason: "A value-rich AI chair with body scanning and voice command tech.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/R-10-1.webp", link: "r-10-massage-chair" },
-        'R9': { name: "R9 7D", reason: "Human-touch 7D rollers providing premium value for therapeutic needs.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/R9-1.webp", link: "r9-massage-chair" },
-        'Q5': { name: "Q5 Model", reason: "Solid value model balancing body coverage with reliable robotic relief.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/Q7-1.webp", link: "q7-massage-chair" },
-        
-        // Budget Models
-        'R8Pro': { name: "R8 Pro", reason: "Budget-friendly performance focusing on intensive leg and calf recovery.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/R8-Pro-1.webp", link: "r8-pro-massage-chair" },
-        'R7Neo': { name: "R7 Neo", reason: "Stylish metal-frame design providing quality 4D relief on a budget.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/R7-Neo-1.webp", link: "r7-neo-massage-chair" },
-        'R6': { name: "R6 4D", reason: "Elegant wooden frame 4D chair offering great relief at a budget price point.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/R6-1.webp", link: "r6-massage-chair" },
-        
-        // Commercial Only
-        'CoinChair': { name: "Coin Massage Chair", reason: "The standard for public spaces. Features payment integration for easy revenue.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/08/Amty-Global-Logo.png", link: "" }
+        'MonsterX': { name: "Monster X", reason: "Luxury 7D flagship for ultimate therapy.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/12/Monster-X-1.webp", link: "monster-x-massage-chair" },
+        'Moonwalker': { name: "Moonwalker M", reason: "Premium capsule with independent leg movement.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/11/Moonwalker-M-1.webp", link: "moonwalker-m-capsule" },
+        'RX7': { name: "RX 7 Capsule", reason: "Futuristic zero-gravity experience.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/11/RX-7-1.webp", link: "rx-7-massage-capsule" },
+        'RXTwister': { name: "Rx Twister", reason: "Stretching and twisting specialist.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/RX-3-1.webp", link: "rx-twister-massage-chair" },
+        'RX5Elite': { name: "RX-5 Elite", reason: "Top durability for high-end home use.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/RX-5-Elite-1.webp", link: "rx-5-elite-massage-chair" },
+        'RX3': { name: "RX-3 7D", reason: "Best 7D value with Dual SL track.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/RX-3-1.webp", link: "rx-3-massage-chair" },
+        'Q9Sonic': { name: "Q9 Sonic", reason: "Sonic-vibration technology for deeper relief.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/Q7-2.0-1.webp", link: "q9-sonic-massage-chair" },
+        'Q7-2': { name: "Q7 2.0", reason: "Touchscreen and interactive app control.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/Q7-2.0-1.webp", link: "q7-2-0-massage-chair" },
+        'R10': { name: "R10 4D", reason: "AI scanning and voice command tech.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/R-10-1.webp", link: "r-10-massage-chair" },
+        'R9': { name: "R9 7D", reason: "Human-touch rollers for therapeutic needs.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/R9-1.webp", link: "r9-massage-chair" },
+        'Q5': { name: "Q5 Model", reason: "Balanced robotics and full body coverage.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/Q7-1.webp", link: "q5-massage-chair" },
+        'R8Pro': { name: "R8 Pro", reason: "Budget focus on leg and calf recovery.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/R8-Pro-1.webp", link: "r8-pro-massage-chair" },
+        'R7Neo': { name: "R7 Neo", reason: "Stylish metal frame 4D relief.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/R7-Neo-1.webp", link: "r7-neo-massage-chair" },
+        'R6': { name: "R6 4D", reason: "Elegant wooden frame 4D chair.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/R6-1.webp", link: "r6-massage-chair" },
+        'CoinChair': { name: "Coin Massage Chair", reason: "Automatic revenue generator for public spaces.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/08/Amty-Global-Logo.png", link: "coin-massage-chair" }
     };
 
     function nextStep(choice) {
@@ -126,13 +120,13 @@
     function showBranch(type) {
         const container = document.getElementById('options-container');
         if(type === 'luxury') {
-            container.innerHTML = `<button class="btn" onclick="showFinal('MonsterX')">Monster X</button><button class="btn" onclick="showFinal('Moonwalker')">Moonwalker</button><button class="btn" onclick="showFinal('RX7')">RX 7 Capsule</button><button class="btn" onclick="showFinal('RXTwister')">RX Twister</button><button class="btn" onclick="showFinal('RX5Elite')">RX-5 Elite</button>`;
+            container.innerHTML = `<button class="btn" onclick="showFinal('MonsterX')">Monster X</button><button class="btn" onclick="showFinal('Moonwalker')">Moonwalker</button><button class="btn" onclick="showFinal('RX7')">RX 7 Capsule</button><button class="btn" onclick="showFinal('RXTwister')">Rx Twister</button><button class="btn" onclick="showFinal('RX5Elite')">RX-5 Elite</button>`;
         } else if(type === 'value') {
             container.innerHTML = `<button class="btn" onclick="showFinal('RX3')">RX-3</button><button class="btn" onclick="showFinal('Q9Sonic')">Q9 Sonic</button><button class="btn" onclick="showFinal('Q7-2')">Q7 2.0</button><button class="btn" onclick="showFinal('R10')">R10</button><button class="btn" onclick="showFinal('R9')">R9</button><button class="btn" onclick="showFinal('Q5')">Q5</button>`;
         } else if(type === 'budget') {
             container.innerHTML = `<button class="btn" onclick="showFinal('R8Pro')">R8 Pro</button><button class="btn" onclick="showFinal('R7Neo')">R7 Neo</button><button class="btn" onclick="showFinal('R6')">R6</button>`;
         } else if(type === 'wellness') {
-            container.innerHTML = `<button class="btn" onclick="showFinal('R9')">R9 (Therapeutic)</button><button class="btn" onclick="showFinal('Q7-2')">Q7 2.0 (Smart)</button><button class="btn" onclick="showFinal('CoinChair')">Coin Massage Chair</button>`;
+            container.innerHTML = `<button class="btn" onclick="showFinal('R9')">R9</button><button class="btn" onclick="showFinal('Q7-2')">Q7 2.0</button><button class="btn" onclick="showFinal('CoinChair')">Coin Chair</button>`;
         } else if(type === 'therapy') {
             container.innerHTML = `<button class="btn" onclick="showFinal('R7Neo')">R7 Neo</button><button class="btn" onclick="showFinal('R9')">R9</button><button class="btn" onclick="showFinal('CoinChair')">Coin Chair</button><button class="btn" onclick="showFinal('Q7-2')">Q7 2.0</button>`;
         }
@@ -142,16 +136,15 @@
         document.getElementById('step2').classList.remove('active');
         document.getElementById('step3').classList.add('active');
         const item = products[modelKey];
-        const linkHTML = item.link ? `<a href="https://www.amtyglobal.com/products/${item.link}" target="_blank" style="color: var(--primary-color); font-weight: bold;">View Details on Website →</a>` : `<p><em>Contact Indore Branch for coin-model details.</em></p>`;
-        
         document.getElementById('product-display').innerHTML = `
             <div class="product-card">
-                <div class="reason-box"><strong>Why this fits your search:</strong> ${item.reason}</div>
+                <div class="reason-box"><strong>Why this fits:</strong> ${item.reason}</div>
                 <img src="${item.img}" alt="${item.name}" onerror="this.src='https://www.amtyglobal.com/wp-content/uploads/2023/08/Amty-Global-Logo.png'">
                 <h3>${item.name}</h3>
-                ${linkHTML}
+                <a href="https://www.amtyglobal.com/products/${item.link}" target="_blank" style="color: var(--primary-color); font-weight: bold;">Full Specs →</a>
             </div>
         `;
+        gtag('event', 'view_item', { 'item_name': item.name });
     }
 </script>
 </body>
