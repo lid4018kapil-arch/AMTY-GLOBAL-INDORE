@@ -9,32 +9,30 @@
       gtag('config', 'G-ZGDVCSH4HR');
     </script>
 
-    <meta property="og:url" content="https://lid4018kapil-arch.github.io/AMTY-GLOBAL-INDORE/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="AMTY Global Indore - Find Your Chair">
-    <meta property="og:description" content="Get expert recommendation for the best massage chair in Indore.">
+    <meta property="og:title" content="AMTY Global - Indore Branch">
+    <meta property="og:description" content="Find the perfect massage chair for your home or business.">
     <meta property="og:image" content="https://www.amtyglobal.com/wp-content/uploads/2023/08/Amty-Global-Logo.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMTY Global - Indore</title>
+    <title>AMTY Global - Indore Branch</title>
     <style>
         :root { --primary-color: #003366; --accent-color: #d4af37; --bg-color: #f4f4f9; }
         body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: var(--bg-color); display: flex; justify-content: center; }
         #app-container { width: 100%; max-width: 500px; background: white; min-height: 100vh; padding: 20px; display: flex; flex-direction: column; box-sizing: border-box; }
-        .header { text-align: center; padding: 15px 0; border-bottom: 2px solid var(--accent-color); margin-bottom: 20px; }
+        .header { text-align: center; padding: 20px 0; border-bottom: 2px solid var(--accent-color); margin-bottom: 20px; }
         .header h1 { margin: 0; color: var(--primary-color); font-size: 24px; }
         .card { display: none; text-align: center; animation: fadeIn 0.4s ease-in-out; }
         .card.active { display: block; }
         .btn { display: block; width: 100%; padding: 16px; margin: 10px 0; background: var(--primary-color); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; text-decoration: none; box-sizing: border-box; }
-        .btn-whatsapp { background: #25D366; color: white; }
-        .btn-call { background: var(--accent-color); color: black; }
-        .product-card { border: 2px solid #eee; padding: 15px; border-radius: 12px; margin: 15px 0; text-align: left; background: #fff; }
-        .reason-box { background: #fff8e1; border-left: 4px solid var(--accent-color); padding: 12px; margin-bottom: 15px; font-size: 15px; color: #333; line-height: 1.4; }
-        .product-card img { width: 100%; border-radius: 8px; margin-bottom: 10px; }
-        .contact-footer { margin-top: auto; padding: 15px; border-top: 1px solid #ddd; font-size: 14px; text-align: center; }
+        .btn-call { background: var(--accent-color); color: #000; }
+        .btn-whatsapp { background: #25D366; color: #fff; }
+        .product-card { border: 1px solid #ddd; padding: 15px; border-radius: 12px; margin: 20px 0; text-align: left; }
+        .reason-box { background: #fff8e1; border-left: 4px solid var(--accent-color); padding: 10px; margin-bottom: 15px; font-size: 14px; color: #444; line-height: 1.4; }
+        .product-card img { width: 100%; border-radius: 8px; margin-bottom: 10px; background: #eee; }
+        .contact-footer { margin-top: auto; padding: 20px; border-top: 1px solid #ddd; font-size: 14px; text-align: center; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
@@ -47,26 +45,25 @@
     </div>
 
     <div id="step1" class="card active">
-        <h2>Aapki Zaroorat Kya Hai?</h2>
-        <p>Sahi chair chunne mein hum aapki madad karenge.</p>
-        <button class="btn" onclick="nextStep('personal')">Ghar Ke Liye (Personal)</button>
-        <button class="btn" onclick="nextStep('commercial')">Business Ke Liye (Commercial)</button>
+        <h2>Find Your Perfect Match</h2>
+        <p>Expertly categorized massage chairs for your home or business.</p>
+        <button class="btn" onclick="nextStep('personal')">For Personal Use</button>
+        <button class="btn" onclick="nextStep('commercial')">For Commercial Use</button>
     </div>
 
     <div id="step2" class="card">
-        <h2 id="question-text">Category Chunein:</h2>
+        <h2 id="question-text">Select Category:</h2>
         <div id="options-container"></div>
     </div>
 
     <div id="step3" class="card">
-        <h2 style="color: var(--accent-color);">Hamari Recommendation</h2>
+        <h2 style="color: var(--accent-color);">Expert Recommendation</h2>
         <div id="product-display"></div>
-        
         <div style="background: #f0f4f8; padding: 15px; border-radius: 10px; margin-top: 10px;">
-            <p style="font-weight: bold; margin-bottom: 10px;">Visit Kariye: 999 Khatiwala Tank, Indore</p>
-            <a href="tel:+918319950609" class="btn btn-call">📞 Call Karein (Best Price Ke Liye)</a>
+            <p style="font-weight: bold; margin: 0 0 10px 0;">Visit 999 Khatiwala Tank for a Demo!</p>
+            <a href="tel:+918319950609" onclick="gtag('event', 'click_call', {'branch': 'Indore'});" class="btn btn-call">📞 Call Now for Best Price</a>
         </div>
-        <button class="btn" onclick="location.reload()" style="background:#888; margin-top: 10px;">Wapas Shuru Karein</button>
+        <button class="btn" onclick="location.reload()" style="background:#888; margin-top: 15px;">Restart Quiz</button>
     </div>
 
     <div class="contact-footer">
@@ -77,16 +74,28 @@
 
 <script>
     const products = {
-        'MonsterX': { name: "Monster X", reason: "Yeh hamari sabse advanced 7D chair hai. Agar aapko best-in-class full body therapy chahiye, toh Monster X se behtar kuch nahi.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/12/Monster-X-1.webp" },
-        'Moonwalker': { name: "Moonwalker M", reason: "Isme independent leg movement hai, jo thake huye pairon ke liye bohot asardaar hai. Luxury aur comfort ka perfect combo.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/11/Moonwalker-M-1.webp" },
-        'RX7': { name: "RX 7 Capsule", reason: "Space-saving design aur zero-gravity features ke sath, yeh chote kamron mein bhi fit ho jati hai aur deep massage deti hai.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/11/RX-7-1.webp" },
-        'RXTwister': { name: "RX Twister", reason: "Special twisting aur stretching therapy ke liye. Agar aapko back pain ya stiffness rehti hai, toh yeh best hai.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/RX-3-1.webp" },
-        'RX5Elite': { name: "RX-5 Elite", reason: "Heavy-duty durability. Yeh chair lambe samay tak bina kisi problem ke chalti hai, daily family use ke liye best.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/RX-5-Elite-1.webp" },
-        'RX3': { name: "RX-3 7D", reason: "Kam budget mein 7D technology chahiye? RX-3 sabse value-for-money model hai Indore mein.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/RX-3-1.webp" },
-        'Q7-2': { name: "Q7 2.0", reason: "Touchscreen control aur modern features ke sath. Commercial use ke liye bhi bohot stylish dikhti hai.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/Q7-2.0-1.webp" },
-        'R9': { name: "R9 7D", reason: "Human-touch rollers jo bilkul asli massage jaisa feel dete hain. Chronic pain ke liye best therapy.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/R9-1.webp" },
-        'R8Pro': { name: "R8 Pro", reason: "Budget model jo special focus leg aur calf recovery pe karta hai. Exercise ke baad ke liye best.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/R8-Pro-1.webp" },
-        'CoinChair': { name: "Coin Massage Chair", reason: "Business ke liye best! Salon, Mall ya Hospital mein lagaiye aur automatic income shuru karein.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/08/Amty-Global-Logo.png" }
+        // Personal - Luxury
+        'MonsterX': { name: "Monster X", reason: "Our 7D flagship. The ultimate choice for deep-tissue therapy and premium luxury.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/12/Monster-X-1.webp" },
+        'Moonwalker': { name: "Moonwalker M", reason: "Innovative design with independent leg movements for a unique massage experience.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/11/Moonwalker-M-1.webp" },
+        'RX7': { name: "RX 7 Capsule", reason: "Futuristic zero-gravity capsule for complete physical and mental immersion.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/11/RX-7-1.webp" },
+        'RXTwister': { name: "RX Twister", reason: "Advanced model focusing on unique twisting and stretching relief for the spine.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/RX-3-1.webp" },
+        'RX5Elite': { name: "RX-5 Elite", reason: "The gold standard for durability and high-performance daily family use.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/RX-5-Elite-1.webp" },
+        
+        // Personal - Value
+        'RX3': { name: "RX-3 7D", reason: "Best value for 7D technology, featuring an advanced dual SL track system.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/RX-3-1.webp" },
+        'Q9Sonic': { name: "Q9 Sonic", reason: "High-performance model with focused sonic-vibration relief features.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/Q7-2.0-1.webp" },
+        'Q7-2': { name: "Q7 2.0", reason: "Great value for entertainment lovers, featuring a touchscreen and app controls.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/Q7-2.0-1.webp" },
+        'R10': { name: "R10 4D", reason: "AI-powered relaxation with precise body scanning and voice control.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/R-10-1.webp" },
+        'R9': { name: "R9 7D", reason: "Luxury 7D rollers that perfectly mimic the touch of professional human hands.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/R9-1.webp" },
+        'Q5': { name: "Q5 Model", reason: "Solid performance balancing body coverage with reliable robotic relief.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/Q7-1.webp" },
+
+        // Personal - Budget
+        'R8Pro': { name: "R8 Pro", reason: "Enhanced thigh and calf relief, ideal for active lifestyles and leg recovery.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/R8-Pro-1.webp" },
+        'R7Neo': { name: "R7 Neo", reason: "A modern, metal-frame 4D chair that fits beautifully into contemporary homes.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/R7-Neo-1.webp" },
+        'R6': { name: "R6 4D", reason: "Premium wooden aesthetic combined with deep 4D muscle relief technology.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/07/R6-1.webp" },
+
+        // Commercial
+        'CoinChair': { name: "Coin Massage Chair", reason: "Automatic revenue generator. Ideal for malls, airports, and public lounges.", img: "https://www.amtyglobal.com/wp-content/uploads/2023/08/Amty-Global-Logo.png" }
     };
 
     function nextStep(choice) {
@@ -96,18 +105,18 @@
         const qText = document.getElementById('question-text');
 
         if(choice === 'personal') {
-            qText.innerText = "Apna Budget/Style Chunein:";
+            qText.innerText = "Select Personal Category:";
             container.innerHTML = `
-                <button class="btn" onclick="showBranch('luxury')">Luxury (Top Models)</button>
-                <button class="btn" onclick="showBranch('value')">Value for Money</button>
-                <button class="btn" onclick="showBranch('budget')">Low Budget</button>
+                <button class="btn" onclick="showBranch('luxury')">Luxury Models</button>
+                <button class="btn" onclick="showBranch('value')">Value Models</button>
+                <button class="btn" onclick="showBranch('budget')">Budget Models</button>
             `;
         } else {
-            qText.innerText = "Kahan Ke Liye Chahiye?";
+            qText.innerText = "Select Business Setting:";
             container.innerHTML = `
-                <button class="btn" onclick="showFinal('R9')">Wellness/Spa</button>
-                <button class="btn" onclick="showFinal('Q7-2')">Hotel/Office</button>
-                <button class="btn" onclick="showFinal('CoinChair')">Public Place (Coin Operated)</button>
+                <button class="btn" onclick="showBranch('wellness')">Wellness or Spa</button>
+                <button class="btn" onclick="showBranch('saloon')">Saloon / Therapy / Mall</button>
+                <button class="btn" onclick="showFinal('CoinChair')">Public Places</button>
             `;
         }
     }
@@ -115,11 +124,41 @@
     function showBranch(type) {
         const container = document.getElementById('options-container');
         if(type === 'luxury') {
-            container.innerHTML = `<button class="btn" onclick="showFinal('MonsterX')">Monster X</button><button class="btn" onclick="showFinal('Moonwalker')">Moonwalker</button><button class="btn" onclick="showFinal('RX7')">RX 7 Capsule</button>`;
+            container.innerHTML = `
+                <button class="btn" onclick="showFinal('MonsterX')">Monster X</button>
+                <button class="btn" onclick="showFinal('Moonwalker')">Moonwalker</button>
+                <button class="btn" onclick="showFinal('RX7')">RX 7 Capsule</button>
+                <button class="btn" onclick="showFinal('RXTwister')">RX Twister</button>
+                <button class="btn" onclick="showFinal('RX5Elite')">RX-5 Elite</button>
+            `;
         } else if(type === 'value') {
-            container.innerHTML = `<button class="btn" onclick="showFinal('RX3')">RX-3 7D</button><button class="btn" onclick="showFinal('RX5Elite')">RX-5 Elite</button>`;
+            container.innerHTML = `
+                <button class="btn" onclick="showFinal('RX3')">RX-3</button>
+                <button class="btn" onclick="showFinal('Q9Sonic')">Q9 Sonic</button>
+                <button class="btn" onclick="showFinal('Q7-2')">Q7 2.0</button>
+                <button class="btn" onclick="showFinal('R10')">R10</button>
+                <button class="btn" onclick="showFinal('R9')">R9</button>
+                <button class="btn" onclick="showFinal('Q5')">Q5</button>
+            `;
         } else if(type === 'budget') {
-            container.innerHTML = `<button class="btn" onclick="showFinal('R8Pro')">R8 Pro</button><button class="btn" onclick="showFinal('RXTwister')">RX Twister</button>`;
+            container.innerHTML = `
+                <button class="btn" onclick="showFinal('R8Pro')">R8 Pro</button>
+                <button class="btn" onclick="showFinal('R7Neo')">R7 Neo</button>
+                <button class="btn" onclick="showFinal('R6')">R6</button>
+            `;
+        } else if(type === 'wellness') {
+            container.innerHTML = `
+                <button class="btn" onclick="showFinal('R9')">R9 7D</button>
+                <button class="btn" onclick="showFinal('Q7-2')">Q7 2.0</button>
+                <button class="btn" onclick="showFinal('CoinChair')">Coin Massage Chair</button>
+            `;
+        } else if(type === 'saloon') {
+            container.innerHTML = `
+                <button class="btn" onclick="showFinal('R7Neo')">R7 Neo</button>
+                <button class="btn" onclick="showFinal('R9')">R9 7D</button>
+                <button class="btn" onclick="showFinal('CoinChair')">Coin Massage Chair</button>
+                <button class="btn" onclick="showFinal('Q7-2')">Q7 2.0</button>
+            `;
         }
     }
 
@@ -127,14 +166,14 @@
         document.getElementById('step2').classList.remove('active');
         document.getElementById('step3').classList.add('active');
         const item = products[modelKey];
-        const waLink = `https://wa.me/918319950609?text=Hi, Indore Branch. I am interested in ${item.name}. Please share price and offer details.`;
+        const waLink = `https://wa.me/918319950609?text=Inquiry%20from%20Indore%20App:%20I%20am%20interested%20in%20the%20${encodeURIComponent(item.name)}%20model.`;
         
         document.getElementById('product-display').innerHTML = `
             <div class="product-card">
                 <h3>${item.name}</h3>
                 <img src="${item.img}" alt="${item.name}" onerror="this.src='https://www.amtyglobal.com/wp-content/uploads/2023/08/Amty-Global-Logo.png'">
-                <div class="reason-box"><strong>Kyon Kharidein:</strong> ${item.reason}</div>
-                <a href="${waLink}" class="btn btn-whatsapp">💬 Is Model Ke Liye Chat Karein</a>
+                <div class="reason-box"><strong>Expert Advice:</strong> ${item.reason}</div>
+                <a href="${waLink}" onclick="gtag('event', 'click_whatsapp', {'model': '${item.name}'});" class="btn btn-whatsapp">💬 Inquiry for this Model</a>
             </div>
         `;
         gtag('event', 'view_item', { 'item_name': item.name });
