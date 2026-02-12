@@ -34,7 +34,7 @@
         .btn-whatsapp { background: #25D366; color: #fff; animation: pulse-green 2s infinite; }
         .btn-maps { background: #4285F4; color: #fff; margin-top: 15px; }
         .btn-outline { background: transparent; border: 2px solid var(--primary-color); color: var(--primary-color); font-size: 13px; padding: 8px 15px; width: auto; display: inline-block; border-radius: 20px; font-weight: bold; }
-        .btn-brochure { background: #555; color: white; font-size: 14px; padding: 12px; margin-top: 10px; border-radius: 8px; }
+        .btn-brochure { background: #555; color: white; font-size: 14px; padding: 12px; margin-top: 10px; border-radius: 8px; width: 100%; }
 
         @keyframes pulse-yellow { 0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); } 70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); } 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); } }
         @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); } 70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
@@ -71,13 +71,13 @@
         <button class="btn" onclick="toStep2('commercial')">For Commercial Use</button>
 
         <div class="trust-section">
-            <strong>GOOGLE RATING: <span class="stars">★★★★★</span> 4.9/5</strong>
-            <p style="font-size: 12px; margin: 5px 0 15px 0;">Visit our Khatiwala Tank Showroom</p>
+            <strong>GOOGLE RATING: <span class="stars">★★★★★</span> 5.0/5</strong>
+            <p style="font-size: 12px; margin: 5px 0 15px 0;">Visit our Showroom: 999 Khatiwala Tank, Indore</p>
             
-            <a href="https://maps.app.goo.gl/uX3hPjC8fK2k8xP97" target="_blank" class="btn btn-maps">📍 Drive to Showroom (Maps)</a>
+            <a href="https://maps.google.com/?cid=415761010920313751&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="btn btn-maps">📍 Drive to Showroom (Google Maps)</a>
             
             <div style="display: flex; gap: 10px; margin-top: 10px;">
-                <a href="tel:+918319950609" class="btn btn-call" style="flex: 1; font-size: 14px;">📞 Call Now</a>
+                <a href="tel:+918319950609" class="btn btn-call" style="flex: 1; font-size: 14px;">📞 Call Expert</a>
                 <a href="https://wa.me/918319950609" class="btn btn-whatsapp" style="flex: 1; font-size: 14px;">💬 WhatsApp</a>
             </div>
         </div>
@@ -98,15 +98,15 @@
         <div id="product-display"></div>
         
         <div style="background: #f0f4f8; padding: 15px; border-radius: 10px; margin-top: 10px; border-left: 5px solid var(--primary-color); text-align: left;">
-            <p style="font-weight: bold; margin: 0 0 5px 0;">Experience it Live!</p>
-            <p style="font-size: 13px; margin: 0 0 12px 0;">📍 999 Khatiwala Tank, Indore</p>
-            <a href="https://maps.app.goo.gl/uX3hPjC8fK2k8xP97" target="_blank" class="btn btn-maps" style="margin: 0 0 10px 0;">📍 Open in Google Maps</a>
-            <a href="tel:+918319950609" class="btn btn-call" style="margin: 0;">📞 Call Expert</a>
+            <p style="font-weight: bold; margin: 0 0 5px 0;">Visit Showroom to Try It!</p>
+            <p style="font-size: 13px; margin: 0 0 12px 0;">📍 999 Khatiwala Tank, near Khanuja Garden, Indore</p>
+            <a href="https://maps.google.com/?cid=415761010920313751&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="btn btn-maps" style="margin: 0 0 10px 0;">📍 Open in Google Maps</a>
+            <a href="tel:+918319950609" class="btn btn-call" style="margin: 0;">📞 Call Showroom</a>
         </div>
     </div>
 
     <div class="contact-footer">
-        <strong>AMTY Global Indore</strong><br>
+        <strong>AMTY GLOBAL INDORE</strong><br>
         Indore's Trusted Massage Chair Destination
     </div>
 </div>
@@ -174,12 +174,13 @@
                 <img src="${item.img}" alt="${item.name}">
                 <span class="price-text">${item.price}</span>
                 <div class="offer-box">
-                    <strong>Indore Exclusive Offer:</strong><br>
-                    ✅ Free Doorstep Delivery & Installation<br>
-                    ✅ 2 Years Full Warranty<br>
-                    ✅ Lifetime Free Service Support<br>
-                    ✅ All Prices Include GST<br>
-                    ✅ No-Cost EMI Available
+                    <strong>Indore Exclusive Offers:</strong><br>
+                    ✅ Free doorstep delivery<br>
+                    ✅ Plug and use self 5 min installation<br>
+                    ✅ GST included<br>
+                    ✅ 2 years full warranty<br>
+                    ✅ Lifetime years free service<br>
+                    ✅ No cost emi and cashback on credit card may available
                 </div>
                 <p style="font-size:14px; color:#555;"><strong>Expert Advice:</strong> ${item.reason}</p>
                 <a href="${waLink}" class="btn btn-whatsapp">💬 Inquiry on WhatsApp</a>
