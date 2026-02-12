@@ -17,13 +17,25 @@
         body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: var(--bg-color); display: flex; justify-content: center; }
         #app-container { width: 100%; max-width: 500px; background: white; min-height: 100vh; padding: 20px; display: flex; flex-direction: column; box-sizing: border-box; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
         
+        /* Navigation */
         .nav-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 5px; min-height: 35px; }
         .nav-btn { background: #f0f0f0; border: none; font-size: 13px; color: var(--primary-color); cursor: pointer; font-weight: bold; padding: 6px 14px; border-radius: 20px; visibility: hidden; }
         .nav-btn.visible { visibility: visible; }
         
+        /* Header */
         .header { text-align: center; padding-bottom: 15px; border-bottom: 2px solid var(--accent-color); margin-bottom: 15px; }
-        .logo-img { width: 100%; max-width: 300px; height: auto; }
+        .logo-img { width: 100%; max-width: 280px; height: auto; }
         
+        /* Advantage Section */
+        .hero-banner { background: linear-gradient(135deg, #003366 0%, #001a33 100%); color: white; padding: 18px; border-radius: 12px; margin-bottom: 15px; text-align: center; }
+        .hero-banner h2 { margin: 0; font-size: 22px; color: var(--accent-color); }
+        .hero-banner p { margin: 5px 0 0 0; font-size: 14px; opacity: 0.9; }
+
+        .advantage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 15px 0; text-align: left; }
+        .adv-item { background: #fff; border: 1px solid #e0e0e0; padding: 12px; border-radius: 8px; font-size: 12px; line-height: 1.4; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .adv-item strong { color: var(--primary-color); font-size: 14px; display: block; margin-bottom: 3px; }
+
+        /* Cards & Buttons */
         .card { display: none; text-align: center; animation: fadeIn 0.3s ease-in-out; }
         .card.active { display: block; }
         
@@ -66,19 +78,43 @@
     </div>
 
     <div id="step1" class="card active">
-        <h2 style="color: var(--primary-color);">Find Your Perfect Match</h2>
-        <button class="btn" onclick="toStep2('personal')">For Personal Use</button>
-        <button class="btn" onclick="toStep2('commercial')">For Commercial Use</button>
+        <div class="hero-banner">
+            <h2>The AMTY Advantage</h2>
+            <p>Experience India's Most Trusted Wellness Brand</p>
+        </div>
+
+        <div class="advantage-grid">
+            <div class="adv-item">
+                <strong>Widest Range</strong>
+                15+ Premium Models for every body type & budget.
+            </div>
+            <div class="adv-item">
+                <strong>Starting ₹50,000</strong>
+                High-end 4D Massage technology made affordable.
+            </div>
+            <div class="adv-item">
+                <strong>PAN India Presence</strong>
+                12+ Direct Company Showrooms across India.
+            </div>
+            <div class="adv-item">
+                <strong>Service Leader</strong>
+                Best rated in after-sales service & tech support.
+            </div>
+        </div>
+
+        <h3 style="color: var(--primary-color); margin: 20px 0 10px 0;">Find Your Perfect Match:</h3>
+        <button class="btn" onclick="toStep2('personal')">🏠 For Home / Personal Use</button>
+        <button class="btn" onclick="toStep2('commercial')" style="background: #444;">🏢 For Business / Commercial</button>
 
         <div class="trust-section">
             <strong>GOOGLE RATING: <span class="stars">★★★★★</span> 5.0/5</strong>
-            <p style="font-size: 12px; margin: 5px 0 15px 0;">Visit our Showroom: 999 Khatiwala Tank, Indore</p>
+            <p style="font-size: 12px; margin: 5px 0 15px 0;">Showroom: 999 Khatiwala Tank, Indore</p>
             
-            <a href="https://maps.google.com/?cid=415761010920313751&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="btn btn-maps">📍 Drive to Showroom (Google Maps)</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=AMTY+GLOBAL+INDORE+999+Khatiwala+Tank" target="_blank" class="btn btn-maps">📍 Drive to Showroom (Google Maps)</a>
             
             <div style="display: flex; gap: 10px; margin-top: 10px;">
                 <a href="tel:+918319950609" class="btn btn-call" style="flex: 1; font-size: 14px;">📞 Call Expert</a>
-                <a href="https://wa.me/918319950609" class="btn btn-whatsapp" style="flex: 1; font-size: 14px;">💬 WhatsApp</a>
+                <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Indore,%20I%20scanned%20your%20QR%20code%20and%20want%20to%20know%20more." class="btn btn-whatsapp" style="flex: 1; font-size: 14px;">💬 WhatsApp</a>
             </div>
         </div>
     </div>
@@ -100,7 +136,7 @@
         <div style="background: #f0f4f8; padding: 15px; border-radius: 10px; margin-top: 10px; border-left: 5px solid var(--primary-color); text-align: left;">
             <p style="font-weight: bold; margin: 0 0 5px 0;">Visit Showroom to Try It!</p>
             <p style="font-size: 13px; margin: 0 0 12px 0;">📍 999 Khatiwala Tank, near Khanuja Garden, Indore</p>
-            <a href="https://maps.google.com/?cid=415761010920313751&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="btn btn-maps" style="margin: 0 0 10px 0;">📍 Open in Google Maps</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=AMTY+GLOBAL+INDORE+999+Khatiwala+Tank" target="_blank" class="btn btn-maps" style="margin: 0 0 10px 0;">📍 Get Directions</a>
             <a href="tel:+918319950609" class="btn btn-call" style="margin: 0;">📞 Call Showroom</a>
         </div>
     </div>
@@ -174,13 +210,13 @@
                 <img src="${item.img}" alt="${item.name}">
                 <span class="price-text">${item.price}</span>
                 <div class="offer-box">
-                    <strong>Indore Exclusive Offers:</strong><br>
+                    <strong>Exclusive Showroom Benefits:</strong><br>
                     ✅ Free doorstep delivery<br>
-                    ✅ Plug and use self 5 min installation<br>
-                    ✅ GST included<br>
+                    ✅ Plug & use 5-min self installation<br>
+                    ✅ GST included in price<br>
                     ✅ 2 years full warranty<br>
-                    ✅ Lifetime years free service<br>
-                    ✅ No cost emi and cashback on credit card may available
+                    ✅ Lifetime free service support<br>
+                    ✅ No-cost EMI & Cashback available*
                 </div>
                 <p style="font-size:14px; color:#555;"><strong>Expert Advice:</strong> ${item.reason}</p>
                 <a href="${waLink}" class="btn btn-whatsapp">💬 Inquiry on WhatsApp</a>
