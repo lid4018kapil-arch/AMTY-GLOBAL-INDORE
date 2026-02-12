@@ -16,15 +16,23 @@
         :root { --primary-color: #003366; --accent-color: #d4af37; --bg-color: #f4f4f9; }
         body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: var(--bg-color); display: flex; justify-content: center; }
         #app-container { width: 100%; max-width: 500px; background: white; min-height: 100vh; padding: 20px; display: flex; flex-direction: column; box-sizing: border-box; }
-        .header { text-align: center; padding: 15px 0; border-bottom: 2px solid var(--accent-color); margin-bottom: 15px; }
+        
+        /* Navigation Styles */
+        .nav-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 10px; }
+        .nav-btn { background: none; border: none; font-size: 14px; color: var(--primary-color); cursor: pointer; font-weight: bold; display: flex; align-items: center; visibility: hidden; }
+        .nav-btn.visible { visibility: visible; }
+        
+        .header { text-align: center; padding: 10px 0 15px 0; border-bottom: 2px solid var(--accent-color); margin-bottom: 15px; }
         .header h1 { margin: 0; color: var(--primary-color); font-size: 24px; }
         .card { display: none; text-align: center; animation: fadeIn 0.4s ease-in-out; }
         .card.active { display: block; }
+        
         .btn { display: block; width: 100%; padding: 16px; margin: 10px 0; background: var(--primary-color); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; text-decoration: none; box-sizing: border-box; }
         .btn-call { background: var(--accent-color); color: #000; }
         .btn-whatsapp { background: #25D366; color: #fff; }
         .btn-outline { background: transparent; border: 2px solid var(--primary-color); color: var(--primary-color); font-size: 14px; padding: 10px; margin-top: 5px; width: auto; display: inline-block; }
         .btn-brochure { background: #555; color: #fff; font-size: 13px; padding: 10px; border-radius: 6px; margin-top: 8px; display: inline-block; width: 100%; text-align: center; }
+        
         .product-card { border: 1px solid #ddd; padding: 15px; border-radius: 12px; margin: 20px 0; text-align: left; }
         .reason-box { background: #fff8e1; border-left: 4px solid var(--accent-color); padding: 10px; margin-bottom: 12px; font-size: 14px; color: #444; line-height: 1.4; }
         .offer-box { background: #e8f5e9; border: 1px dashed #2e7d32; padding: 10px; margin-bottom: 15px; font-size: 13px; color: #1b5e20; border-radius: 8px; }
@@ -37,6 +45,11 @@
 <body>
 
 <div id="app-container">
+    <div class="nav-header">
+        <button id="back-btn" class="nav-btn" onclick="goBack()">⬅ Back</button>
+        <button id="home-btn" class="nav-btn" onclick="location.reload()">🏠 Home</button>
+    </div>
+
     <div class="header">
         <h1>AMTY GLOBAL</h1>
         <p style="font-weight: bold; color: var(--accent-color); margin: 5px 0;">Indore Branch</p>
@@ -62,7 +75,6 @@
             <p style="font-weight: bold; margin: 0 0 10px 0;">Visit 999 Khatiwala Tank for a Demo!</p>
             <a href="tel:+918319950609" class="btn btn-call">📞 Call Now for Best Price</a>
         </div>
-        <button class="btn" onclick="location.reload()" style="background:#888; margin-top: 15px;">Restart Quiz</button>
     </div>
 
     <div class="contact-footer">
@@ -73,105 +85,38 @@
 
 <script>
     const imgPath = "https://lid4018kapil-arch.github.io/AMTY-GLOBAL-INDORE/";
+    let currentPath = []; // Track history for Back button
 
     const products = {
-        'MonsterX': { 
-            name: "Monster X", price: "₹3,35,000",
-            reason: "Our 7D flagship. Most powerful luxury relaxation for all body types with SL track precision.", 
-            img: imgPath + "monster.png", 
-            brochure: "https://drive.google.com/file/d/1As1RlVVutCDY9Lv2bVtgKr1mcLQlGmPO/view?usp=drivesdk" 
-        },
-        'Moonwalker': { 
-            name: "Moonwalker M", price: "₹2,30,000",
-            reason: "Features individual leg movement, 7D massage, and advanced hand-squeezing technology.", 
-            img: imgPath + "moon%20walker.png", 
-            brochure: "https://drive.google.com/file/d/1sj5Nke9bnufTf6WLgWnT-NSlcdNmb94a/view?usp=drivesdk" 
-        },
-        'RX7': { 
-            name: "RX 7 Capsule", price: "₹2,00,000",
-            reason: "Futuristic capsule design with AI body scan and voice control for total immersion.", 
-            img: imgPath + "Rx7.png", 
-            brochure: "https://drive.google.com/file/d/1L67tTygyJBolhqU-yzTNMA3l5Tc2xrYF/view?usp=drivesdk" 
-        },
-        'RXTwister': { 
-            name: "RX Twister", price: "₹1,90,000",
-            reason: "Flexible SL track specializing in unique twisting and stretching relief for the spine.", 
-            img: imgPath + "Twister.png", 
-            brochure: "https://drive.google.com/file/d/1iiGM9ndKbAuFGuh_71uWSyR4LHX9fgKH/view?usp=drivesdk" 
-        },
-        'RX5Elite': { 
-            name: "RX-5 Elite", price: "₹1,70,000",
-            reason: "Tri-motion calf rubbing and automatic leg stretching. Ideal for heavy-duty family use.", 
-            img: imgPath + "Rx5elite.png", 
-            brochure: "https://drive.google.com/file/d/1BBOuu_w2nA2q-L2E_xsWziP4ce8UNFJ9/view?usp=drivesdk" 
-        },
-        'RX3': { 
-            name: "RX-3 7D", price: "₹1,40,000",
-            reason: "Best value 7D technology featuring an advanced dual SL track and calf rubbing.", 
-            img: imgPath + "Rx3.png", 
-            brochure: "https://drive.google.com/file/d/13wgxzLHPwaf2bR6Z8V5kjqkSdYRsop0u/view?usp=drivesdk" 
-        },
-        'Q9Sonic': { 
-            name: "Q9 Sonic", price: "₹1,35,000",
-            reason: "Revolutionary Sonic Wave Massage that synchronizes intensity with your favorite music.", 
-            img: imgPath + "Q9Sonic.png", 
-            brochure: "https://drive.google.com/file/d/1Cm4C0f2iuuGB9MFuuXSpBvT71kOIlfCo/view?usp=drivesdk" 
-        },
-        'Q7-2': { 
-            name: "Q7 2.0", price: "₹1,30,000",
-            reason: "Android touchscreen with TikTok controller. High entertainment value and calf rubbing.", 
-            img: imgPath + "Q7.png", 
-            brochure: "https://drive.google.com/file/d/1rRCqbR7813zVLhrRdyq0x7md5ZiCxZxb/view?usp=drivesdk" 
-        },
-        'R10': { 
-            name: "R10 4D", price: "₹90,000",
-            reason: "Smart AI-powered relaxation with U-shaped head massage and extra cushioning.", 
-            img: imgPath + "R10.png", 
-            brochure: "https://drive.google.com/file/d/1KG-wYO2qqgO6YQxj1ADqnWOoyUj4SyMS/view?usp=drivesdk" 
-        },
-        'R9': { 
-            name: "R9 7D", price: "₹94,000",
-            reason: "Human-touch rollers with butterfly head massage. Highly recommended for salons and gyms.", 
-            img: imgPath + "R9.png", 
-            brochure: "https://drive.google.com/file/d/1wr6BH1_XCzxkL0Y5X9kOPxY29KtE8Ln2/view?usp=drivesdk" 
-        },
-        'Q5': { 
-            name: "Q5 Model", price: "₹1,20,000",
-            reason: "Balanced performance with wireless charging, AI body scan, and voice control.", 
-            img: imgPath + "Q5.png", 
-            brochure: "https://drive.google.com/file/d/1_Ivsz-mbsnoK3gtDEzWRu41ndSS9iUGo/view?usp=drivesdk" 
-        },
-        'R8Pro': { 
-            name: "R8 Pro", price: "₹70,000",
-            reason: "Focus on thigh and calf recovery with premium faux leather and shortcut keys.", 
-            img: imgPath + "R8.png", 
-            brochure: "https://drive.google.com/file/d/1mvfLadnyET3vH7bYrRbyrHrbmvvgA0dS/view?usp=drivesdk" 
-        },
-        'R7Neo': { 
-            name: "R7 Neo", price: "₹65,000",
-            reason: "Strong metal frame built for up to 150kg. Perfect for durability in commercial settings.", 
-            img: imgPath + "R7.png", 
-            brochure: "https://drive.google.com/file/d/118920SrFCzXGBwQi1B6HLmPp07741SGe/view?usp=drivesdk" 
-        },
-        'R6': { 
-            name: "R6 4D", price: "₹50,000",
-            reason: "Sturdy wooden frame combined with 4D relief and soothing eye massage.", 
-            img: imgPath + "R6.png", 
-            brochure: null 
-        },
-        'CoinChair': { 
-            name: "Coin Massage Chair", price: "₹1,50,000",
-            reason: "Automatic revenue generator. Supports Coin and QR-UPI payments for public spaces.", 
-            img: imgPath + "coin.png", 
-            brochure: "https://drive.google.com/file/d/1QmjflU63Krv5x-0bPXJE9zuIN8Zuh5Eb/view?usp=drivesdk" 
-        }
+        'MonsterX': { name: "Monster X", price: "₹3,35,000", reason: "Our 7D flagship. Most powerful luxury relaxation for all body types with SL track precision.", img: imgPath + "monster.png", brochure: "https://drive.google.com/file/d/1As1RlVVutCDY9Lv2bVtgKr1mcLQlGmPO/view?usp=drivesdk" },
+        'Moonwalker': { name: "Moonwalker M", price: "₹2,30,000", reason: "Features individual leg movement, 7D massage, and advanced hand-squeezing technology.", img: imgPath + "moon%20walker.png", brochure: "https://drive.google.com/file/d/1sj5Nke9bnufTf6WLgWnT-NSlcdNmb94a/view?usp=drivesdk" },
+        'RX7': { name: "RX 7 Capsule", price: "₹2,00,000", reason: "Futuristic capsule design with AI body scan and voice control for total immersion.", img: imgPath + "Rx7.png", brochure: "https://drive.google.com/file/d/1L67tTygyJBolhqU-yzTNMA3l5Tc2xrYF/view?usp=drivesdk" },
+        'RXTwister': { name: "RX Twister", price: "₹1,90,000", reason: "Flexible SL track specializing in unique twisting and stretching relief for the spine.", img: imgPath + "Twister.png", brochure: "https://drive.google.com/file/d/1iiGM9ndKbAuFGuh_71uWSyR4LHX9fgKH/view?usp=drivesdk" },
+        'RX5Elite': { name: "RX-5 Elite", price: "₹1,70,000", reason: "Tri-motion calf rubbing and automatic leg stretching. Ideal for heavy-duty family use.", img: imgPath + "Rx5elite.png", brochure: "https://drive.google.com/file/d/1BBOuu_w2nA2q-L2E_xsWziP4ce8UNFJ9/view?usp=drivesdk" },
+        'RX3': { name: "RX-3 7D", price: "₹1,40,000", reason: "Best value 7D technology featuring an advanced dual SL track and calf rubbing.", img: imgPath + "Rx3.png", brochure: "https://drive.google.com/file/d/13wgxzLHPwaf2bR6Z8V5kjqkSdYRsop0u/view?usp=drivesdk" },
+        'Q9Sonic': { name: "Q9 Sonic", price: "₹1,35,000", reason: "Revolutionary Sonic Wave Massage that synchronizes intensity with your favorite music.", img: imgPath + "Q9Sonic.png", brochure: "https://drive.google.com/file/d/1Cm4C0f2iuuGB9MFuuXSpBvT71kOIlfCo/view?usp=drivesdk" },
+        'Q7-2': { name: "Q7 2.0", price: "₹1,30,000", reason: "Android touchscreen with TikTok controller. High entertainment value and calf rubbing.", img: imgPath + "Q7.png", brochure: "https://drive.google.com/file/d/1rRCqbR7813zVLhrRdyq0x7md5ZiCxZxb/view?usp=drivesdk" },
+        'R10': { name: "R10 4D", price: "₹90,000", reason: "Smart AI-powered relaxation with U-shaped head massage and extra cushioning.", img: imgPath + "R10.png", brochure: "https://drive.google.com/file/d/1KG-wYO2qqgO6YQxj1ADqnWOoyUj4SyMS/view?usp=drivesdk" },
+        'R9': { name: "R9 7D", price: "₹94,000", reason: "Human-touch rollers with butterfly head massage. Highly recommended for salons and gyms.", img: imgPath + "R9.png", brochure: "https://drive.google.com/file/d/1wr6BH1_XCzxkL0Y5X9kOPxY29KtE8Ln2/view?usp=drivesdk" },
+        'Q5': { name: "Q5 Model", price: "₹1,20,000", reason: "Balanced performance with wireless charging, AI body scan, and voice control.", img: imgPath + "Q5.png", brochure: "https://drive.google.com/file/d/1_Ivsz-mbsnoK3gtDEzWRu41ndSS9iUGo/view?usp=drivesdk" },
+        'R8Pro': { name: "R8 Pro", price: "₹70,000", reason: "Focus on thigh and calf recovery with premium faux leather and shortcut keys.", img: imgPath + "R8.png", brochure: "https://drive.google.com/file/d/1mvfLadnyET3vH7bYrRbyrHrbmvvgA0dS/view?usp=drivesdk" },
+        'R7Neo': { name: "R7 Neo", price: "₹65,000", reason: "Strong metal frame built for up to 150kg. Perfect for durability in commercial settings.", img: imgPath + "R7.png", brochure: "https://drive.google.com/file/d/118920SrFCzXGBwQi1B6HLmPp07741SGe/view?usp=drivesdk" },
+        'R6': { name: "R6 4D", price: "₹50,000", reason: "Sturdy wooden frame combined with 4D relief and soothing eye massage.", img: imgPath + "R6.png", brochure: null },
+        'CoinChair': { name: "Coin Massage Chair", price: "₹1,50,000", reason: "Automatic revenue generator. Supports Coin and QR-UPI payments for public spaces.", img: imgPath + "coin.png", brochure: "https://drive.google.com/file/d/1QmjflU63Krv5x-0bPXJE9zuIN8Zuh5Eb/view?usp=drivesdk" }
     };
 
+    function updateNav() {
+        document.getElementById('back-btn').classList.toggle('visible', currentPath.length > 0);
+        document.getElementById('home-btn').classList.toggle('visible', currentPath.length > 0);
+    }
+
     function nextStep(choice) {
+        currentPath.push('step1');
         document.getElementById('step1').classList.remove('active');
         document.getElementById('step2').classList.add('active');
         const container = document.getElementById('options-container');
         const qText = document.getElementById('question-text');
+        updateNav();
 
         if(choice === 'personal') {
             qText.innerText = "Select Personal Category:";
@@ -191,6 +136,7 @@
     }
 
     function showBranch(type) {
+        currentPath.push('step2-category');
         const container = document.getElementById('options-container');
         if(type === 'luxury') {
             container.innerHTML = `<button class="btn" onclick="showFinal('MonsterX')">Monster X</button><button class="btn" onclick="showFinal('Moonwalker')">Moonwalker</button><button class="btn" onclick="showFinal('RX7')">RX 7 Capsule</button><button class="btn" onclick="showFinal('RXTwister')">RX Twister</button><button class="btn" onclick="showFinal('RX5Elite')">RX-5 Elite</button>`;
@@ -206,6 +152,7 @@
     }
 
     function showFinal(modelKey) {
+        currentPath.push('step2-models');
         document.getElementById('step2').classList.remove('active');
         document.getElementById('step3').classList.add('active');
         const item = products[modelKey];
@@ -232,7 +179,23 @@
                 ${brochureBtn}
             </div>
         `;
-        gtag('event', 'view_item', { 'item_name': item.name });
+        updateNav();
+    }
+
+    function goBack() {
+        const lastStep = currentPath.pop();
+        if (lastStep === 'step1') {
+            document.getElementById('step2').classList.remove('active');
+            document.getElementById('step1').classList.add('active');
+        } else if (lastStep === 'step2-category') {
+            // Re-render Step 2 initial choice
+            nextStep(currentPath.includes('personal') ? 'personal' : 'commercial');
+            currentPath.pop(); // Remove the extra step added by calling nextStep
+        } else if (lastStep === 'step2-models') {
+            document.getElementById('step3').classList.remove('active');
+            document.getElementById('step2').classList.add('active');
+        }
+        updateNav();
     }
 </script>
 </body>
