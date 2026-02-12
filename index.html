@@ -17,18 +17,16 @@
         body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: var(--bg-color); display: flex; justify-content: center; }
         #app-container { width: 100%; max-width: 500px; background: white; min-height: 100vh; padding: 20px; display: flex; flex-direction: column; box-sizing: border-box; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
         
-        /* Navigation */
-        .nav-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 10px; }
-        .nav-btn { background: none; border: none; font-size: 14px; color: var(--primary-color); cursor: pointer; font-weight: bold; display: flex; align-items: center; visibility: hidden; }
+        .nav-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 5px; min-height: 30px; }
+        .nav-btn { background: none; border: none; font-size: 14px; color: var(--primary-color); cursor: pointer; font-weight: bold; visibility: hidden; }
         .nav-btn.visible { visibility: visible; }
         
-        .header { text-align: center; padding: 10px 0 15px 0; border-bottom: 2px solid var(--accent-color); margin-bottom: 15px; }
-        .header h1 { margin: 0; color: var(--primary-color); font-size: 24px; letter-spacing: 1px; }
+        .header { text-align: center; padding-bottom: 15px; border-bottom: 2px solid var(--accent-color); margin-bottom: 15px; }
+        .logo-img { width: 180px; height: auto; margin-bottom: 10px; border-radius: 5px; }
         
         .card { display: none; text-align: center; animation: fadeIn 0.4s ease-in-out; }
         .card.active { display: block; }
         
-        /* Buttons */
         .btn { display: block; width: 100%; padding: 16px; margin: 10px 0; background: var(--primary-color); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; text-decoration: none; box-sizing: border-box; transition: 0.3s; }
         .btn:active { transform: scale(0.98); }
         .btn-call { background: var(--accent-color); color: #000; }
@@ -36,13 +34,12 @@
         .btn-outline { background: transparent; border: 2px solid var(--primary-color); color: var(--primary-color); font-size: 13px; padding: 8px 15px; margin-top: 5px; width: auto; display: inline-block; border-radius: 20px; }
         .btn-brochure { background: #555; color: #fff; font-size: 13px; padding: 10px; border-radius: 6px; margin-top: 8px; display: inline-block; width: 100%; text-align: center; }
         
-        /* Trust & Social Proof */
         .trust-section { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 15px; margin: 20px 0; text-align: center; }
-        .google-rating { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 10px; text-decoration: none; color: #333; }
-        .stars { color: #f4b400; font-size: 18px; }
-        .insta-btn { background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); color: white; padding: 10px; border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; width: 100%; justify-content: center; box-sizing: border-box; }
+        .google-rating { display: inline-block; text-decoration: none; color: #333; font-weight: bold; margin-bottom: 10px; }
+        .stars { color: #f4b400; font-size: 18px; margin: 0 5px; }
+        .insta-btn { background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); color: white; padding: 10px; border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: bold; display: flex; align-items: center; justify-content: center; width: 100%; box-sizing: border-box; }
 
-        .product-card { border: 1px solid #ddd; padding: 15px; border-radius: 12px; margin: 20px 0; text-align: left; position: relative; }
+        .product-card { border: 1px solid #ddd; padding: 15px; border-radius: 12px; margin: 20px 0; text-align: left; }
         .offer-box { background: #e8f5e9; border: 1px dashed #2e7d32; padding: 10px; margin-bottom: 15px; font-size: 13px; color: #1b5e20; border-radius: 8px; }
         .price-text { font-size: 20px; color: #c62828; font-weight: bold; margin-bottom: 5px; display: block; }
         .product-card img { width: 100%; border-radius: 8px; margin-bottom: 10px; background: #f9f9f9; min-height: 200px; object-fit: contain; }
@@ -60,26 +57,24 @@
     </div>
 
     <div class="header">
-        <h1>AMTY GLOBAL</h1>
-        <p style="font-weight: bold; color: var(--accent-color); margin: 5px 0;">✨ Trusted Indore Branch ✨</p>
-        <a href="https://drive.google.com/file/d/1Bp1zIZAroIwzCXATYo7I7oxgGrMXvzrm/view?usp=drivesdk" target="_blank" class="btn btn-outline">📖 Full 2026 Catalogue</a>
+        <img src="https://raw.githubusercontent.com/lid4018kapil-arch/AMTY-GLOBAL-INDORE/main/amtyindorelogo.jpg" alt="AMTY Global Indore" class="logo-img">
+        <p style="font-weight: bold; color: var(--accent-color); margin: 0;">✨ Premium Massage Chairs ✨</p>
+        <a href="https://drive.google.com/file/d/1Bp1zIZAroIwzCXATYo7I7oxgGrMXvzrm/view?usp=sharing" target="_blank" class="btn btn-outline">📖 Full 2026 Catalogue</a>
     </div>
 
     <div id="step1" class="card active">
         <h2>Find Your Perfect Match</h2>
-        <p>Expertly categorized massage chairs for your home or business.</p>
+        <p>Expertly categorized for your home or business.</p>
         <button class="btn" onclick="nextStep('personal')">For Personal Use</button>
         <button class="btn" onclick="nextStep('commercial')">For Commercial Use</button>
 
         <div class="trust-section">
-            <a href="https://share.google.com/qGydD2YZTWJHLQWZo" target="_blank" class="google-rating">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Color_Icon.svg" width="20" alt="Google">
-                <strong>4.9/5 Rating</strong>
-                <span class="stars">★★★★★</span>
+            <a href="https://search.google.com/local/reviews?placeid=ChIJm2Hk06WcaDoRP6-VfNnQnxM" target="_blank" class="google-rating">
+                GOOGLE RATING: <span class="stars">★★★★★</span> 4.9/5
             </a>
-            <p style="font-size: 12px; margin: 0 0 15px 0;">Indore's Most Trusted Massage Chair Showroom</p>
-            <a href="https://www.instagram.com/amtyglobal.indore?igsh=MThsYzR4em1vbWp3ZQ==" target="_blank" class="insta-btn">
-                📸 Follow us on Instagram
+            <p style="font-size: 12px; margin: 0 0 15px 0;">Indore's Most Trusted Showroom</p>
+            <a href="https://www.instagram.com/amtyglobal.indore/" target="_blank" class="insta-btn">
+                📸 Follow on Instagram
             </a>
         </div>
     </div>
@@ -92,64 +87,55 @@
     <div id="step3" class="card">
         <h2 style="color: var(--accent-color);">Expert Recommendation</h2>
         <div id="product-display"></div>
-        
         <div style="background: #f0f4f8; padding: 15px; border-radius: 10px; margin-top: 10px; border-left: 5px solid var(--primary-color);">
-            <p style="font-weight: bold; margin: 0 0 5px 0;">Visit us for a Live Demo!</p>
-            <p style="font-size: 13px; margin: 0 0 15px 0;">Experience the massage before you buy.</p>
+            <p style="font-weight: bold; margin: 0 0 5px 0;">Visit for a Live Demo!</p>
+            <p style="font-size: 13px; margin: 0 0 15px 0;">999 Khatiwala Tank, Indore</p>
             <a href="tel:+918319950609" class="btn btn-call">📞 Call Now for Best Price</a>
         </div>
     </div>
 
     <div class="contact-footer">
-        <strong>Showroom:</strong> 999 Khatiwala Tank, Indore<br>
+        Showroom: 999 Khatiwala Tank, Indore<br>
         <a href="tel:+918319950609" style="text-decoration:none; color: var(--primary-color); font-weight: bold;">+91 83199-50609</a>
     </div>
 </div>
 
 <script>
     const imgPath = "https://lid4018kapil-arch.github.io/AMTY-GLOBAL-INDORE/";
-    let currentPath = [];
+    let currentScreen = 'step1';
+    let userPath = ''; // 'personal' or 'commercial'
 
     const products = {
-        'MonsterX': { name: "Monster X", price: "₹3,35,000", reason: "Our 7D flagship. Most powerful luxury relaxation for all body types with SL track precision.", img: imgPath + "monster.png", brochure: "https://drive.google.com/file/d/1As1RlVVutCDY9Lv2bVtgKr1mcLQlGmPO/view?usp=drivesdk" },
-        'Moonwalker': { name: "Moonwalker M", price: "₹2,30,000", reason: "Features individual leg movement, 7D massage, and advanced hand-squeezing technology.", img: imgPath + "moon%20walker.png", brochure: "https://drive.google.com/file/d/1sj5Nke9bnufTf6WLgWnT-NSlcdNmb94a/view?usp=drivesdk" },
-        'RX7': { name: "RX 7 Capsule", price: "₹2,00,000", reason: "Futuristic capsule design with AI body scan and voice control for total immersion.", img: imgPath + "Rx7.png", brochure: "https://drive.google.com/file/d/1L67tTygyJBolhqU-yzTNMA3l5Tc2xrYF/view?usp=drivesdk" },
-        'RXTwister': { name: "RX Twister", price: "₹1,90,000", reason: "Flexible SL track specializing in unique twisting and stretching relief for the spine.", img: imgPath + "Twister.png", brochure: "https://drive.google.com/file/d/1iiGM9ndKbAuFGuh_71uWSyR4LHX9fgKH/view?usp=drivesdk" },
-        'RX5Elite': { name: "RX-5 Elite", price: "₹1,70,000", reason: "Tri-motion calf rubbing and automatic leg stretching. Ideal for heavy-duty family use.", img: imgPath + "Rx5elite.png", brochure: "https://drive.google.com/file/d/1BBOuu_w2nA2q-L2E_xsWziP4ce8UNFJ9/view?usp=drivesdk" },
-        'RX3': { name: "RX-3 7D", price: "₹1,40,000", reason: "Best value 7D technology featuring an advanced dual SL track and calf rubbing.", img: imgPath + "Rx3.png", brochure: "https://drive.google.com/file/d/13wgxzLHPwaf2bR6Z8V5kjqkSdYRsop0u/view?usp=drivesdk" },
-        'Q9Sonic': { name: "Q9 Sonic", price: "₹1,35,000", reason: "Revolutionary Sonic Wave Massage that synchronizes intensity with your favorite music.", img: imgPath + "Q9Sonic.png", brochure: "https://drive.google.com/file/d/1Cm4C0f2iuuGB9MFuuXSpBvT71kOIlfCo/view?usp=drivesdk" },
-        'Q7-2': { name: "Q7 2.0", price: "₹1,30,000", reason: "Android touchscreen with TikTok controller. High entertainment value and calf rubbing.", img: imgPath + "Q7.png", brochure: "https://drive.google.com/file/d/1rRCqbR7813zVLhrRdyq0x7md5ZiCxZxb/view?usp=drivesdk" },
-        'R10': { name: "R10 4D", price: "₹90,000", reason: "Smart AI-powered relaxation with U-shaped head massage and extra cushioning.", img: imgPath + "R10.png", brochure: "https://drive.google.com/file/d/1KG-wYO2qqgO6YQxj1ADqnWOoyUj4SyMS/view?usp=drivesdk" },
-        'R9': { name: "R9 7D", price: "₹94,000", reason: "Human-touch rollers with butterfly head massage. Highly recommended for salons and gyms.", img: imgPath + "R9.png", brochure: "https://drive.google.com/file/d/1wr6BH1_XCzxkL0Y5X9kOPxY29KtE8Ln2/view?usp=drivesdk" },
-        'Q5': { name: "Q5 Model", price: "₹1,20,000", reason: "Balanced performance with wireless charging, AI body scan, and voice control.", img: imgPath + "Q5.png", brochure: "https://drive.google.com/file/d/1_Ivsz-mbsnoK3gtDEzWRu41ndSS9iUGo/view?usp=drivesdk" },
-        'R8Pro': { name: "R8 Pro", price: "₹70,000", reason: "Focus on thigh and calf recovery with premium faux leather and shortcut keys.", img: imgPath + "R8.png", brochure: "https://drive.google.com/file/d/1mvfLadnyET3vH7bYrRbyrHrbmvvgA0dS/view?usp=drivesdk" },
-        'R7Neo': { name: "R7 Neo", price: "₹65,000", reason: "Strong metal frame built for up to 150kg. Perfect for durability in commercial settings.", img: imgPath + "R7.png", brochure: "https://drive.google.com/file/d/118920SrFCzXGBwQi1B6HLmPp07741SGe/view?usp=drivesdk" },
+        'MonsterX': { name: "Monster X", price: "₹3,35,000", reason: "Our 7D flagship. Most powerful luxury relaxation for all body types with SL track precision.", img: imgPath + "monster.png", brochure: "https://drive.google.com/file/d/1As1RlVVutCDY9Lv2bVtgKr1mcLQlGmPO/view?usp=sharing" },
+        'Moonwalker': { name: "Moonwalker M", price: "₹2,30,000", reason: "Features individual leg movement, 7D massage, and advanced hand-squeezing technology.", img: imgPath + "moon%20walker.png", brochure: "https://drive.google.com/file/d/1sj5Nke9bnufTf6WLgWnT-NSlcdNmb94a/view?usp=sharing" },
+        'RX7': { name: "RX 7 Capsule", price: "₹2,00,000", reason: "Futuristic capsule design with AI body scan and voice control for total immersion.", img: imgPath + "Rx7.png", brochure: "https://drive.google.com/file/d/1L67tTygyJBolhqU-yzTNMA3l5Tc2xrYF/view?usp=sharing" },
+        'RXTwister': { name: "RX Twister", price: "₹1,90,000", reason: "Flexible SL track specializing in unique twisting and stretching relief for the spine.", img: imgPath + "Twister.png", brochure: "https://drive.google.com/file/d/1iiGM9ndKbAuFGuh_71uWSyR4LHX9fgKH/view?usp=sharing" },
+        'RX5Elite': { name: "RX-5 Elite", price: "₹1,70,000", reason: "Tri-motion calf rubbing and automatic leg stretching. Ideal for heavy-duty family use.", img: imgPath + "Rx5elite.png", brochure: "https://drive.google.com/file/d/1BBOuu_w2nA2q-L2E_xsWziP4ce8UNFJ9/view?usp=sharing" },
+        'RX3': { name: "RX-3 7D", price: "₹1,40,000", reason: "Best value 7D technology featuring an advanced dual SL track and calf rubbing.", img: imgPath + "Rx3.png", brochure: "https://drive.google.com/file/d/13wgxzLHPwaf2bR6Z8V5kjqkSdYRsop0u/view?usp=sharing" },
+        'Q9Sonic': { name: "Q9 Sonic", price: "₹1,35,000", reason: "Revolutionary Sonic Wave Massage that synchronizes intensity with your favorite music.", img: imgPath + "Q9Sonic.png", brochure: "https://drive.google.com/file/d/1Cm4C0f2iuuGB9MFuuXSpBvT71kOIlfCo/view?usp=sharing" },
+        'Q7-2': { name: "Q7 2.0", price: "₹1,30,000", reason: "Android touchscreen with TikTok controller. High entertainment value and calf rubbing.", img: imgPath + "Q7.png", brochure: "https://drive.google.com/file/d/1rRCqbR7813zVLhrRdyq0x7md5ZiCxZxb/view?usp=sharing" },
+        'R10': { name: "R10 4D", price: "₹90,000", reason: "Smart AI-powered relaxation with U-shaped head massage and extra cushioning.", img: imgPath + "R10.png", brochure: "https://drive.google.com/file/d/1KG-wYO2qqgO6YQxj1ADqnWOoyUj4SyMS/view?usp=sharing" },
+        'R9': { name: "R9 7D", price: "₹94,000", reason: "Human-touch rollers with butterfly head massage. Highly recommended for salons and gyms.", img: imgPath + "R9.png", brochure: "https://drive.google.com/file/d/1wr6BH1_XCzxkL0Y5X9kOPxY29KtE8Ln2/view?usp=sharing" },
+        'Q5': { name: "Q5 Model", price: "₹1,20,000", reason: "Balanced performance with wireless charging, AI body scan, and voice control.", img: imgPath + "Q5.png", brochure: "https://drive.google.com/file/d/1_Ivsz-mbsnoK3gtDEzWRu41ndSS9iUGo/view?usp=sharing" },
+        'R8Pro': { name: "R8 Pro", price: "₹70,000", reason: "Focus on thigh and calf recovery with premium faux leather and shortcut keys.", img: imgPath + "R8.png", brochure: "https://drive.google.com/file/d/1mvfLadnyET3vH7bYrRbyrHrbmvvgA0dS/view?usp=sharing" },
+        'R7Neo': { name: "R7 Neo", price: "₹65,000", reason: "Strong metal frame built for up to 150kg. Perfect for durability in commercial settings.", img: imgPath + "R7.png", brochure: "https://drive.google.com/file/d/118920SrFCzXGBwQi1B6HLmPp07741SGe/view?usp=sharing" },
         'R6': { name: "R6 4D", price: "₹50,000", reason: "Sturdy wooden frame combined with 4D relief and soothing eye massage.", img: imgPath + "R6.png", brochure: null },
-        'CoinChair': { name: "Coin Massage Chair", price: "₹1,50,000", reason: "Automatic revenue generator. Supports Coin and QR-UPI payments for public spaces.", img: imgPath + "coin.png", brochure: "https://drive.google.com/file/d/1QmjflU63Krv5x-0bPXJE9zuIN8Zuh5Eb/view?usp=drivesdk" }
+        'CoinChair': { name: "Coin Massage Chair", price: "₹1,50,000", reason: "Automatic revenue generator. Supports Coin and QR-UPI payments for public spaces.", img: imgPath + "coin.png", brochure: "https://drive.google.com/file/d/1QmjflU63Krv5x-0bPXJE9zuIN8Zuh5Eb/view?usp=sharing" }
     };
 
-    function updateNav() {
-        document.getElementById('back-btn').classList.toggle('visible', currentPath.length > 0);
-        document.getElementById('home-btn').classList.toggle('visible', currentPath.length > 0);
-    }
-
     function nextStep(choice) {
-        currentPath.push('step1');
-        document.getElementById('step1').classList.remove('active');
-        document.getElementById('step2').classList.add('active');
+        userPath = choice;
+        showScreen('step2');
         const container = document.getElementById('options-container');
-        const qText = document.getElementById('question-text');
-        updateNav();
-
         if(choice === 'personal') {
-            qText.innerText = "Select Personal Category:";
+            document.getElementById('question-text').innerText = "Select Personal Category:";
             container.innerHTML = `
                 <button class="btn" onclick="showBranch('luxury')">Luxury Models</button>
                 <button class="btn" onclick="showBranch('value')">Value Models</button>
                 <button class="btn" onclick="showBranch('budget')">Budget Models</button>
             `;
         } else {
-            qText.innerText = "Select Business Setting:";
+            document.getElementById('question-text').innerText = "Select Business Setting:";
             container.innerHTML = `
                 <button class="btn" onclick="showBranch('wellness')">Wellness or Spa</button>
                 <button class="btn" onclick="showBranch('saloon')">Saloon / Therapy / Mall</button>
@@ -159,7 +145,7 @@
     }
 
     function showBranch(type) {
-        currentPath.push('step2-category');
+        showScreen('step2-sub');
         const container = document.getElementById('options-container');
         if(type === 'luxury') {
             container.innerHTML = `<button class="btn" onclick="showFinal('MonsterX')">Monster X</button><button class="btn" onclick="showFinal('Moonwalker')">Moonwalker</button><button class="btn" onclick="showFinal('RX7')">RX 7 Capsule</button><button class="btn" onclick="showFinal('RXTwister')">RX Twister</button><button class="btn" onclick="showFinal('RX5Elite')">RX-5 Elite</button>`;
@@ -167,57 +153,54 @@
             container.innerHTML = `<button class="btn" onclick="showFinal('RX3')">RX-3</button><button class="btn" onclick="showFinal('Q9Sonic')">Q9 Sonic</button><button class="btn" onclick="showFinal('Q7-2')">Q7 2.0</button><button class="btn" onclick="showFinal('R10')">R10</button><button class="btn" onclick="showFinal('R9')">R9</button><button class="btn" onclick="showFinal('Q5')">Q5</button>`;
         } else if(type === 'budget') {
             container.innerHTML = `<button class="btn" onclick="showFinal('R8Pro')">R8 Pro</button><button class="btn" onclick="showFinal('R7Neo')">R7 Neo</button><button class="btn" onclick="showFinal('R6')">R6</button>`;
-        } else if(type === 'wellness') {
-            container.innerHTML = `<button class="btn" onclick="showFinal('R9')">R9 7D</button><button class="btn" onclick="showFinal('Q7-2')">Q7 2.0</button><button class="btn" onclick="showFinal('CoinChair')">Coin Massage Chair</button>`;
-        } else if(type === 'saloon') {
-            container.innerHTML = `<button class="btn" onclick="showFinal('R7Neo')">R7 Neo</button><button class="btn" onclick="showFinal('R9')">R9 7D</button><button class="btn" onclick="showFinal('CoinChair')">Coin Massage Chair</button><button class="btn" onclick="showFinal('Q7-2')">Q7 2.0</button>`;
+        } else {
+            container.innerHTML = `<button class="btn" onclick="showFinal('R9')">R9 7D</button><button class="btn" onclick="showFinal('Q7-2')">Q7 2.0</button><button class="btn" onclick="showFinal('CoinChair')">Coin Chair</button>`;
         }
     }
 
     function showFinal(modelKey) {
-        currentPath.push('step2-models');
-        document.getElementById('step2').classList.remove('active');
-        document.getElementById('step3').classList.add('active');
+        showScreen('step3');
         const item = products[modelKey];
-        const waLink = `https://wa.me/918319950609?text=Inquiry%20from%20Indore%20App:%20I%20am%20interested%20in%20the%20${encodeURIComponent(item.name)}%20model.`;
+        const waLink = `https://wa.me/918319950609?text=Inquiry%20for%20${encodeURIComponent(item.name)}`;
         
-        const brochureBtn = item.brochure ? `<a href="${item.brochure}" target="_blank" class="btn btn-brochure">📄 View Full Brochure</a>` : '';
-
         document.getElementById('product-display').innerHTML = `
             <div class="product-card">
                 <h3>${item.name}</h3>
-                <img src="${item.img}" alt="${item.name}" onerror="this.src='https://www.amtyglobal.com/wp-content/uploads/2023/08/Amty-Global-Logo.png'">
+                <img src="${item.img}" alt="${item.name}">
                 <span class="price-text">${item.price}</span>
                 <div class="offer-box">
-                    <strong>Current Offer Includes:</strong><br>
                     • Free Doorstep Delivery<br>
-                    • Easy Plug & Play (5-min setup)<br>
-                    • GST Included (No hidden costs)<br>
+                    • Easy Plug & Play Setup<br>
                     • 2 Years Full Warranty<br>
-                    • Lifetime Free Service<br>
-                    • No Cost EMI & Cashback available
+                    • Lifetime Free Service
                 </div>
-                <div style="background: #fff8e1; border-left: 4px solid var(--accent-color); padding: 10px; margin-bottom: 12px; font-size: 14px;"><strong>Expert Advice:</strong> ${item.reason}</div>
+                <div style="background: #fff8e1; border-left: 4px solid var(--accent-color); padding: 10px; margin-bottom: 12px; font-size: 14px;">${item.reason}</div>
                 <a href="${waLink}" class="btn btn-whatsapp">💬 Inquiry for this Model</a>
-                ${brochureBtn}
+                ${item.brochure ? `<a href="${item.brochure}" target="_blank" class="btn btn-brochure">📄 View Full Brochure</a>` : ''}
             </div>
         `;
-        updateNav();
+    }
+
+    function showScreen(screen) {
+        currentScreen = screen;
+        document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
+        if (screen === 'step2-sub') {
+            document.getElementById('step2').classList.add('active');
+        } else {
+            document.getElementById(screen).classList.add('active');
+        }
+        document.getElementById('back-btn').style.visibility = (screen === 'step1') ? 'hidden' : 'visible';
+        document.getElementById('home-btn').style.visibility = (screen === 'step1') ? 'hidden' : 'visible';
     }
 
     function goBack() {
-        const lastStep = currentPath.pop();
-        if (lastStep === 'step1') {
-            document.getElementById('step2').classList.remove('active');
-            document.getElementById('step1').classList.add('active');
-        } else if (lastStep === 'step2-category') {
-            nextStep(currentPath.includes('personal') ? 'personal' : 'commercial');
-            currentPath.pop();
-        } else if (lastStep === 'step2-models') {
-            document.getElementById('step3').classList.remove('active');
-            document.getElementById('step2').classList.add('active');
+        if (currentScreen === 'step3') {
+            showScreen('step2-sub');
+        } else if (currentScreen === 'step2-sub') {
+            nextStep(userPath);
+        } else if (currentScreen === 'step2') {
+            showScreen('step1');
         }
-        updateNav();
     }
 </script>
 </body>
