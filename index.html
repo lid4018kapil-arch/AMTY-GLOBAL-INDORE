@@ -17,35 +17,35 @@
         body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: var(--bg-color); display: flex; justify-content: center; }
         #app-container { width: 100%; max-width: 500px; background: white; min-height: 100vh; padding: 20px; display: flex; flex-direction: column; box-sizing: border-box; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
         
-        .nav-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 5px; min-height: 30px; }
-        .nav-btn { background: none; border: none; font-size: 14px; color: var(--primary-color); cursor: pointer; font-weight: bold; visibility: hidden; }
+        /* Fixed Back Navigation Logic UI */
+        .nav-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 5px; min-height: 35px; }
+        .nav-btn { background: #f0f0f0; border: none; font-size: 13px; color: var(--primary-color); cursor: pointer; font-weight: bold; padding: 5px 12px; border-radius: 15px; visibility: hidden; }
         .nav-btn.visible { visibility: visible; }
         
         .header { text-align: center; padding-bottom: 15px; border-bottom: 2px solid var(--accent-color); margin-bottom: 15px; }
-        .logo-img { width: 180px; height: auto; margin-bottom: 10px; border-radius: 5px; }
+        .logo-img { width: 100%; max-width: 280px; height: auto; margin-bottom: 5px; }
         
-        .card { display: none; text-align: center; animation: fadeIn 0.4s ease-in-out; }
+        .card { display: none; text-align: center; animation: fadeIn 0.3s ease-in-out; }
         .card.active { display: block; }
         
-        .btn { display: block; width: 100%; padding: 16px; margin: 10px 0; background: var(--primary-color); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; text-decoration: none; box-sizing: border-box; transition: 0.3s; }
-        .btn:active { transform: scale(0.98); }
+        .btn { display: block; width: 100%; padding: 16px; margin: 10px 0; background: var(--primary-color); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; text-decoration: none; box-sizing: border-box; transition: 0.2s; }
+        .btn:active { transform: scale(0.97); }
         .btn-call { background: var(--accent-color); color: #000; }
         .btn-whatsapp { background: #25D366; color: #fff; }
-        .btn-outline { background: transparent; border: 2px solid var(--primary-color); color: var(--primary-color); font-size: 13px; padding: 8px 15px; margin-top: 5px; width: auto; display: inline-block; border-radius: 20px; }
-        .btn-brochure { background: #555; color: #fff; font-size: 13px; padding: 10px; border-radius: 6px; margin-top: 8px; display: inline-block; width: 100%; text-align: center; }
+        .btn-outline { background: transparent; border: 2px solid var(--primary-color); color: var(--primary-color); font-size: 13px; padding: 8px 15px; margin-top: 5px; width: auto; display: inline-block; border-radius: 20px; font-weight: bold; }
         
         .trust-section { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 15px; margin: 20px 0; text-align: center; }
         .google-rating { display: inline-block; text-decoration: none; color: #333; font-weight: bold; margin-bottom: 10px; }
         .stars { color: #f4b400; font-size: 18px; margin: 0 5px; }
-        .insta-btn { background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); color: white; padding: 10px; border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: bold; display: flex; align-items: center; justify-content: center; width: 100%; box-sizing: border-box; }
+        .insta-btn { background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); color: white; padding: 12px; border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: bold; display: flex; align-items: center; justify-content: center; width: 100%; box-sizing: border-box; }
 
         .product-card { border: 1px solid #ddd; padding: 15px; border-radius: 12px; margin: 20px 0; text-align: left; }
-        .offer-box { background: #e8f5e9; border: 1px dashed #2e7d32; padding: 10px; margin-bottom: 15px; font-size: 13px; color: #1b5e20; border-radius: 8px; }
-        .price-text { font-size: 20px; color: #c62828; font-weight: bold; margin-bottom: 5px; display: block; }
+        .offer-box { background: #e8f5e9; border: 1px dashed #2e7d32; padding: 12px; margin-bottom: 15px; font-size: 13px; color: #1b5e20; border-radius: 8px; line-height: 1.5; }
+        .price-text { font-size: 22px; color: #c62828; font-weight: bold; margin-bottom: 5px; display: block; }
         .product-card img { width: 100%; border-radius: 8px; margin-bottom: 10px; background: #f9f9f9; min-height: 200px; object-fit: contain; }
         
-        .contact-footer { margin-top: auto; padding: 20px; border-top: 1px solid #ddd; font-size: 14px; text-align: center; color: #666; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .contact-footer { margin-top: auto; padding: 20px; border-top: 1px solid #ddd; font-size: 13px; text-align: center; color: #555; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
 </head>
 <body>
@@ -57,14 +57,15 @@
     </div>
 
     <div class="header">
-        <img src="https://raw.githubusercontent.com/lid4018kapil-arch/AMTY-GLOBAL-INDORE/main/amtyindorelogo.jpg" alt="AMTY Global Indore" class="logo-img">
-        <p style="font-weight: bold; color: var(--accent-color); margin: 0;">✨ Premium Massage Chairs ✨</p>
-        <a href="https://drive.google.com/file/d/1Bp1zIZAroIwzCXATYo7I7oxgGrMXvzrm/view?usp=sharing" target="_blank" class="btn btn-outline">📖 Full 2026 Catalogue</a>
+        <img src="https://raw.githubusercontent.com/lid4018kapil-arch/AMTY-GLOBAL-INDORE/main/1770923362567.png" alt="AMTY Global Indore" class="logo-img">
+        <div style="margin-top: 5px;">
+            <a href="https://drive.google.com/file/d/1Bp1zIZAroIwzCXATYo7I7oxgGrMXvzrm/view?usp=sharing" target="_blank" class="btn btn-outline">📖 Full 2026 Catalogue</a>
+        </div>
     </div>
 
     <div id="step1" class="card active">
-        <h2>Find Your Perfect Match</h2>
-        <p>Expertly categorized for your home or business.</p>
+        <h2 style="color: var(--primary-color);">Find Your Perfect Match</h2>
+        <p>Select your requirement to see the best models</p>
         <button class="btn" onclick="nextStep('personal')">For Personal Use</button>
         <button class="btn" onclick="nextStep('commercial')">For Commercial Use</button>
 
@@ -72,38 +73,38 @@
             <a href="https://search.google.com/local/reviews?placeid=ChIJm2Hk06WcaDoRP6-VfNnQnxM" target="_blank" class="google-rating">
                 GOOGLE RATING: <span class="stars">★★★★★</span> 4.9/5
             </a>
-            <p style="font-size: 12px; margin: 0 0 15px 0;">Indore's Most Trusted Showroom</p>
+            <p style="font-size: 12px; margin: 0 0 15px 0;">Indore's #1 Rated Showroom</p>
             <a href="https://www.instagram.com/amtyglobal.indore/" target="_blank" class="insta-btn">
-                📸 Follow on Instagram
+                📸 Follow us for Live Demos
             </a>
         </div>
     </div>
 
     <div id="step2" class="card">
-        <h2 id="question-text">Select Category:</h2>
+        <h2 id="question-text" style="color: var(--primary-color);">Select Category:</h2>
         <div id="options-container"></div>
     </div>
 
     <div id="step3" class="card">
         <h2 style="color: var(--accent-color);">Expert Recommendation</h2>
         <div id="product-display"></div>
-        <div style="background: #f0f4f8; padding: 15px; border-radius: 10px; margin-top: 10px; border-left: 5px solid var(--primary-color);">
+        <div style="background: #f0f4f8; padding: 15px; border-radius: 10px; margin-top: 10px; border-left: 5px solid var(--primary-color); text-align: left;">
             <p style="font-weight: bold; margin: 0 0 5px 0;">Visit for a Live Demo!</p>
-            <p style="font-size: 13px; margin: 0 0 15px 0;">999 Khatiwala Tank, Indore</p>
-            <a href="tel:+918319950609" class="btn btn-call">📞 Call Now for Best Price</a>
+            <p style="font-size: 13px; margin: 0 0 12px 0;">📍 999 Khatiwala Tank, Indore</p>
+            <a href="tel:+918319950609" class="btn btn-call" style="margin: 0;">📞 Call: +91 83199-50609</a>
         </div>
     </div>
 
     <div class="contact-footer">
-        Showroom: 999 Khatiwala Tank, Indore<br>
-        <a href="tel:+918319950609" style="text-decoration:none; color: var(--primary-color); font-weight: bold;">+91 83199-50609</a>
+        <strong>Showroom:</strong> 999 Khatiwala Tank, Indore<br>
+        Open All Week • Expert Support
     </div>
 </div>
 
 <script>
     const imgPath = "https://lid4018kapil-arch.github.io/AMTY-GLOBAL-INDORE/";
-    let currentScreen = 'step1';
-    let userPath = ''; // 'personal' or 'commercial'
+    let historyStack = ['step1'];
+    let currentPathType = ''; 
 
     const products = {
         'MonsterX': { name: "Monster X", price: "₹3,35,000", reason: "Our 7D flagship. Most powerful luxury relaxation for all body types with SL track precision.", img: imgPath + "monster.png", brochure: "https://drive.google.com/file/d/1As1RlVVutCDY9Lv2bVtgKr1mcLQlGmPO/view?usp=sharing" },
@@ -123,11 +124,28 @@
         'CoinChair': { name: "Coin Massage Chair", price: "₹1,50,000", reason: "Automatic revenue generator. Supports Coin and QR-UPI payments for public spaces.", img: imgPath + "coin.png", brochure: "https://drive.google.com/file/d/1QmjflU63Krv5x-0bPXJE9zuIN8Zuh5Eb/view?usp=sharing" }
     };
 
+    function navigateTo(screenId) {
+        document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
+        document.getElementById(screenId === 'step2-sub' ? 'step2' : screenId).classList.add('active');
+        historyStack.push(screenId);
+        updateNavButtons();
+    }
+
+    function updateNavButtons() {
+        const isStart = historyStack.length <= 1;
+        document.getElementById('back-btn').classList.toggle('visible', !isStart);
+        document.getElementById('home-btn').classList.toggle('visible', !isStart);
+    }
+
     function nextStep(choice) {
-        userPath = choice;
-        showScreen('step2');
+        currentPathType = choice;
+        navigateTo('step2');
+        renderCategories();
+    }
+
+    function renderCategories() {
         const container = document.getElementById('options-container');
-        if(choice === 'personal') {
+        if(currentPathType === 'personal') {
             document.getElementById('question-text').innerText = "Select Personal Category:";
             container.innerHTML = `
                 <button class="btn" onclick="showBranch('luxury')">Luxury Models</button>
@@ -145,62 +163,66 @@
     }
 
     function showBranch(type) {
-        showScreen('step2-sub');
+        navigateTo('step2-sub');
         const container = document.getElementById('options-container');
-        if(type === 'luxury') {
-            container.innerHTML = `<button class="btn" onclick="showFinal('MonsterX')">Monster X</button><button class="btn" onclick="showFinal('Moonwalker')">Moonwalker</button><button class="btn" onclick="showFinal('RX7')">RX 7 Capsule</button><button class="btn" onclick="showFinal('RXTwister')">RX Twister</button><button class="btn" onclick="showFinal('RX5Elite')">RX-5 Elite</button>`;
-        } else if(type === 'value') {
-            container.innerHTML = `<button class="btn" onclick="showFinal('RX3')">RX-3</button><button class="btn" onclick="showFinal('Q9Sonic')">Q9 Sonic</button><button class="btn" onclick="showFinal('Q7-2')">Q7 2.0</button><button class="btn" onclick="showFinal('R10')">R10</button><button class="btn" onclick="showFinal('R9')">R9</button><button class="btn" onclick="showFinal('Q5')">Q5</button>`;
-        } else if(type === 'budget') {
-            container.innerHTML = `<button class="btn" onclick="showFinal('R8Pro')">R8 Pro</button><button class="btn" onclick="showFinal('R7Neo')">R7 Neo</button><button class="btn" onclick="showFinal('R6')">R6</button>`;
-        } else {
-            container.innerHTML = `<button class="btn" onclick="showFinal('R9')">R9 7D</button><button class="btn" onclick="showFinal('Q7-2')">Q7 2.0</button><button class="btn" onclick="showFinal('CoinChair')">Coin Chair</button>`;
-        }
+        document.getElementById('question-text').innerText = "Pick a Model:";
+        
+        let models = [];
+        if(type === 'luxury') models = ['MonsterX', 'Moonwalker', 'RX7', 'RXTwister', 'RX5Elite'];
+        else if(type === 'value') models = ['RX3', 'Q9Sonic', 'Q7-2', 'R10', 'R9', 'Q5'];
+        else if(type === 'budget') models = ['R8Pro', 'R7Neo', 'R6'];
+        else models = ['R9', 'Q7-2', 'CoinChair'];
+
+        container.innerHTML = models.map(m => `<button class="btn" onclick="showFinal('${m}')">${products[m].name}</button>`).join('');
     }
 
     function showFinal(modelKey) {
-        showScreen('step3');
+        navigateTo('step3');
         const item = products[modelKey];
         const waLink = `https://wa.me/918319950609?text=Inquiry%20for%20${encodeURIComponent(item.name)}`;
         
         document.getElementById('product-display').innerHTML = `
             <div class="product-card">
-                <h3>${item.name}</h3>
+                <h3 style="margin-top:0; color:var(--primary-color);">${item.name}</h3>
                 <img src="${item.img}" alt="${item.name}">
                 <span class="price-text">${item.price}</span>
                 <div class="offer-box">
-                    • Free Doorstep Delivery<br>
-                    • Easy Plug & Play Setup<br>
-                    • 2 Years Full Warranty<br>
-                    • Lifetime Free Service
+                    <strong>Exclusive Offer:</strong><br>
+                    ✅ Free Doorstep Delivery<br>
+                    ✅ Easy Plug & Play (5-min setup)<br>
+                    ✅ GST Included<br>
+                    ✅ 2 Years Full Warranty<br>
+                    ✅ Lifetime Free Service
                 </div>
-                <div style="background: #fff8e1; border-left: 4px solid var(--accent-color); padding: 10px; margin-bottom: 12px; font-size: 14px;">${item.reason}</div>
-                <a href="${waLink}" class="btn btn-whatsapp">💬 Inquiry for this Model</a>
-                ${item.brochure ? `<a href="${item.brochure}" target="_blank" class="btn btn-brochure">📄 View Full Brochure</a>` : ''}
+                <div style="background: #fff8e1; border-left: 4px solid var(--accent-color); padding: 12px; margin-bottom: 12px; font-size: 14px;"><strong>Why this?</strong> ${item.reason}</div>
+                <a href="${waLink}" class="btn btn-whatsapp">💬 Inquiry on WhatsApp</a>
+                ${item.brochure ? `<a href="${item.brochure}" target="_blank" class="btn btn-outline" style="width:100%; text-align:center;">📄 View Full Brochure</a>` : ''}
             </div>
         `;
     }
 
-    function showScreen(screen) {
-        currentScreen = screen;
-        document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
-        if (screen === 'step2-sub') {
-            document.getElementById('step2').classList.add('active');
-        } else {
-            document.getElementById(screen).classList.add('active');
-        }
-        document.getElementById('back-btn').style.visibility = (screen === 'step1') ? 'hidden' : 'visible';
-        document.getElementById('home-btn').style.visibility = (screen === 'step1') ? 'hidden' : 'visible';
-    }
-
     function goBack() {
-        if (currentScreen === 'step3') {
-            showScreen('step2-sub');
-        } else if (currentScreen === 'step2-sub') {
-            nextStep(userPath);
-        } else if (currentScreen === 'step2') {
-            showScreen('step1');
+        if (historyStack.length <= 1) return;
+        historyStack.pop(); // Remove current
+        const prevScreen = historyStack.pop(); // Get previous
+        
+        if (prevScreen === 'step1') {
+            document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
+            document.getElementById('step1').classList.add('active');
+            historyStack = ['step1'];
+        } else if (prevScreen === 'step2') {
+            nextStep(currentPathType);
+        } else if (prevScreen === 'step2-sub') {
+            // This is handled by renderCategories logic usually, but for simple back:
+            showScreenById('step2');
         }
+        updateNavButtons();
+    }
+    
+    function showScreenById(id) {
+        document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+        historyStack.push(id);
     }
 </script>
 </body>
