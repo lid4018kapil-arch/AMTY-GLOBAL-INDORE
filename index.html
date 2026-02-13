@@ -15,49 +15,56 @@
     <style>
         :root { --primary-color: #003366; --accent-color: #d4af37; --bg-color: #f4f4f9; }
         body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: var(--bg-color); display: flex; justify-content: center; }
-        #app-container { width: 100%; max-width: 500px; background: white; min-height: 100vh; padding: 20px; display: flex; flex-direction: column; box-sizing: border-box; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
         
-        /* Navigation */
-        .nav-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 5px; min-height: 35px; }
+        /* FIX 1: Sticky Navigation Bar */
+        .nav-header { 
+            position: sticky; 
+            top: 0; 
+            background: white; 
+            z-index: 1000; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 10px 20px; 
+            min-height: 40px; 
+            border-bottom: 1px solid #eee;
+            width: 100%;
+            max-width: 500px;
+            box-sizing: border-box;
+        }
+        
+        #app-container { width: 100%; max-width: 500px; background: white; min-height: 100vh; display: flex; flex-direction: column; box-sizing: border-box; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+        
+        .content-padding { padding: 0 20px 20px 20px; }
+
         .nav-btn { background: #f0f0f0; border: none; font-size: 13px; color: var(--primary-color); cursor: pointer; font-weight: bold; padding: 6px 14px; border-radius: 20px; visibility: hidden; }
         .nav-btn.visible { visibility: visible; }
         
-        /* Header */
-        .header { text-align: center; padding-bottom: 15px; border-bottom: 2px solid var(--accent-color); margin-bottom: 15px; }
+        .header { text-align: center; padding-bottom: 15px; border-bottom: 2px solid var(--accent-color); margin: 15px 20px; }
         .logo-img { width: 100%; max-width: 280px; height: auto; }
         
-        /* Advantage Section */
+        /* Rest of your existing styles... */
         .hero-banner { background: linear-gradient(135deg, #003366 0%, #001a33 100%); color: white; padding: 18px; border-radius: 12px; margin-bottom: 15px; text-align: center; }
         .hero-banner h2 { margin: 0; font-size: 22px; color: var(--accent-color); }
         .hero-banner p { margin: 5px 0 0 0; font-size: 14px; opacity: 0.9; }
-
         .advantage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 15px 0; text-align: left; }
         .adv-item { background: #fff; border: 1px solid #e0e0e0; padding: 12px; border-radius: 8px; font-size: 12px; line-height: 1.4; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
         .adv-item strong { color: var(--primary-color); font-size: 14px; display: block; margin-bottom: 3px; }
-
-        /* Cards & Buttons */
         .card { display: none; text-align: center; animation: fadeIn 0.3s ease-in-out; }
         .card.active { display: block; }
-        
         .btn { display: block; width: 100%; padding: 16px; margin: 10px 0; background: var(--primary-color); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; text-decoration: none; box-sizing: border-box; transition: 0.2s; text-align: center; }
         .btn:active { transform: scale(0.97); }
-        
         .btn-call { background: var(--accent-color); color: #000; animation: pulse-yellow 2s infinite; }
         .btn-whatsapp { background: #25D366; color: #fff; animation: pulse-green 2s infinite; }
         .btn-maps { background: #4285F4; color: #fff; margin-top: 15px; }
         .btn-outline { background: transparent; border: 2px solid var(--primary-color); color: var(--primary-color); font-size: 13px; padding: 8px 15px; width: auto; display: inline-block; border-radius: 20px; font-weight: bold; }
         .btn-brochure { background: #555; color: white; font-size: 14px; padding: 12px; margin-top: 10px; border-radius: 8px; width: 100%; }
-
-        @keyframes pulse-yellow { 0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); } 70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); } 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); } }
-        @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); } 70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
-
         .trust-section { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 15px; margin: 20px 0; text-align: center; }
         .stars { color: #f4b400; font-size: 18px; margin: 0 5px; }
         .product-card { border: 1px solid #ddd; padding: 15px; border-radius: 12px; margin: 15px 0; text-align: left; }
         .offer-box { background: #e8f5e9; border: 1px dashed #2e7d32; padding: 12px; margin-bottom: 15px; font-size: 13px; color: #1b5e20; border-radius: 8px; line-height: 1.6; }
         .price-text { font-size: 22px; color: #c62828; font-weight: bold; margin-bottom: 5px; display: block; }
         .product-card img { width: 100%; border-radius: 8px; margin-bottom: 10px; background: #f9f9f9; min-height: 200px; object-fit: contain; }
-        
         .contact-footer { margin-top: auto; padding: 20px; border-top: 1px solid #ddd; font-size: 13px; text-align: center; color: #555; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
@@ -77,67 +84,44 @@
         </div>
     </div>
 
-    <div id="step1" class="card active">
-        <div class="hero-banner">
-            <h2>The AMTY Advantage</h2>
-            <p>Experience India's Most Trusted Wellness Brand</p>
-        </div>
-
-        <div class="advantage-grid">
-            <div class="adv-item">
-                <strong>Widest Range</strong>
-                15+ Premium Models for every body type & budget.
+    <div class="content-padding">
+        <div id="step1" class="card active">
+            <div class="hero-banner">
+                <h2>The AMTY Advantage</h2>
+                <p>Experience India's Most Trusted Wellness Brand</p>
             </div>
-            <div class="adv-item">
-                <strong>Starting ₹50,000</strong>
-                High-end 4D Massage technology made affordable.
+            <div class="advantage-grid">
+                <div class="adv-item"><strong>Widest Range</strong>15+ Models for every body type.</div>
+                <div class="adv-item"><strong>Starting ₹50,000</strong>High-end 4D technology made affordable.</div>
+                <div class="adv-item"><strong>PAN India Presence</strong>12+ Direct Company Showrooms.</div>
+                <div class="adv-item"><strong>Service Leader</strong>Best rated after-sales tech support.</div>
             </div>
-            <div class="adv-item">
-                <strong>PAN India Presence</strong>
-                12+ Direct Company Showrooms across India.
-            </div>
-            <div class="adv-item">
-                <strong>Service Leader</strong>
-                Best rated in after-sales service & tech support.
-            </div>
-        </div>
-
-        <h3 style="color: var(--primary-color); margin: 20px 0 10px 0;">Find Your Perfect Match:</h3>
-        <button class="btn" onclick="toStep2('personal')">🏠 For Home / Personal Use</button>
-        <button class="btn" onclick="toStep2('commercial')" style="background: #444;">🏢 For Business / Commercial</button>
-
-        <div class="trust-section">
-            <strong>GOOGLE RATING: <span class="stars">★★★★★</span> 5.0/5</strong>
-            <p style="font-size: 12px; margin: 5px 0 15px 0;">Showroom: 999 Khatiwala Tank, Indore</p>
-            
-            <a href="https://www.google.com/maps/dir/?api=1&destination=AMTY+GLOBAL+INDORE+999+Khatiwala+Tank" target="_blank" class="btn btn-maps">📍 Drive to Showroom (Google Maps)</a>
-            
-            <div style="display: flex; gap: 10px; margin-top: 10px;">
-                <a href="tel:+918319950609" class="btn btn-call" style="flex: 1; font-size: 14px;">📞 Call Expert</a>
-                <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Indore,%20I%20scanned%20your%20QR%20code%20and%20want%20to%20know%20more." class="btn btn-whatsapp" style="flex: 1; font-size: 14px;">💬 WhatsApp</a>
+            <h3 style="color: var(--primary-color);">Find Your Perfect Match:</h3>
+            <button class="btn" onclick="toStep2('personal')">🏠 For Home / Personal Use</button>
+            <button class="btn" onclick="toStep2('commercial')" style="background: #444;">🏢 For Business / Commercial</button>
+            <div class="trust-section">
+                <strong>GOOGLE RATING: <span class="stars">★★★★★</span> 5.0/5</strong>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=AMTY+Global+Indore" target="_blank" class="btn btn-maps">📍 Drive to Showroom</a>
+                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                    <a href="tel:+918319950609" class="btn btn-call" style="flex: 1;">📞 Call</a>
+                    <a href="https://wa.me/918319950609" class="btn btn-whatsapp" style="flex: 1;">💬 WhatsApp</a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div id="step2" class="card">
-        <h2 id="step2-title" style="color: var(--primary-color);">Select Category:</h2>
-        <div id="step2-options"></div>
-    </div>
+        <div id="step2" class="card">
+            <h2 id="step2-title">Select Category:</h2>
+            <div id="step2-options"></div>
+        </div>
 
-    <div id="step3" class="card">
-        <h2 id="step3-title" style="color: var(--primary-color);">Select Model:</h2>
-        <div id="step3-options"></div>
-    </div>
+        <div id="step3" class="card">
+            <h2 id="step3-title">Select Model:</h2>
+            <div id="step3-options"></div>
+        </div>
 
-    <div id="step4" class="card">
-        <h2 style="color: var(--accent-color);">Expert Recommendation</h2>
-        <div id="product-display"></div>
-        
-        <div style="background: #f0f4f8; padding: 15px; border-radius: 10px; margin-top: 10px; border-left: 5px solid var(--primary-color); text-align: left;">
-            <p style="font-weight: bold; margin: 0 0 5px 0;">Visit Showroom to Try It!</p>
-            <p style="font-size: 13px; margin: 0 0 12px 0;">📍 999 Khatiwala Tank, near Khanuja Garden, Indore</p>
-            <a href="https://www.google.com/maps/dir/?api=1&destination=AMTY+GLOBAL+INDORE+999+Khatiwala+Tank" target="_blank" class="btn btn-maps" style="margin: 0 0 10px 0;">📍 Get Directions</a>
-            <a href="tel:+918319950609" class="btn btn-call" style="margin: 0;">📞 Call Showroom</a>
+        <div id="step4" class="card">
+            <h2 style="color: var(--accent-color);">Expert Recommendation</h2>
+            <div id="product-display"></div>
         </div>
     </div>
 
@@ -149,34 +133,51 @@
 
 <script>
     const imgPath = "https://lid4018kapil-arch.github.io/AMTY-GLOBAL-INDORE/";
+    const products = {
+        'MonsterX': { name: "Monster X", price: "₹3,35,000", reason: "Our 7D flagship. Most powerful luxury relaxation.", img: imgPath + "monster.png", brochure: "https://drive.google.com/file/d/1As1RlVVutCDY9Lv2bVtgKr1mcLQlGmPO/view?usp=sharing" },
+        'Moonwalker': { name: "Moonwalker M", price: "₹2,30,000", reason: "Features advanced hand-squeezing tech.", img: imgPath + "moon%20walker.png", brochure: "https://drive.google.com/file/d/1sj5Nke9bnufTf6WLgWnT-NSlcdNmb94a/view?usp=sharing" },
+        'RX7': { name: "RX 7 Capsule", price: "₹2,00,000", reason: "Futuristic design with AI body scan.", img: imgPath + "Rx7.png" },
+        'RXTwister': { name: "RX Twister", price: "₹1,90,000", reason: "Unique twisting and stretching for the spine.", img: imgPath + "Twister.png" },
+        'RX5Elite': { name: "RX-5 Elite", price: "₹1,70,000", reason: "Tri-motion calf rubbing.", img: imgPath + "Rx5elite.png" },
+        'RX3': { name: "RX-3 7D", price: "₹1,40,000", reason: "Best value 7D technology.", img: imgPath + "Rx3.png" },
+        'Q9Sonic': { name: "Q9 Sonic", price: "₹1,35,000", reason: "Sonic Wave Massage synced with music.", img: imgPath + "Q9Sonic.png" },
+        'Q7-2': { name: "Q7 2.0", price: "₹1,30,000", reason: "Android touchscreen with TikTok controller.", img: imgPath + "Q7.png" },
+        'R10': { name: "R10 4D", price: "₹90,000", reason: "AI-powered relaxation.", img: imgPath + "R10.png" },
+        'R9': { name: "R9 7D", price: "₹94,000", reason: "Butterfly head massage.", img: imgPath + "R9.png" },
+        'Q5': { name: "Q5 Model", price: "₹1,20,000", reason: "Wireless charging and voice control.", img: imgPath + "Q5.png" },
+        'R8Pro': { name: "R8 Pro", price: "₹70,000", reason: "Focus on thigh and calf recovery.", img: imgPath + "R8.png" },
+        'R7Neo': { name: "R7 Neo", price: "₹65,000", reason: "Strong metal frame built for up to 150kg.", img: imgPath + "R7.png" },
+        'R6': { name: "R6 4D", price: "₹50,000", reason: "Sturdy wooden frame.", img: imgPath + "R6.png" },
+        'CoinChair': { name: "Coin Massage Chair", price: "₹1,50,000", reason: "Supports Coin and QR-UPI.", img: imgPath + "coin.png" }
+    };
+
     let currentStep = 1;
     let selectedType = '';
 
-    const products = {
-        'MonsterX': { name: "Monster X", price: "₹3,35,000", reason: "Our 7D flagship. Most powerful luxury relaxation for all body types.", img: imgPath + "monster.png", brochure: "https://drive.google.com/file/d/1As1RlVVutCDY9Lv2bVtgKr1mcLQlGmPO/view?usp=sharing" },
-        'Moonwalker': { name: "Moonwalker M", price: "₹2,30,000", reason: "Features individual leg movement and advanced hand-squeezing tech.", img: imgPath + "moon%20walker.png", brochure: "https://drive.google.com/file/d/1sj5Nke9bnufTf6WLgWnT-NSlcdNmb94a/view?usp=sharing" },
-        'RX7': { name: "RX 7 Capsule", price: "₹2,00,000", reason: "Futuristic capsule design with AI body scan and voice control.", img: imgPath + "Rx7.png", brochure: "https://drive.google.com/file/d/1L67tTygyJBolhqU-yzTNMA3l5Tc2xrYF/view?usp=sharing" },
-        'RXTwister': { name: "RX Twister", price: "₹1,90,000", reason: "Specializing in unique twisting and stretching relief for the spine.", img: imgPath + "Twister.png", brochure: "https://drive.google.com/file/d/1iiGM9ndKbAuFGuh_71uWSyR4LHX9fgKH/view?usp=sharing" },
-        'RX5Elite': { name: "RX-5 Elite", price: "₹1,70,000", reason: "Tri-motion calf rubbing. Ideal for heavy-duty family use.", img: imgPath + "Rx5elite.png", brochure: "https://drive.google.com/file/d/1BBOuu_w2nA2q-L2E_xsWziP4ce8UNFJ9/view?usp=sharing" },
-        'RX3': { name: "RX-3 7D", price: "₹1,40,000", reason: "Best value 7D technology featuring an advanced dual SL track.", img: imgPath + "Rx3.png", brochure: "https://drive.google.com/file/d/13wgxzLHPwaf2bR6Z8V5kjqkSdYRsop0u/view?usp=sharing" },
-        'Q9Sonic': { name: "Q9 Sonic", price: "₹1,35,000", reason: "Revolutionary Sonic Wave Massage synced with music.", img: imgPath + "Q9Sonic.png", brochure: "https://drive.google.com/file/d/1Cm4C0f2iuuGB9MFuuXSpBvT71kOIlfCo/view?usp=sharing" },
-        'Q7-2': { name: "Q7 2.0", price: "₹1,30,000", reason: "Android touchscreen with TikTok controller. High entertainment.", img: imgPath + "Q7.png", brochure: "https://drive.google.com/file/d/1rRCqbR7813zVLhrRdyq0x7md5ZiCxZxb/view?usp=sharing" },
-        'R10': { name: "R10 4D", price: "₹90,000", reason: "AI-powered relaxation with U-shaped head massage.", img: imgPath + "R10.png", brochure: "https://drive.google.com/file/d/1KG-wYO2qqgO6YQxj1ADqnWOoyUj4SyMS/view?usp=sharing" },
-        'R9': { name: "R9 7D", price: "₹94,000", reason: "Butterfly head massage. Recommended for salons and gyms.", img: imgPath + "R9.png", brochure: "https://drive.google.com/file/d/1wr6BH1_XCzxkL0Y5X9kOPxY29KtE8Ln2/view?usp=sharing" },
-        'Q5': { name: "Q5 Model", price: "₹1,20,000", reason: "Balanced performance with wireless charging and voice control.", img: imgPath + "Q5.png", brochure: "https://drive.google.com/file/d/1_Ivsz-mbsnoK3gtDEzWRu41ndSS9iUGo/view?usp=sharing" },
-        'R8Pro': { name: "R8 Pro", price: "₹70,000", reason: "Focus on thigh and calf recovery with premium faux leather.", img: imgPath + "R8.png", brochure: "https://drive.google.com/file/d/1mvfLadnyET3vH7bYrRbyrHrbmvvgA0dS/view?usp=sharing" },
-        'R7Neo': { name: "R7 Neo", price: "₹65,000", reason: "Strong metal frame built for up to 150kg. Perfect for durability.", img: imgPath + "R7.png", brochure: "https://drive.google.com/file/d/118920SrFCzXGBwQi1B6HLmPp07741SGe/view?usp=sharing" },
-        'R6': { name: "R6 4D", price: "₹50,000", reason: "Sturdy wooden frame combined with 4D relief.", img: imgPath + "R6.png", brochure: null },
-        'CoinChair': { name: "Coin Massage Chair", price: "₹1,50,000", reason: "Automatic revenue generator. Supports Coin and QR-UPI.", img: imgPath + "coin.png", brochure: "https://drive.google.com/file/d/1QmjflU63Krv5x-0bPXJE9zuIN8Zuh5Eb/view?usp=sharing" }
-    };
-
-    function switchCard(stepId) {
+    // FIX 2: History Navigation Logic
+    function switchCard(stepId, pushHistory = true) {
         document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
         document.getElementById('step' + stepId).classList.add('active');
         currentStep = stepId;
+        
         document.getElementById('back-btn').style.visibility = (stepId === 1) ? 'hidden' : 'visible';
         document.getElementById('home-btn').style.visibility = (stepId === 1) ? 'hidden' : 'visible';
+        
+        window.scrollTo(0, 0); // Always scroll to top when changing steps
+
+        if (pushHistory) {
+            history.pushState({ step: stepId }, `Step ${stepId}`);
+        }
     }
+
+    // Handle Phone Back Button
+    window.onpopstate = function(event) {
+        if (event.state && event.state.step) {
+            switchCard(event.state.step, false);
+        } else {
+            switchCard(1, false);
+        }
+    };
 
     function toStep2(type) {
         selectedType = type;
@@ -203,34 +204,31 @@
 
     function showFinal(modelKey) {
         const item = products[modelKey];
-        const waLink = `https://wa.me/918319950609?text=Inquiry%20for%20${encodeURIComponent(item.name)}`;
         document.getElementById('product-display').innerHTML = `
             <div class="product-card">
-                <h3 style="margin:0; color:var(--primary-color);">${item.name}</h3>
+                <h3 style="color:var(--primary-color);">${item.name}</h3>
                 <img src="${item.img}" alt="${item.name}">
                 <span class="price-text">${item.price}</span>
                 <div class="offer-box">
-                    <strong>Exclusive Showroom Benefits:</strong><br>
-                    ✅ Free doorstep delivery<br>
-                    ✅ Plug & use 5-min self installation<br>
-                    ✅ GST included in price<br>
-                    ✅ 2 years full warranty<br>
-                    ✅ Lifetime free service support<br>
-                    ✅ No-cost EMI & Cashback available*
+                    <strong>Indore Exclusive Benefits:</strong><br>
+                    ✅ Free doorstep delivery & 5-min installation<br>
+                    ✅ 2 Years Full Warranty | Lifetime Service<br>
+                    ✅ No-cost EMI & Credit Card Cashback
                 </div>
-                <p style="font-size:14px; color:#555;"><strong>Expert Advice:</strong> ${item.reason}</p>
-                <a href="${waLink}" class="btn btn-whatsapp">💬 Inquiry on WhatsApp</a>
-                ${item.brochure ? `<a href="${item.brochure}" target="_blank" class="btn btn-brochure">📄 Download ${item.name} Brochure</a>` : ''}
+                <p><strong>Expert Advice:</strong> ${item.reason}</p>
+                <a href="https://wa.me/918319950609?text=Inquiry%20for%20${item.name}" class="btn btn-whatsapp">💬 WhatsApp Inquiry</a>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=AMTY+Global+Indore" class="btn btn-maps">📍 Visit Showroom</a>
             </div>
         `;
         switchCard(4);
     }
 
     function goBack() {
-        if(currentStep === 4) switchCard(selectedType === 'commercial' && document.getElementById('product-display').innerHTML.includes('Coin') ? 2 : 3);
-        else if(currentStep === 3) switchCard(2);
-        else if(currentStep === 2) switchCard(1);
+        window.history.back();
     }
+    
+    // Initial state
+    history.replaceState({ step: 1 }, "Step 1");
 </script>
 </body>
 </html>
