@@ -34,8 +34,9 @@
         .card.active { display: block; }
         .btn { display: block; width: 100%; padding: 16px; margin: 10px 0; background: var(--primary-color); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; text-decoration: none; box-sizing: border-box; transition: 0.2s; text-align: center; }
         .btn:active { transform: scale(0.97); }
-        .btn-call { background: var(--accent-color); color: #000; animation: pulse-yellow 2s infinite; }
-        .btn-whatsapp { background: #25D366; color: #fff; animation: pulse-green 2s infinite; }
+        .btn-call { background: var(--accent-color); color: #000; }
+        .btn-whatsapp { background: #25D366; color: #fff; }
+        .btn-video { background: #FF0000; color: #fff; border: 2px solid #cc0000; }
         .btn-maps { background: #4285F4; color: #fff; margin-top: 15px; }
         .btn-outline { background: transparent; border: 2px solid var(--primary-color); color: var(--primary-color); font-size: 13px; padding: 8px 15px; width: auto; display: inline-block; border-radius: 20px; font-weight: bold; }
         .btn-brochure { background: #555; color: white; font-size: 14px; padding: 12px; margin-top: 10px; border-radius: 8px; width: 100%; }
@@ -71,17 +72,17 @@
                 <p>Experience India's Most Trusted Wellness Brand</p>
             </div>
             <div class="advantage-grid">
-                <div class="adv-item"><strong>Widest Range</strong>15+ Models for every body type.</div>
-                <div class="adv-item"><strong>Starting ₹50,000</strong>High-end 4D technology made affordable.</div>
-                <div class="adv-item"><strong>PAN India Presence</strong>12+ Direct Company Showrooms.</div>
-                <div class="adv-item"><strong>Service Leader</strong>Best rated after-sales tech support.</div>
+                <div class="adv-item"><strong>Widest Range</strong>15+ Models</div>
+                <div class="adv-item"><strong>Starting ₹50,000</strong>High-end 4D technology</div>
+                <div class="adv-item"><strong>PAN India Presence</strong>12+ Direct Showrooms</div>
+                <div class="adv-item"><strong>Service Leader</strong>Best rated tech support</div>
             </div>
             <h3 style="color: var(--primary-color);">Let's Find Your Match:</h3>
             <button class="btn" onclick="toStep2('personal')">🏠 For Home / Personal Use</button>
             <button class="btn" onclick="toStep2('commercial')" style="background: #444;">🏢 For Business / Commercial</button>
             <div class="trust-section">
                 <strong>GOOGLE RATING: <span class="stars">★★★★★</span> 5.0/5</strong>
-                <a href="https://www.google.com/maps/dir/?api=1&destination=AMTY+Global+Indore" target="_blank" class="btn btn-maps">📍 Drive to Showroom</a>
+                <a href="https://maps.google.com" target="_blank" class="btn btn-maps">📍 Drive to Showroom</a>
                 <div style="display: flex; gap: 10px; margin-top: 10px;">
                     <a href="tel:+918319950609" class="btn btn-call" style="flex: 1;">📞 Call</a>
                     <a href="https://wa.me/918319950609" class="btn btn-whatsapp" style="flex: 1;">💬 WhatsApp</a>
@@ -123,21 +124,21 @@
 <script>
     const imgPath = "https://lid4018kapil-arch.github.io/AMTY-GLOBAL-INDORE/";
     const products = {
-        'MonsterX': { sku: "AMTY-MX-01", name: "Monster X", priceNum: 335000, price: "₹3,35,000", reason: "Our 7D flagship. Most powerful luxury relaxation for all body types.", img: imgPath + "monster.png", brochure: "https://drive.google.com/file/d/1As1RlVVutCDY9Lv2bVtgKr1mcLQlGmPO/view?usp=sharing" },
-        'Moonwalker': { sku: "AMTY-MW-02", name: "Moonwalker M", priceNum: 230000, price: "₹2,30,000", reason: "Features individual leg movement and advanced hand-squeezing tech.", img: imgPath + "moon%20walker.png", brochure: "https://drive.google.com/file/d/1sj5Nke9bnufTf6WLgWnT-NSlcdNmb94a/view?usp=sharing" },
-        'RX7': { sku: "AMTY-RX7-03", name: "RX 7 Capsule", priceNum: 200000, price: "₹2,00,000", reason: "Futuristic capsule design with AI body scan and voice control.", img: imgPath + "Rx7.png", brochure: "https://drive.google.com/file/d/1L67tTygyJBolhqU-yzTNMA3l5Tc2xrYF/view?usp=sharing" },
-        'RXTwister': { sku: "AMTY-RT-04", name: "RX Twister", priceNum: 190000, price: "₹1,90,000", reason: "Specializing in unique twisting and stretching relief for the spine.", img: imgPath + "Twister.png", brochure: "https://drive.google.com/file/d/1iiGM9ndKbAuFGuh_71uWSyR4LHX9fgKH/view?usp=sharing" },
-        'RX5Elite': { sku: "AMTY-RE-05", name: "RX-5 Elite", priceNum: 170000, price: "₹1,70,000", reason: "Tri-motion calf rubbing. Ideal for heavy-duty family use.", img: imgPath + "Rx5elite.png", brochure: "https://drive.google.com/file/d/1BBOuu_w2nA2q-L2E_xsWziP4ce8UNFJ9/view?usp=sharing" },
-        'RX3': { sku: "AMTY-RX3-06", name: "RX-3 7D", priceNum: 140000, price: "₹1,40,000", reason: "Best value 7D technology featuring an advanced dual SL track.", img: imgPath + "Rx3.png", brochure: "https://drive.google.com/file/d/13wgxzLHPwaf2bR6Z8V5kjqkSdYRsop0u/view?usp=sharing" },
-        'Q9Sonic': { sku: "AMTY-QS-07", name: "Q9 Sonic", priceNum: 135000, price: "₹1,35,000", reason: "Revolutionary Sonic Wave Massage synced with music.", img: imgPath + "Q9Sonic.png", brochure: "https://drive.google.com/file/d/1Cm4C0f2iuuGB9MFuuXSpBvT71kOIlfCo/view?usp=sharing" },
-        'Q7-2': { sku: "AMTY-Q7-08", name: "Q7 2.0", priceNum: 130000, price: "₹1,30,000", reason: "Android touchscreen with TikTok controller. High entertainment.", img: imgPath + "Q7.png", brochure: "https://drive.google.com/file/d/1rRCqbR7813zVLhrRdyq0x7md5ZiCxZxb/view?usp=sharing" },
-        'R10': { sku: "AMTY-R10-09", name: "R10 4D", priceNum: 90000, price: "₹90,000", reason: "AI-powered relaxation with U-shaped head massage.", img: imgPath + "R10.png", brochure: "https://drive.google.com/file/d/1KG-wYO2qqgO6YQxj1ADqnWOoyUj4SyMS/view?usp=sharing" },
-        'R9': { sku: "AMTY-R9-10", name: "R9 7D", priceNum: 94000, price: "₹94,000", reason: "Butterfly head massage. Recommended for salons and gyms.", img: imgPath + "R9.png", brochure: "https://drive.google.com/file/d/1wr6BH1_XCzxkL0Y5X9kOPxY29KtE8Ln2/view?usp=sharing" },
-        'Q5': { sku: "AMTY-Q5-11", name: "Q5 Model", priceNum: 120000, price: "₹1,20,000", reason: "Balanced performance with wireless charging and voice control.", img: imgPath + "Q5.png", brochure: "https://drive.google.com/file/d/1_Ivsz-mbsnoK3gtDEzWRu41ndSS9iUGo/view?usp=sharing" },
-        'R8Pro': { sku: "AMTY-R8-12", name: "R8 Pro", priceNum: 70000, price: "₹70,000", reason: "Focus on thigh and calf recovery with premium faux leather.", img: imgPath + "R8.png", brochure: "https://drive.google.com/file/d/1mvfLadnyET3vH7bYrRbyrHrbmvvgA0dS/view?usp=sharing" },
-        'R7Neo': { sku: "AMTY-R7-13", name: "R7 Neo", priceNum: 65000, price: "₹65,000", reason: "Strong metal frame built for up to 150kg. Perfect for durability.", img: imgPath + "R7.png", brochure: "https://drive.google.com/file/d/118920SrFCzXGBwQi1B6HLmPp07741SGe/view?usp=sharing" },
-        'R6': { sku: "AMTY-R6-14", name: "R6 4D", priceNum: 50000, price: "₹50,000", reason: "Sturdy wooden frame combined with 4D relief.", img: imgPath + "R6.png", brochure: null },
-        'CoinChair': { sku: "AMTY-COIN-15", name: "Coin Massage Chair", priceNum: 150000, price: "₹1,50,000", reason: "Automatic revenue generator. Supports Coin and QR-UPI.", img: imgPath + "coin.png", brochure: "https://drive.google.com/file/d/1QmjflU63Krv5x-0bPXJE9zuIN8Zuh5Eb/view?usp=sharing" }
+        'MonsterX': { sku: "AMTY-MX-01", name: "Monster X", priceNum: 335000, price: "₹3,35,000", reason: "Our 7D flagship. Most powerful luxury relaxation for all body types.", img: imgPath + "monster.png", brochure: "https://drive.google.com/file/d/1As1RlVVutCDY9Lv2bVtgKr1mcLQlGmPO/view?usp=sharing", video: null },
+        'Moonwalker': { sku: "AMTY-MW-02", name: "Moonwalker M", priceNum: 230000, price: "₹2,30,000", reason: "Features individual leg movement and advanced hand-squeezing tech.", img: imgPath + "moon%20walker.png", brochure: "https://drive.google.com/file/d/1sj5Nke9bnufTf6WLgWnT-NSlcdNmb94a/view?usp=sharing", video: "https://www.youtube.com/shorts/bMfz47tn8_o" },
+        'RX7': { sku: "AMTY-RX7-03", name: "RX 7 Capsule", priceNum: 200000, price: "₹2,00,000", reason: "Futuristic capsule design with AI body scan and voice control.", img: imgPath + "Rx7.png", brochure: "https://drive.google.com/file/d/1L67tTygyJBolhqU-yzTNMA3l5Tc2xrYF/view?usp=sharing", video: null },
+        'RXTwister': { sku: "AMTY-RT-04", name: "RX Twister", priceNum: 190000, price: "₹1,90,000", reason: "Specializing in unique twisting and stretching relief for the spine.", img: imgPath + "Twister.png", brochure: "https://drive.google.com/file/d/1iiGM9ndKbAuFGuh_71uWSyR4LHX9fgKH/view?usp=sharing", video: null },
+        'RX5Elite': { sku: "AMTY-RE-05", name: "RX-5 Elite", priceNum: 170000, price: "₹1,70,000", reason: "Tri-motion calf rubbing. Ideal for heavy-duty family use.", img: imgPath + "Rx5elite.png", brochure: "https://drive.google.com/file/d/1BBOuu_w2nA2q-L2E_xsWziP4ce8UNFJ9/view?usp=sharing", video: "https://www.youtube.com/watch?v=27awEzvO82I" },
+        'RX3': { sku: "AMTY-RX3-06", name: "RX-3 7D", priceNum: 140000, price: "₹1,40,000", reason: "Best value 7D technology featuring an advanced dual SL track.", img: imgPath + "Rx3.png", brochure: "https://drive.google.com/file/d/13wgxzLHPwaf2bR6Z8V5kjqkSdYRsop0u/view?usp=sharing", video: "https://www.youtube.com/shorts/GCOfmKSAq80" },
+        'Q9Sonic': { sku: "AMTY-QS-07", name: "Q9 Sonic", priceNum: 135000, price: "₹1,35,000", reason: "Revolutionary Sonic Wave Massage synced with music.", img: imgPath + "Q9Sonic.png", brochure: "https://drive.google.com/file/d/1Cm4C0f2iuuGB9MFuuXSpBvT71kOIlfCo/view?usp=sharing", video: "https://www.youtube.com/shorts/Fuu2dlkaEyg" },
+        'Q7-2': { sku: "AMTY-Q7-08", name: "Q7 2.0", priceNum: 130000, price: "₹1,30,000", reason: "Android touchscreen with TikTok controller. High entertainment.", img: imgPath + "Q7.png", brochure: "https://drive.google.com/file/d/1rRCqbR7813zVLhrRdyq0x7md5ZiCxZxb/view?usp=sharing", video: "https://www.youtube.com/watch?v=tPPtWNESxs4" },
+        'R10': { sku: "AMTY-R10-09", name: "R10 4D", priceNum: 90000, price: "₹90,000", reason: "AI-powered relaxation with U-shaped head massage.", img: imgPath + "R10.png", brochure: "https://drive.google.com/file/d/1KG-wYO2qqgO6YQxj1ADqnWOoyUj4SyMS/view?usp=sharing", video: "https://www.youtube.com/shorts/rN8qLD4A05g" },
+        'R9': { sku: "AMTY-R9-10", name: "R9 7D", priceNum: 94000, price: "₹94,000", reason: "Butterfly head massage. Recommended for salons and gyms.", img: imgPath + "R9.png", brochure: "https://drive.google.com/file/d/1wr6BH1_XCzxkL0Y5X9kOPxY29KtE8Ln2/view?usp=sharing", video: "https://www.youtube.com/watch?v=wpWwgsVXBoo" },
+        'Q5': { sku: "AMTY-Q5-11", name: "Q5 Model", priceNum: 120000, price: "₹1,20,000", reason: "Balanced performance with wireless charging and voice control.", img: imgPath + "Q5.png", brochure: "https://drive.google.com/file/d/1_Ivsz-mbsnoK3gtDEzWRu41ndSS9iUGo/view?usp=sharing", video: null },
+        'R8Pro': { sku: "AMTY-R8-12", name: "R8 Pro", priceNum: 70000, price: "₹70,000", reason: "Focus on thigh and calf recovery with premium faux leather.", img: imgPath + "R8.png", brochure: "https://drive.google.com/file/d/1mvfLadnyET3vH7bYrRbyrHrbmvvgA0dS/view?usp=sharing", video: "https://www.youtube.com/watch?v=pJSPgXSBDSQ" },
+        'R7Neo': { sku: "AMTY-R7-13", name: "R7 Neo", priceNum: 65000, price: "₹65,000", reason: "Strong metal frame built for up to 150kg. Perfect for durability.", img: imgPath + "R7.png", brochure: "https://drive.google.com/file/d/118920SrFCzXGBwQi1B6HLmPp07741SGe/view?usp=sharing", video: "https://www.youtube.com/shorts/GWYmzZTMOY0" },
+        'R6': { sku: "AMTY-R6-14", name: "R6 4D", priceNum: 50000, price: "₹50,000", reason: "Sturdy wooden frame combined with 4D relief.", img: imgPath + "R6.png", brochure: null, video: "https://www.youtube.com/shorts/yZylQPcM0SU" },
+        'CoinChair': { sku: "AMTY-COIN-15", name: "Coin Massage Chair", priceNum: 150000, price: "₹1,50,000", reason: "Automatic revenue generator. Supports Coin and QR-UPI.", img: imgPath + "coin.png", brochure: "https://drive.google.com/file/d/1QmjflU63Krv5x-0bPXJE9zuIN8Zuh5Eb/view?usp=sharing", video: null }
     };
 
     function updateMerchantSchema(modelKey) {
@@ -212,10 +213,13 @@
                     ✅ 2 Years Full Warranty | Lifetime Service
                 </div>
                 <p style="font-size:14px; color:#333; line-height:1.5;"><strong>Expert Advice:</strong> ${item.reason}</p>
+                
+                ${item.video ? `<a href="${item.video}" target="_blank" rel="noopener noreferrer" class="btn btn-video">🎬 Watch ${item.name} Video</a>` : ''}
+                
                 <a href="tel:+918319950609" class="btn btn-call">📞 Call to Discuss ${item.name}</a>
                 <a href="https://wa.me/918319950609?text=Inquiry%20for%20${item.name}" class="btn btn-whatsapp">💬 Inquiry on WhatsApp</a>
                 ${item.brochure ? `<a href="${item.brochure}" target="_blank" class="btn btn-brochure">📄 Download ${item.name} Brochure</a>` : ''}
-                <a href="https://www.google.com/maps/dir/?api=1&destination=AMTY+Global+Indore" target="_blank" class="btn btn-maps">📍 Drive to Showroom</a>
+                <a href="https://maps.google.com" target="_blank" class="btn btn-maps">📍 Drive to Showroom</a>
             </div>
         `;
         switchCard(4);
@@ -224,97 +228,5 @@
     function goBack() { window.history.back(); }
     history.replaceState({ step: 1 }, "Step 1");
 </script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org/",
-  "@type": "ItemList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "item": {
-        "@type": "Product",
-        "name": "AMTY Monster X 7D Massage Chair",
-        "image": "https://lid4018kapil-arch.github.io/AMTY-GLOBAL-INDORE/monster.png",
-        "description": "Our 7D flagship. Most powerful luxury relaxation for all body types.",
-        "brand": { "@type": "Brand", "name": "AMTY Global" },
-        "sku": "AMTY-MX-01",
-        "mpn": "MX-01",
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "INR",
-          "price": "335000",
-          "itemCondition": "https://schema.org/NewCondition",
-          "availability": "https://schema.org/InStock",
-          "url": "https://lid4018kapil-arch.github.io/AMTY-GLOBAL-INDORE/"
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "item": {
-        "@type": "Product",
-        "name": "AMTY Moonwalker M Massage Chair",
-        "image": "https://lid4018kapil-arch.github.io/AMTY-GLOBAL-INDORE/moon%20walker.png",
-        "description": "Features individual leg movement and advanced hand-squeezing tech.",
-        "brand": { "@type": "Brand", "name": "AMTY Global" },
-        "sku": "AMTY-MW-02",
-        "mpn": "MW-02",
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "INR",
-          "price": "230000",
-          "itemCondition": "https://schema.org/NewCondition",
-          "availability": "https://schema.org/InStock",
-          "url": "https://lid4018kapil-arch.github.io/AMTY-GLOBAL-INDORE/"
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "item": {
-        "@type": "Product",
-        "name": "AMTY RX 7 Capsule Massage Chair",
-        "image": "https://lid4018kapil-arch.github.io/AMTY-GLOBAL-INDORE/Rx7.png",
-        "description": "Futuristic capsule design with AI body scan and voice control.",
-        "brand": { "@type": "Brand", "name": "AMTY Global" },
-        "sku": "AMTY-RX7-03",
-        "mpn": "RX7-03",
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "INR",
-          "price": "200000",
-          "itemCondition": "https://schema.org/NewCondition",
-          "availability": "https://schema.org/InStock",
-          "url": "https://lid4018kapil-arch.github.io/AMTY-GLOBAL-INDORE/"
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 15,
-      "item": {
-        "@type": "Product",
-        "name": "AMTY Coin-Operated Massage Chair",
-        "image": "https://lid4018kapil-arch.github.io/AMTY-GLOBAL-INDORE/coin.png",
-        "description": "Automatic revenue generator. Supports Coin and QR-UPI for business.",
-        "brand": { "@type": "Brand", "name": "AMTY Global" },
-        "sku": "AMTY-COIN-15",
-        "mpn": "COIN-15",
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "INR",
-          "price": "150000",
-          "itemCondition": "https://schema.org/NewCondition",
-          "availability": "https://schema.org/InStock",
-          "url": "https://lid4018kapil-arch.github.io/AMTY-GLOBAL-INDORE/"
-        }
-      }
-    }
-  ]
-}
-    </script>
 </body>
 </html>
