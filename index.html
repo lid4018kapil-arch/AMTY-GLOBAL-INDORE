@@ -75,9 +75,9 @@
                 <div class="adv-item"><strong>Widest Range</strong>15+ Models</div>
                 <div class="adv-item"><strong>Starting ₹50,000</strong>High-end 4D technology</div>
                 <div class="adv-item"><strong>PAN India Presence</strong>12+ Direct Showrooms</div>
-                <div class="adv-item"><strong>Service Leader</strong>Best rated tech support</div>
+                <div class="adv-item"><strong>Service Leader</strong>Best rated after sales support</div>
             </div>
-            <h3 style="color: var(--primary-color);">Let's Find Your Match:</h3>
+            <h3 style="color: var(--primary-color);">Click on below buttons to Find Your Match:</h3>
             <button class="btn" onclick="toStep2('personal')">🏠 For Home / Personal Use</button>
             <button class="btn" onclick="toStep2('commercial')" style="background: #444;">🏢 For Business / Commercial</button>
             <div class="trust-section">
@@ -179,7 +179,7 @@
         const container = document.getElementById('step2-options');
         if(type === 'personal') {
             document.getElementById('step2-title').innerText = "Personal Use Categories:";
-            container.innerHTML = `<button class="btn" onclick="toStep3('luxury')">Luxury Models</button><button class="btn" onclick="toStep3('value')">Value Models</button><button class="btn" onclick="toStep3('budget')">Budget Models</button>`;
+            container.innerHTML = `<button class="btn" onclick="toStep3('luxury')">Premium Models</button><button class="btn" onclick="toStep3('value')">Value Models</button><button class="btn" onclick="toStep3('budget')">Budget Models</button>`;
         } else {
             document.getElementById('step2-title').innerText = "Commercial Settings:";
             container.innerHTML = `<button class="btn" onclick="toStep3('commercial')">Professional / Public</button><button class="btn" onclick="showFinal('CoinChair')">Public Places (Coin/QR)</button>`;
