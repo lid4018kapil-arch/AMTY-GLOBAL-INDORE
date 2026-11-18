@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AMTY Global Indore — Massage Chairs &amp; Office Chairs (2026 Catalog)</title>
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -20,22 +20,14 @@
             gold: '#dea727',
             goldDark: '#b88616',
           },
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
         },
       },
     };
   </script>
   <style>
-    body {
-      background-color: #fffbed;
-      color: #1c1c1c;
-      font-family: 'Inter', system-ui, sans-serif;
-    }
-    .gold-gradient {
-      background: linear-gradient(135deg, #dea727 0%, #f0c24b 100%);
-    }
+    body { background-color: #fffbed; color: #1c1c1c; font-family: 'Inter', system-ui, sans-serif; }
+    .gold-gradient { background: linear-gradient(135deg, #dea727 0%, #f0c24b 100%); }
   </style>
 </head>
 <body class="bg-cream text-neutral-900 antialiased">
@@ -65,13 +57,11 @@
           <div class="text-[11px] font-semibold text-goldDark tracking-wider uppercase mt-0.5">Indore Showroom</div>
         </div>
       </a>
-
       <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-neutral-700">
         <a href="#models" class="hover:text-navy transition">All Models</a>
         <a href="#compare" class="hover:text-navy transition">Comparison Matrix</a>
         <a href="#showroom" class="hover:text-navy transition">Indore Showroom</a>
       </nav>
-
       <div class="flex items-center gap-2">
         <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%20Indore%2C%20I%20would%20like%20to%20book%20a%20free%20massage%20chair%20demo%20at%20your%20showroom."
            target="_blank" rel="noopener noreferrer"
@@ -96,7 +86,7 @@
         <p class="text-cream/80 text-base sm:text-lg max-w-2xl">
           Explore 18 ergonomic office and full-body robotic massage chairs—starting at
           <strong class="text-gold">₹25,000</strong> with flat <strong class="text-white">50% OFF MRP</strong>,
-          18% GST included, Free Pan-India Delivery, and up to 4 years warranty.
+          5% GST included, Free Pan-India Delivery, and up to 4 years warranty.
         </p>
         <div class="flex flex-wrap gap-3 pt-2">
           <a href="#models" class="gold-gradient text-navy font-extrabold px-6 py-3 rounded-xl shadow hover:opacity-95 transition text-sm sm:text-base">
@@ -133,7 +123,7 @@
     </div>
   </section>
 
-  <!-- Models Section -->
+  <!-- Models Section (Statically Pre-Rendered) -->
   <main id="models" class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
       <div>
@@ -146,7 +136,6 @@
       </div>
     </div>
 
-    <!-- Filter Pills -->
     <div id="filterBar" class="flex flex-wrap gap-2 mb-8">
       <button data-filter="all" class="filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-navy text-gold border border-navy transition">All (18)</button>
       <button data-filter="office" class="filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white text-neutral-700 border border-gold/35 hover:border-navy transition">Office Chairs (3)</button>
@@ -156,14 +145,465 @@
       <button data-filter="4yr" class="filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white text-neutral-700 border border-gold/35 hover:border-navy transition">4-Year Warranty</button>
     </div>
 
-    <!-- Product Grid -->
-    <div id="productGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    <div id="productGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <article class="product-card bg-white rounded-2xl border border-gold/35 shadow-sm hover:shadow-md transition flex flex-col overflow-hidden" data-tags="office" data-search="x1 office chair combines premium comfort with built-in massage functionality, soft pu leather, 6d adjustable armrests, and integrated lumbar support. 6d adjustable armrests adjustable massage &amp; lumbar support class-3 bifma gas lift &amp; chrome base ">
+        <div class="p-5 flex-1 flex flex-col">
+          <div class="flex items-center justify-between gap-2 mb-3 min-h-[26px]">
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-400">Office Series</span>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full">GST Included</span>
+          </div>
+          <h3 class="text-xl font-extrabold text-navy">X1 Office Chair</h3>
+          <p class="text-sm text-neutral-600 mt-2 leading-relaxed">Combines premium comfort with built-in massage functionality, soft PU leather, 6D adjustable armrests, and integrated lumbar support.</p>
+          <ul class="mt-4 space-y-1.5 text-xs sm:text-sm text-neutral-800 border-t border-gold/20 pt-3"><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>6D Adjustable Armrests</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Adjustable Massage &amp; Lumbar Support</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Class-3 BIFMA Gas Lift &amp; Chrome Base</span></li></ul>
+        </div>
+        <div class="bg-navy text-cream p-5 mt-auto">
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <div>
+              <div class="text-[11px] text-cream/65 font-semibold">MRP <span class="line-through decoration-red-400 decoration-2 text-cream/85">₹50,000</span></div>
+              <div class="text-[11px] uppercase tracking-wider text-white/80 font-bold mt-1">Current Offer Price</div>
+              <div class="text-2xl font-extrabold text-gold leading-tight">₹25,000</div>
+            </div>
+            <span class="bg-gold text-navy font-extrabold text-xs px-3 py-1 rounded-full">50% OFF</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 pt-2">
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20am%20interested%20in%20buying%20the%20X1%20Office%20Chair%20%28Offer%20Price%3A%20%E2%82%B925%2C000%29.%20Please%20share%20booking%20and%20delivery%20details." target="_blank" rel="noopener noreferrer" class="gold-gradient text-navy font-extrabold text-xs sm:text-sm py-2.5 rounded-xl text-center hover:opacity-95 transition">SHOP NOW</a>
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20would%20like%20more%20information%20about%20the%20X1%20Office%20Chair%20%28features%2C%20warranty%2C%20and%20demo%20details%29." target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 text-white border border-white/25 font-bold text-xs sm:text-sm py-2.5 rounded-xl text-center transition">MORE INFO</a>
+          </div>
+        </div>
+      </article>
+      <article class="product-card bg-white rounded-2xl border border-gold/35 shadow-sm hover:shadow-md transition flex flex-col overflow-hidden" data-tags="office" data-search="x2 office chair premium ergonomic chair with soft pu leather, high-resilience foam, 3-position tilt lock, and 3-mode massage with lumbar support. 3-mode massage &amp; lumbar support bifma-certified gas lift soft pu leather &amp; high-resilience foam ">
+        <div class="p-5 flex-1 flex flex-col">
+          <div class="flex items-center justify-between gap-2 mb-3 min-h-[26px]">
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-400">Office Series</span>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full">GST Included</span>
+          </div>
+          <h3 class="text-xl font-extrabold text-navy">X2 Office Chair</h3>
+          <p class="text-sm text-neutral-600 mt-2 leading-relaxed">Premium ergonomic chair with soft PU leather, high-resilience foam, 3-position tilt lock, and 3-mode massage with lumbar support.</p>
+          <ul class="mt-4 space-y-1.5 text-xs sm:text-sm text-neutral-800 border-t border-gold/20 pt-3"><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>3-Mode Massage &amp; Lumbar Support</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>BIFMA-Certified Gas Lift</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Soft PU Leather &amp; High-Resilience Foam</span></li></ul>
+        </div>
+        <div class="bg-navy text-cream p-5 mt-auto">
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <div>
+              <div class="text-[11px] text-cream/65 font-semibold">MRP <span class="line-through decoration-red-400 decoration-2 text-cream/85">₹56,000</span></div>
+              <div class="text-[11px] uppercase tracking-wider text-white/80 font-bold mt-1">Current Offer Price</div>
+              <div class="text-2xl font-extrabold text-gold leading-tight">₹28,000</div>
+            </div>
+            <span class="bg-gold text-navy font-extrabold text-xs px-3 py-1 rounded-full">50% OFF</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 pt-2">
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20am%20interested%20in%20buying%20the%20X2%20Office%20Chair%20%28Offer%20Price%3A%20%E2%82%B928%2C000%29.%20Please%20share%20booking%20and%20delivery%20details." target="_blank" rel="noopener noreferrer" class="gold-gradient text-navy font-extrabold text-xs sm:text-sm py-2.5 rounded-xl text-center hover:opacity-95 transition">SHOP NOW</a>
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20would%20like%20more%20information%20about%20the%20X2%20Office%20Chair%20%28features%2C%20warranty%2C%20and%20demo%20details%29." target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 text-white border border-white/25 font-bold text-xs sm:text-sm py-2.5 rounded-xl text-center transition">MORE INFO</a>
+          </div>
+        </div>
+      </article>
+      <article class="product-card bg-white rounded-2xl border border-gold/35 shadow-sm hover:shadow-md transition flex flex-col overflow-hidden" data-tags="office" data-search="x3 office chair protein-style pu leather upholstery with high-density foam, polished chrome 5-star base, and integrated 3-mode lumbar massage. 3-mode massage &amp; lumbar support premium protein-style pu leather bifma-certified class-3 gas lift ">
+        <div class="p-5 flex-1 flex flex-col">
+          <div class="flex items-center justify-between gap-2 mb-3 min-h-[26px]">
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-400">Office Series</span>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full">GST Included</span>
+          </div>
+          <h3 class="text-xl font-extrabold text-navy">X3 Office Chair</h3>
+          <p class="text-sm text-neutral-600 mt-2 leading-relaxed">Protein-style PU leather upholstery with high-density foam, polished chrome 5-star base, and integrated 3-mode lumbar massage.</p>
+          <ul class="mt-4 space-y-1.5 text-xs sm:text-sm text-neutral-800 border-t border-gold/20 pt-3"><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>3-Mode Massage &amp; Lumbar Support</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Premium Protein-Style PU Leather</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>BIFMA-Certified Class-3 Gas Lift</span></li></ul>
+        </div>
+        <div class="bg-navy text-cream p-5 mt-auto">
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <div>
+              <div class="text-[11px] text-cream/65 font-semibold">MRP <span class="line-through decoration-red-400 decoration-2 text-cream/85">₹64,000</span></div>
+              <div class="text-[11px] uppercase tracking-wider text-white/80 font-bold mt-1">Current Offer Price</div>
+              <div class="text-2xl font-extrabold text-gold leading-tight">₹32,000</div>
+            </div>
+            <span class="bg-gold text-navy font-extrabold text-xs px-3 py-1 rounded-full">50% OFF</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 pt-2">
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20am%20interested%20in%20buying%20the%20X3%20Office%20Chair%20%28Offer%20Price%3A%20%E2%82%B932%2C000%29.%20Please%20share%20booking%20and%20delivery%20details." target="_blank" rel="noopener noreferrer" class="gold-gradient text-navy font-extrabold text-xs sm:text-sm py-2.5 rounded-xl text-center hover:opacity-95 transition">SHOP NOW</a>
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20would%20like%20more%20information%20about%20the%20X3%20Office%20Chair%20%28features%2C%20warranty%2C%20and%20demo%20details%29." target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 text-white border border-white/25 font-bold text-xs sm:text-sm py-2.5 rounded-xl text-center transition">MORE INFO</a>
+          </div>
+        </div>
+      </article>
+      <article class="product-card bg-white rounded-2xl border border-gold/35 shadow-sm hover:shadow-md transition flex flex-col overflow-hidden" data-tags="massage" data-search="r6 massage chair solid wooden frame with comprehensive 4d massage, therapeutic heating, eye massage airbag, and targeted thigh massage (90–100 kg capacity). comprehensive full body 4d massage targeted thigh massage soothing eye massage ">
+        <div class="p-5 flex-1 flex flex-col">
+          <div class="flex items-center justify-between gap-2 mb-3 min-h-[26px]">
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-400">Massage Series</span>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full">2 Yrs Warranty</span>
+          </div>
+          <h3 class="text-xl font-extrabold text-navy">R6 Massage Chair</h3>
+          <p class="text-sm text-neutral-600 mt-2 leading-relaxed">Solid wooden frame with comprehensive 4D massage, therapeutic heating, eye massage airbag, and targeted thigh massage (90–100 kg capacity).</p>
+          <ul class="mt-4 space-y-1.5 text-xs sm:text-sm text-neutral-800 border-t border-gold/20 pt-3"><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Comprehensive Full Body 4D Massage</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Targeted Thigh Massage</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Soothing Eye Massage</span></li></ul>
+        </div>
+        <div class="bg-navy text-cream p-5 mt-auto">
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <div>
+              <div class="text-[11px] text-cream/65 font-semibold">MRP <span class="line-through decoration-red-400 decoration-2 text-cream/85">₹1,00,000</span></div>
+              <div class="text-[11px] uppercase tracking-wider text-white/80 font-bold mt-1">Current Offer Price</div>
+              <div class="text-2xl font-extrabold text-gold leading-tight">₹50,000</div>
+            </div>
+            <span class="bg-gold text-navy font-extrabold text-xs px-3 py-1 rounded-full">50% OFF</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 pt-2">
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20am%20interested%20in%20buying%20the%20R6%20Massage%20Chair%20%28Offer%20Price%3A%20%E2%82%B950%2C000%29.%20Please%20share%20booking%20and%20delivery%20details." target="_blank" rel="noopener noreferrer" class="gold-gradient text-navy font-extrabold text-xs sm:text-sm py-2.5 rounded-xl text-center hover:opacity-95 transition">SHOP NOW</a>
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20would%20like%20more%20information%20about%20the%20R6%20Massage%20Chair%20%28features%2C%20warranty%2C%20and%20demo%20details%29." target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 text-white border border-white/25 font-bold text-xs sm:text-sm py-2.5 rounded-xl text-center transition">MORE INFO</a>
+          </div>
+        </div>
+      </article>
+      <article class="product-card bg-white rounded-2xl border border-gold/35 shadow-sm hover:shadow-md transition flex flex-col overflow-hidden" data-tags="massage" data-search="r7 neo massage chair sleek metal frame (up to 150 kg) for personal or commercial use with fixed roller massage, zero gravity, bluetooth audio, and heating. dynamic airbag massage technology advanced fixed roller massage ergonomic zero gravity positioning ">
+        <div class="p-5 flex-1 flex flex-col">
+          <div class="flex items-center justify-between gap-2 mb-3 min-h-[26px]">
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-400">Massage Series</span>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full">2 Yrs Warranty</span>
+          </div>
+          <h3 class="text-xl font-extrabold text-navy">R7 Neo Massage Chair</h3>
+          <p class="text-sm text-neutral-600 mt-2 leading-relaxed">Sleek metal frame (up to 150 kg) for personal or commercial use with fixed roller massage, zero gravity, Bluetooth audio, and heating.</p>
+          <ul class="mt-4 space-y-1.5 text-xs sm:text-sm text-neutral-800 border-t border-gold/20 pt-3"><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Dynamic Airbag Massage Technology</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Advanced Fixed Roller Massage</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Ergonomic Zero Gravity Positioning</span></li></ul>
+        </div>
+        <div class="bg-navy text-cream p-5 mt-auto">
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <div>
+              <div class="text-[11px] text-cream/65 font-semibold">MRP <span class="line-through decoration-red-400 decoration-2 text-cream/85">₹1,30,000</span></div>
+              <div class="text-[11px] uppercase tracking-wider text-white/80 font-bold mt-1">Current Offer Price</div>
+              <div class="text-2xl font-extrabold text-gold leading-tight">₹65,000</div>
+            </div>
+            <span class="bg-gold text-navy font-extrabold text-xs px-3 py-1 rounded-full">50% OFF</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 pt-2">
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20am%20interested%20in%20buying%20the%20R7%20Neo%20Massage%20Chair%20%28Offer%20Price%3A%20%E2%82%B965%2C000%29.%20Please%20share%20booking%20and%20delivery%20details." target="_blank" rel="noopener noreferrer" class="gold-gradient text-navy font-extrabold text-xs sm:text-sm py-2.5 rounded-xl text-center hover:opacity-95 transition">SHOP NOW</a>
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20would%20like%20more%20information%20about%20the%20R7%20Neo%20Massage%20Chair%20%28features%2C%20warranty%2C%20and%20demo%20details%29." target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 text-white border border-white/25 font-bold text-xs sm:text-sm py-2.5 rounded-xl text-center transition">MORE INFO</a>
+          </div>
+        </div>
+      </article>
+      <article class="product-card bg-white rounded-2xl border border-gold/35 shadow-sm hover:shadow-md transition flex flex-col overflow-hidden" data-tags="massage,top-pick" data-search="r8 pro massage chair upgraded faux leather, enhanced thigh massage straps, quick-access shortcut keys, 4d full-body massage, and zero gravity recline. thigh massage strap quick-access shortcut keys premium faux leather ★ top pick">
+        <div class="p-5 flex-1 flex flex-col">
+          <div class="flex items-center justify-between gap-2 mb-3 min-h-[26px]">
+            <span class="inline-flex items-center px-3 py-1 rounded-full bg-navy text-gold border border-gold text-[11px] font-extrabold tracking-wide">★ TOP PICK</span>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full">2 Yrs Warranty</span>
+          </div>
+          <h3 class="text-xl font-extrabold text-navy">R8 Pro Massage Chair</h3>
+          <p class="text-sm text-neutral-600 mt-2 leading-relaxed">Upgraded faux leather, enhanced thigh massage straps, quick-access shortcut keys, 4D full-body massage, and zero gravity recline.</p>
+          <ul class="mt-4 space-y-1.5 text-xs sm:text-sm text-neutral-800 border-t border-gold/20 pt-3"><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Thigh Massage Strap</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Quick-Access Shortcut Keys</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Premium Faux Leather</span></li></ul>
+        </div>
+        <div class="bg-navy text-cream p-5 mt-auto">
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <div>
+              <div class="text-[11px] text-cream/65 font-semibold">MRP <span class="line-through decoration-red-400 decoration-2 text-cream/85">₹1,40,000</span></div>
+              <div class="text-[11px] uppercase tracking-wider text-white/80 font-bold mt-1">Current Offer Price</div>
+              <div class="text-2xl font-extrabold text-gold leading-tight">₹70,000</div>
+            </div>
+            <span class="bg-gold text-navy font-extrabold text-xs px-3 py-1 rounded-full">50% OFF</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 pt-2">
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20am%20interested%20in%20buying%20the%20R8%20Pro%20Massage%20Chair%20%28Offer%20Price%3A%20%E2%82%B970%2C000%29.%20Please%20share%20booking%20and%20delivery%20details." target="_blank" rel="noopener noreferrer" class="gold-gradient text-navy font-extrabold text-xs sm:text-sm py-2.5 rounded-xl text-center hover:opacity-95 transition">SHOP NOW</a>
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20would%20like%20more%20information%20about%20the%20R8%20Pro%20Massage%20Chair%20%28features%2C%20warranty%2C%20and%20demo%20details%29." target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 text-white border border-white/25 font-bold text-xs sm:text-sm py-2.5 rounded-xl text-center transition">MORE INFO</a>
+          </div>
+        </div>
+      </article>
+      <article class="product-card bg-white rounded-2xl border border-gold/35 shadow-sm hover:shadow-md transition flex flex-col overflow-hidden" data-tags="massage,top-pick" data-search="r10 massage chair 7d massage with intelligent ai body scan, advanced sl track, u-shaped head massage, navy blue leather, and convenient voice control. advanced sl track system convenient voice control intelligent ai body scan ★ top pick">
+        <div class="p-5 flex-1 flex flex-col">
+          <div class="flex items-center justify-between gap-2 mb-3 min-h-[26px]">
+            <span class="inline-flex items-center px-3 py-1 rounded-full bg-navy text-gold border border-gold text-[11px] font-extrabold tracking-wide">★ TOP PICK</span>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full">2 Yrs Warranty</span>
+          </div>
+          <h3 class="text-xl font-extrabold text-navy">R10 Massage Chair</h3>
+          <p class="text-sm text-neutral-600 mt-2 leading-relaxed">7D massage with intelligent AI body scan, advanced SL track, U-shaped head massage, navy blue leather, and convenient voice control.</p>
+          <ul class="mt-4 space-y-1.5 text-xs sm:text-sm text-neutral-800 border-t border-gold/20 pt-3"><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Advanced SL Track System</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Convenient Voice Control</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Intelligent AI Body Scan</span></li></ul>
+        </div>
+        <div class="bg-navy text-cream p-5 mt-auto">
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <div>
+              <div class="text-[11px] text-cream/65 font-semibold">MRP <span class="line-through decoration-red-400 decoration-2 text-cream/85">₹1,80,000</span></div>
+              <div class="text-[11px] uppercase tracking-wider text-white/80 font-bold mt-1">Current Offer Price</div>
+              <div class="text-2xl font-extrabold text-gold leading-tight">₹90,000</div>
+            </div>
+            <span class="bg-gold text-navy font-extrabold text-xs px-3 py-1 rounded-full">50% OFF</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 pt-2">
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20am%20interested%20in%20buying%20the%20R10%20Massage%20Chair%20%28Offer%20Price%3A%20%E2%82%B990%2C000%29.%20Please%20share%20booking%20and%20delivery%20details." target="_blank" rel="noopener noreferrer" class="gold-gradient text-navy font-extrabold text-xs sm:text-sm py-2.5 rounded-xl text-center hover:opacity-95 transition">SHOP NOW</a>
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20would%20like%20more%20information%20about%20the%20R10%20Massage%20Chair%20%28features%2C%20warranty%2C%20and%20demo%20details%29." target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 text-white border border-white/25 font-bold text-xs sm:text-sm py-2.5 rounded-xl text-center transition">MORE INFO</a>
+          </div>
+        </div>
+      </article>
+      <article class="product-card bg-white rounded-2xl border border-gold/35 shadow-sm hover:shadow-md transition flex flex-col overflow-hidden" data-tags="massage" data-search="r9 massage chair commercial-grade all-black pu leather with 7d massage, sl track, butterfly head massage, wireless mobile charging, and ai body scan. sl track &amp; zero gravity ai body scan &amp; wireless charge voice control &amp; bluetooth audio ">
+        <div class="p-5 flex-1 flex flex-col">
+          <div class="flex items-center justify-between gap-2 mb-3 min-h-[26px]">
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-400">Massage Series</span>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full">2 Yrs Warranty</span>
+          </div>
+          <h3 class="text-xl font-extrabold text-navy">R9 Massage Chair</h3>
+          <p class="text-sm text-neutral-600 mt-2 leading-relaxed">Commercial-grade all-black PU leather with 7D massage, SL track, butterfly head massage, wireless mobile charging, and AI body scan.</p>
+          <ul class="mt-4 space-y-1.5 text-xs sm:text-sm text-neutral-800 border-t border-gold/20 pt-3"><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>SL Track &amp; Zero Gravity</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>AI Body Scan &amp; Wireless Charge</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Voice Control &amp; Bluetooth Audio</span></li></ul>
+        </div>
+        <div class="bg-navy text-cream p-5 mt-auto">
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <div>
+              <div class="text-[11px] text-cream/65 font-semibold">MRP <span class="line-through decoration-red-400 decoration-2 text-cream/85">₹1,88,000</span></div>
+              <div class="text-[11px] uppercase tracking-wider text-white/80 font-bold mt-1">Current Offer Price</div>
+              <div class="text-2xl font-extrabold text-gold leading-tight">₹94,000</div>
+            </div>
+            <span class="bg-gold text-navy font-extrabold text-xs px-3 py-1 rounded-full">50% OFF</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 pt-2">
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20am%20interested%20in%20buying%20the%20R9%20Massage%20Chair%20%28Offer%20Price%3A%20%E2%82%B994%2C000%29.%20Please%20share%20booking%20and%20delivery%20details." target="_blank" rel="noopener noreferrer" class="gold-gradient text-navy font-extrabold text-xs sm:text-sm py-2.5 rounded-xl text-center hover:opacity-95 transition">SHOP NOW</a>
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20would%20like%20more%20information%20about%20the%20R9%20Massage%20Chair%20%28features%2C%20warranty%2C%20and%20demo%20details%29." target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 text-white border border-white/25 font-bold text-xs sm:text-sm py-2.5 rounded-xl text-center transition">MORE INFO</a>
+          </div>
+        </div>
+      </article>
+      <article class="product-card bg-white rounded-2xl border border-gold/35 shadow-sm hover:shadow-md transition flex flex-col overflow-hidden" data-tags="massage" data-search="q5 massage chair compact sl-track 7d massage chair from neck to lower body with zero gravity, therapeutic heating, and dynamic airbag compression. compact sl track system ai body scan &amp; voice control zero gravity &amp; heating therapy ">
+        <div class="p-5 flex-1 flex flex-col">
+          <div class="flex items-center justify-between gap-2 mb-3 min-h-[26px]">
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-400">Massage Series</span>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full">2 Yrs Warranty</span>
+          </div>
+          <h3 class="text-xl font-extrabold text-navy">Q5 Massage Chair</h3>
+          <p class="text-sm text-neutral-600 mt-2 leading-relaxed">Compact SL-track 7D massage chair from neck to lower body with zero gravity, therapeutic heating, and dynamic airbag compression.</p>
+          <ul class="mt-4 space-y-1.5 text-xs sm:text-sm text-neutral-800 border-t border-gold/20 pt-3"><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Compact SL Track System</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>AI Body Scan &amp; Voice Control</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Zero Gravity &amp; Heating Therapy</span></li></ul>
+        </div>
+        <div class="bg-navy text-cream p-5 mt-auto">
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <div>
+              <div class="text-[11px] text-cream/65 font-semibold">MRP <span class="line-through decoration-red-400 decoration-2 text-cream/85">₹2,40,000</span></div>
+              <div class="text-[11px] uppercase tracking-wider text-white/80 font-bold mt-1">Current Offer Price</div>
+              <div class="text-2xl font-extrabold text-gold leading-tight">₹1,20,000</div>
+            </div>
+            <span class="bg-gold text-navy font-extrabold text-xs px-3 py-1 rounded-full">50% OFF</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 pt-2">
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20am%20interested%20in%20buying%20the%20Q5%20Massage%20Chair%20%28Offer%20Price%3A%20%E2%82%B91%2C20%2C000%29.%20Please%20share%20booking%20and%20delivery%20details." target="_blank" rel="noopener noreferrer" class="gold-gradient text-navy font-extrabold text-xs sm:text-sm py-2.5 rounded-xl text-center hover:opacity-95 transition">SHOP NOW</a>
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20would%20like%20more%20information%20about%20the%20Q5%20Massage%20Chair%20%28features%2C%20warranty%2C%20and%20demo%20details%29." target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 text-white border border-white/25 font-bold text-xs sm:text-sm py-2.5 rounded-xl text-center transition">MORE INFO</a>
+          </div>
+        </div>
+      </article>
+      <article class="product-card bg-white rounded-2xl border border-gold/35 shadow-sm hover:shadow-md transition flex flex-col overflow-hidden" data-tags="massage,top-pick" data-search="q7 2.0 massage chair high-tech 7d massage with android-based touchscreen, calf rubbing &amp; rollers, tiktok/reels controller, and full body stretch therapy. calf massage with rubbing motion tiktok/reels controller android-based touchscreen interface ★ top pick">
+        <div class="p-5 flex-1 flex flex-col">
+          <div class="flex items-center justify-between gap-2 mb-3 min-h-[26px]">
+            <span class="inline-flex items-center px-3 py-1 rounded-full bg-navy text-gold border border-gold text-[11px] font-extrabold tracking-wide">★ TOP PICK</span>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full">2 Yrs Warranty</span>
+          </div>
+          <h3 class="text-xl font-extrabold text-navy">Q7 2.0 Massage Chair</h3>
+          <p class="text-sm text-neutral-600 mt-2 leading-relaxed">High-tech 7D massage with Android-based touchscreen, calf rubbing &amp; rollers, TikTok/Reels controller, and full body stretch therapy.</p>
+          <ul class="mt-4 space-y-1.5 text-xs sm:text-sm text-neutral-800 border-t border-gold/20 pt-3"><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Calf Massage with Rubbing Motion</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>TikTok/Reels Controller</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Android-Based Touchscreen Interface</span></li></ul>
+        </div>
+        <div class="bg-navy text-cream p-5 mt-auto">
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <div>
+              <div class="text-[11px] text-cream/65 font-semibold">MRP <span class="line-through decoration-red-400 decoration-2 text-cream/85">₹2,60,000</span></div>
+              <div class="text-[11px] uppercase tracking-wider text-white/80 font-bold mt-1">Current Offer Price</div>
+              <div class="text-2xl font-extrabold text-gold leading-tight">₹1,30,000</div>
+            </div>
+            <span class="bg-gold text-navy font-extrabold text-xs px-3 py-1 rounded-full">50% OFF</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 pt-2">
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20am%20interested%20in%20buying%20the%20Q7%202.0%20Massage%20Chair%20%28Offer%20Price%3A%20%E2%82%B91%2C30%2C000%29.%20Please%20share%20booking%20and%20delivery%20details." target="_blank" rel="noopener noreferrer" class="gold-gradient text-navy font-extrabold text-xs sm:text-sm py-2.5 rounded-xl text-center hover:opacity-95 transition">SHOP NOW</a>
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20would%20like%20more%20information%20about%20the%20Q7%202.0%20Massage%20Chair%20%28features%2C%20warranty%2C%20and%20demo%20details%29." target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 text-white border border-white/25 font-bold text-xs sm:text-sm py-2.5 rounded-xl text-center transition">MORE INFO</a>
+          </div>
+        </div>
+      </article>
+      <article class="product-card bg-white rounded-2xl border border-gold/35 shadow-sm hover:shadow-md transition flex flex-col overflow-hidden" data-tags="massage" data-search="rx-3 massage chair advanced dual sl track system for superior coverage, tri-motion calf rubbing, calf massage rollers, and 7d full-body therapy. dual sl track system tri-motion calf rubbing calf massage rollers ">
+        <div class="p-5 flex-1 flex flex-col">
+          <div class="flex items-center justify-between gap-2 mb-3 min-h-[26px]">
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-400">Massage Series</span>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full">2 Yrs Warranty</span>
+          </div>
+          <h3 class="text-xl font-extrabold text-navy">RX-3 Massage Chair</h3>
+          <p class="text-sm text-neutral-600 mt-2 leading-relaxed">Advanced Dual SL Track system for superior coverage, tri-motion calf rubbing, calf massage rollers, and 7D full-body therapy.</p>
+          <ul class="mt-4 space-y-1.5 text-xs sm:text-sm text-neutral-800 border-t border-gold/20 pt-3"><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Dual SL Track System</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Tri-Motion Calf Rubbing</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Calf Massage Rollers</span></li></ul>
+        </div>
+        <div class="bg-navy text-cream p-5 mt-auto">
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <div>
+              <div class="text-[11px] text-cream/65 font-semibold">MRP <span class="line-through decoration-red-400 decoration-2 text-cream/85">₹2,80,000</span></div>
+              <div class="text-[11px] uppercase tracking-wider text-white/80 font-bold mt-1">Current Offer Price</div>
+              <div class="text-2xl font-extrabold text-gold leading-tight">₹1,40,000</div>
+            </div>
+            <span class="bg-gold text-navy font-extrabold text-xs px-3 py-1 rounded-full">50% OFF</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 pt-2">
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20am%20interested%20in%20buying%20the%20RX-3%20Massage%20Chair%20%28Offer%20Price%3A%20%E2%82%B91%2C40%2C000%29.%20Please%20share%20booking%20and%20delivery%20details." target="_blank" rel="noopener noreferrer" class="gold-gradient text-navy font-extrabold text-xs sm:text-sm py-2.5 rounded-xl text-center hover:opacity-95 transition">SHOP NOW</a>
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20would%20like%20more%20information%20about%20the%20RX-3%20Massage%20Chair%20%28features%2C%20warranty%2C%20and%20demo%20details%29." target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 text-white border border-white/25 font-bold text-xs sm:text-sm py-2.5 rounded-xl text-center transition">MORE INFO</a>
+          </div>
+        </div>
+      </article>
+      <article class="product-card bg-white rounded-2xl border border-gold/35 shadow-sm hover:shadow-md transition flex flex-col overflow-hidden" data-tags="massage,futuristic" data-search="space walker massage chair 127 cm sl-type rail with 5 massage techniques, carbon-fiber waist heat, 360° enclosed foot massage, and individual leg movement. individual leg movement 127 cm sl track &amp; 360° foot massage tablet control &amp; ai body scan ★ futuristic">
+        <div class="p-5 flex-1 flex flex-col">
+          <div class="flex items-center justify-between gap-2 mb-3 min-h-[26px]">
+            <span class="inline-flex items-center px-3 py-1 rounded-full bg-navy text-gold border border-gold text-[11px] font-extrabold tracking-wide">★ FUTURISTIC</span>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full">2 Yrs Warranty</span>
+          </div>
+          <h3 class="text-xl font-extrabold text-navy">Space Walker Massage Chair</h3>
+          <p class="text-sm text-neutral-600 mt-2 leading-relaxed">127 cm SL-Type rail with 5 massage techniques, carbon-fiber waist heat, 360° enclosed foot massage, and individual leg movement.</p>
+          <ul class="mt-4 space-y-1.5 text-xs sm:text-sm text-neutral-800 border-t border-gold/20 pt-3"><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Individual Leg Movement</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>127 cm SL Track &amp; 360° Foot Massage</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Tablet Control &amp; AI Body Scan</span></li></ul>
+        </div>
+        <div class="bg-navy text-cream p-5 mt-auto">
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <div>
+              <div class="text-[11px] text-cream/65 font-semibold">MRP <span class="line-through decoration-red-400 decoration-2 text-cream/85">₹3,10,000</span></div>
+              <div class="text-[11px] uppercase tracking-wider text-white/80 font-bold mt-1">Current Offer Price</div>
+              <div class="text-2xl font-extrabold text-gold leading-tight">₹1,55,000</div>
+            </div>
+            <span class="bg-gold text-navy font-extrabold text-xs px-3 py-1 rounded-full">50% OFF</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 pt-2">
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20am%20interested%20in%20buying%20the%20Space%20Walker%20Massage%20Chair%20%28Offer%20Price%3A%20%E2%82%B91%2C55%2C000%29.%20Please%20share%20booking%20and%20delivery%20details." target="_blank" rel="noopener noreferrer" class="gold-gradient text-navy font-extrabold text-xs sm:text-sm py-2.5 rounded-xl text-center hover:opacity-95 transition">SHOP NOW</a>
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20would%20like%20more%20information%20about%20the%20Space%20Walker%20Massage%20Chair%20%28features%2C%20warranty%2C%20and%20demo%20details%29." target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 text-white border border-white/25 font-bold text-xs sm:text-sm py-2.5 rounded-xl text-center transition">MORE INFO</a>
+          </div>
+        </div>
+      </article>
+      <article class="product-card bg-white rounded-2xl border border-gold/35 shadow-sm hover:shadow-md transition flex flex-col overflow-hidden" data-tags="massage" data-search="rx-5 elite massage chair automatic leg stretching, tri-motion calf rubbing, feet scraping, posture correctness rollers, and auto height adjustment. full body stretching tri-motion calf rubbing feet scraping &amp; auto height ">
+        <div class="p-5 flex-1 flex flex-col">
+          <div class="flex items-center justify-between gap-2 mb-3 min-h-[26px]">
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-400">Massage Series</span>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full">2 Yrs Warranty</span>
+          </div>
+          <h3 class="text-xl font-extrabold text-navy">RX-5 Elite Massage Chair</h3>
+          <p class="text-sm text-neutral-600 mt-2 leading-relaxed">Automatic leg stretching, tri-motion calf rubbing, feet scraping, posture correctness rollers, and auto height adjustment.</p>
+          <ul class="mt-4 space-y-1.5 text-xs sm:text-sm text-neutral-800 border-t border-gold/20 pt-3"><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Full Body Stretching</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Tri-Motion Calf Rubbing</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Feet Scraping &amp; Auto Height</span></li></ul>
+        </div>
+        <div class="bg-navy text-cream p-5 mt-auto">
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <div>
+              <div class="text-[11px] text-cream/65 font-semibold">MRP <span class="line-through decoration-red-400 decoration-2 text-cream/85">₹3,40,000</span></div>
+              <div class="text-[11px] uppercase tracking-wider text-white/80 font-bold mt-1">Current Offer Price</div>
+              <div class="text-2xl font-extrabold text-gold leading-tight">₹1,70,000</div>
+            </div>
+            <span class="bg-gold text-navy font-extrabold text-xs px-3 py-1 rounded-full">50% OFF</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 pt-2">
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20am%20interested%20in%20buying%20the%20RX-5%20Elite%20Massage%20Chair%20%28Offer%20Price%3A%20%E2%82%B91%2C70%2C000%29.%20Please%20share%20booking%20and%20delivery%20details." target="_blank" rel="noopener noreferrer" class="gold-gradient text-navy font-extrabold text-xs sm:text-sm py-2.5 rounded-xl text-center hover:opacity-95 transition">SHOP NOW</a>
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20would%20like%20more%20information%20about%20the%20RX-5%20Elite%20Massage%20Chair%20%28features%2C%20warranty%2C%20and%20demo%20details%29." target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 text-white border border-white/25 font-bold text-xs sm:text-sm py-2.5 rounded-xl text-center transition">MORE INFO</a>
+          </div>
+        </div>
+      </article>
+      <article class="product-card bg-white rounded-2xl border border-gold/35 shadow-sm hover:shadow-md transition flex flex-col overflow-hidden" data-tags="massage,top-pick,4yr" data-search="rx twister massage chair flexible sl track with 4d feet twisting system, hands acupressure, advanced calf therapy, capsule design, and 4-year warranty. 4d feet twisting flexible sl track advanced calf therapy ★ top pick">
+        <div class="p-5 flex-1 flex flex-col">
+          <div class="flex items-center justify-between gap-2 mb-3 min-h-[26px]">
+            <span class="inline-flex items-center px-3 py-1 rounded-full bg-navy text-gold border border-gold text-[11px] font-extrabold tracking-wide">★ TOP PICK</span>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full">4 Yrs Warranty</span>
+          </div>
+          <h3 class="text-xl font-extrabold text-navy">RX Twister Massage Chair</h3>
+          <p class="text-sm text-neutral-600 mt-2 leading-relaxed">Flexible SL track with 4D feet twisting system, hands acupressure, advanced calf therapy, capsule design, and 4-year warranty.</p>
+          <ul class="mt-4 space-y-1.5 text-xs sm:text-sm text-neutral-800 border-t border-gold/20 pt-3"><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>4D Feet Twisting</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Flexible SL Track</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Advanced Calf Therapy</span></li></ul>
+        </div>
+        <div class="bg-navy text-cream p-5 mt-auto">
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <div>
+              <div class="text-[11px] text-cream/65 font-semibold">MRP <span class="line-through decoration-red-400 decoration-2 text-cream/85">₹3,80,000</span></div>
+              <div class="text-[11px] uppercase tracking-wider text-white/80 font-bold mt-1">Current Offer Price</div>
+              <div class="text-2xl font-extrabold text-gold leading-tight">₹1,90,000</div>
+            </div>
+            <span class="bg-gold text-navy font-extrabold text-xs px-3 py-1 rounded-full">50% OFF</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 pt-2">
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20am%20interested%20in%20buying%20the%20RX%20Twister%20Massage%20Chair%20%28Offer%20Price%3A%20%E2%82%B91%2C90%2C000%29.%20Please%20share%20booking%20and%20delivery%20details." target="_blank" rel="noopener noreferrer" class="gold-gradient text-navy font-extrabold text-xs sm:text-sm py-2.5 rounded-xl text-center hover:opacity-95 transition">SHOP NOW</a>
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20would%20like%20more%20information%20about%20the%20RX%20Twister%20Massage%20Chair%20%28features%2C%20warranty%2C%20and%20demo%20details%29." target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 text-white border border-white/25 font-bold text-xs sm:text-sm py-2.5 rounded-xl text-center transition">MORE INFO</a>
+          </div>
+        </div>
+      </article>
+      <article class="product-card bg-white rounded-2xl border border-gold/35 shadow-sm hover:shadow-md transition flex flex-col overflow-hidden" data-tags="massage,4yr" data-search="rx-7 massage chair futuristic capsule aesthetic with 7d massage, sl track, ai body scan, voice control, tablet console, and 4-year extended warranty. futuristic capsule design intelligent ai body scan convenient voice control ">
+        <div class="p-5 flex-1 flex flex-col">
+          <div class="flex items-center justify-between gap-2 mb-3 min-h-[26px]">
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-400">Massage Series</span>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full">4 Yrs Warranty</span>
+          </div>
+          <h3 class="text-xl font-extrabold text-navy">RX-7 Massage Chair</h3>
+          <p class="text-sm text-neutral-600 mt-2 leading-relaxed">Futuristic capsule aesthetic with 7D massage, SL track, AI body scan, voice control, tablet console, and 4-year extended warranty.</p>
+          <ul class="mt-4 space-y-1.5 text-xs sm:text-sm text-neutral-800 border-t border-gold/20 pt-3"><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Futuristic Capsule Design</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Intelligent AI Body Scan</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Convenient Voice Control</span></li></ul>
+        </div>
+        <div class="bg-navy text-cream p-5 mt-auto">
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <div>
+              <div class="text-[11px] text-cream/65 font-semibold">MRP <span class="line-through decoration-red-400 decoration-2 text-cream/85">₹4,00,000</span></div>
+              <div class="text-[11px] uppercase tracking-wider text-white/80 font-bold mt-1">Current Offer Price</div>
+              <div class="text-2xl font-extrabold text-gold leading-tight">₹2,00,000</div>
+            </div>
+            <span class="bg-gold text-navy font-extrabold text-xs px-3 py-1 rounded-full">50% OFF</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 pt-2">
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20am%20interested%20in%20buying%20the%20RX-7%20Massage%20Chair%20%28Offer%20Price%3A%20%E2%82%B92%2C00%2C000%29.%20Please%20share%20booking%20and%20delivery%20details." target="_blank" rel="noopener noreferrer" class="gold-gradient text-navy font-extrabold text-xs sm:text-sm py-2.5 rounded-xl text-center hover:opacity-95 transition">SHOP NOW</a>
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20would%20like%20more%20information%20about%20the%20RX-7%20Massage%20Chair%20%28features%2C%20warranty%2C%20and%20demo%20details%29." target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 text-white border border-white/25 font-bold text-xs sm:text-sm py-2.5 rounded-xl text-center transition">MORE INFO</a>
+          </div>
+        </div>
+      </article>
+      <article class="product-card bg-white rounded-2xl border border-gold/35 shadow-sm hover:shadow-md transition flex flex-col overflow-hidden" data-tags="massage,futuristic,4yr" data-search="moon walker massage chair futuristic capsule design with individual leg movement, hand-squeezing technology, 7d full-body massage, and 4-year warranty. individual leg movement futuristic capsule design hand squeezing massage ★ futuristic">
+        <div class="p-5 flex-1 flex flex-col">
+          <div class="flex items-center justify-between gap-2 mb-3 min-h-[26px]">
+            <span class="inline-flex items-center px-3 py-1 rounded-full bg-navy text-gold border border-gold text-[11px] font-extrabold tracking-wide">★ FUTURISTIC</span>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full">4 Yrs Warranty</span>
+          </div>
+          <h3 class="text-xl font-extrabold text-navy">Moon Walker Massage Chair</h3>
+          <p class="text-sm text-neutral-600 mt-2 leading-relaxed">Futuristic capsule design with individual leg movement, hand-squeezing technology, 7D full-body massage, and 4-year warranty.</p>
+          <ul class="mt-4 space-y-1.5 text-xs sm:text-sm text-neutral-800 border-t border-gold/20 pt-3"><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Individual Leg Movement</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Futuristic Capsule Design</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Hand Squeezing Massage</span></li></ul>
+        </div>
+        <div class="bg-navy text-cream p-5 mt-auto">
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <div>
+              <div class="text-[11px] text-cream/65 font-semibold">MRP <span class="line-through decoration-red-400 decoration-2 text-cream/85">₹4,60,000</span></div>
+              <div class="text-[11px] uppercase tracking-wider text-white/80 font-bold mt-1">Current Offer Price</div>
+              <div class="text-2xl font-extrabold text-gold leading-tight">₹2,30,000</div>
+            </div>
+            <span class="bg-gold text-navy font-extrabold text-xs px-3 py-1 rounded-full">50% OFF</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 pt-2">
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20am%20interested%20in%20buying%20the%20Moon%20Walker%20Massage%20Chair%20%28Offer%20Price%3A%20%E2%82%B92%2C30%2C000%29.%20Please%20share%20booking%20and%20delivery%20details." target="_blank" rel="noopener noreferrer" class="gold-gradient text-navy font-extrabold text-xs sm:text-sm py-2.5 rounded-xl text-center hover:opacity-95 transition">SHOP NOW</a>
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20would%20like%20more%20information%20about%20the%20Moon%20Walker%20Massage%20Chair%20%28features%2C%20warranty%2C%20and%20demo%20details%29." target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 text-white border border-white/25 font-bold text-xs sm:text-sm py-2.5 rounded-xl text-center transition">MORE INFO</a>
+          </div>
+        </div>
+      </article>
+      <article class="product-card bg-white rounded-2xl border border-gold/35 shadow-sm hover:shadow-md transition flex flex-col overflow-hidden" data-tags="massage,4yr" data-search="monster x massage chair ultimate flagship built for all body types with dual sl track, exclusive feet tapping therapy, hands acupressure, and 4-year warranty. ultra-premium luxury design suitable for all body types advanced full-body massage system ★ flagship">
+        <div class="p-5 flex-1 flex flex-col">
+          <div class="flex items-center justify-between gap-2 mb-3 min-h-[26px]">
+            <span class="inline-flex items-center px-3 py-1 rounded-full bg-navy text-gold border border-gold text-[11px] font-extrabold tracking-wide">★ FLAGSHIP</span>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full">4 Yrs Warranty</span>
+          </div>
+          <h3 class="text-xl font-extrabold text-navy">Monster X Massage Chair</h3>
+          <p class="text-sm text-neutral-600 mt-2 leading-relaxed">Ultimate flagship built for all body types with Dual SL Track, exclusive feet tapping therapy, hands acupressure, and 4-year warranty.</p>
+          <ul class="mt-4 space-y-1.5 text-xs sm:text-sm text-neutral-800 border-t border-gold/20 pt-3"><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Ultra-Premium Luxury Design</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Suitable for All Body Types</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Advanced Full-Body Massage System</span></li></ul>
+        </div>
+        <div class="bg-navy text-cream p-5 mt-auto">
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <div>
+              <div class="text-[11px] text-cream/65 font-semibold">MRP <span class="line-through decoration-red-400 decoration-2 text-cream/85">₹6,70,000</span></div>
+              <div class="text-[11px] uppercase tracking-wider text-white/80 font-bold mt-1">Current Offer Price</div>
+              <div class="text-2xl font-extrabold text-gold leading-tight">₹3,35,000</div>
+            </div>
+            <span class="bg-gold text-navy font-extrabold text-xs px-3 py-1 rounded-full">50% OFF</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 pt-2">
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20am%20interested%20in%20buying%20the%20Monster%20X%20Massage%20Chair%20%28Offer%20Price%3A%20%E2%82%B93%2C35%2C000%29.%20Please%20share%20booking%20and%20delivery%20details." target="_blank" rel="noopener noreferrer" class="gold-gradient text-navy font-extrabold text-xs sm:text-sm py-2.5 rounded-xl text-center hover:opacity-95 transition">SHOP NOW</a>
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20would%20like%20more%20information%20about%20the%20Monster%20X%20Massage%20Chair%20%28features%2C%20warranty%2C%20and%20demo%20details%29." target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 text-white border border-white/25 font-bold text-xs sm:text-sm py-2.5 rounded-xl text-center transition">MORE INFO</a>
+          </div>
+        </div>
+      </article>
+      <article class="product-card bg-white rounded-2xl border border-gold/35 shadow-sm hover:shadow-md transition flex flex-col overflow-hidden" data-tags="massage,futuristic,4yr" data-search="moon cruiser massage chair 4d precision control pro with 127 cm sl-track, exclusive hand movement mechanics, 32 airbag sets, and 4-year extended warranty. hand movement mechanics individual leg &amp; 32 airbags 4d control pro • 4-yr warranty ★ next-gen robotic">
+        <div class="p-5 flex-1 flex flex-col">
+          <div class="flex items-center justify-between gap-2 mb-3 min-h-[26px]">
+            <span class="inline-flex items-center px-3 py-1 rounded-full bg-navy text-gold border border-gold text-[11px] font-extrabold tracking-wide">★ NEXT-GEN ROBOTIC</span>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full">4 Yrs Warranty</span>
+          </div>
+          <h3 class="text-xl font-extrabold text-navy">Moon Cruiser Massage Chair</h3>
+          <p class="text-sm text-neutral-600 mt-2 leading-relaxed">4D Precision Control PRO with 127 cm SL-Track, exclusive hand movement mechanics, 32 airbag sets, and 4-year extended warranty.</p>
+          <ul class="mt-4 space-y-1.5 text-xs sm:text-sm text-neutral-800 border-t border-gold/20 pt-3"><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Hand Movement Mechanics</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>Individual Leg &amp; 32 Airbags</span></li><li class="flex items-start gap-2"><span class="text-goldDark font-bold">✓</span><span>4D Control PRO • 4-Yr Warranty</span></li></ul>
+        </div>
+        <div class="bg-navy text-cream p-5 mt-auto">
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <div>
+              <div class="text-[11px] text-cream/65 font-semibold">MRP <span class="line-through decoration-red-400 decoration-2 text-cream/85">₹7,00,000</span></div>
+              <div class="text-[11px] uppercase tracking-wider text-white/80 font-bold mt-1">Current Offer Price</div>
+              <div class="text-2xl font-extrabold text-gold leading-tight">₹3,50,000</div>
+            </div>
+            <span class="bg-gold text-navy font-extrabold text-xs px-3 py-1 rounded-full">50% OFF</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 pt-2">
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20am%20interested%20in%20buying%20the%20Moon%20Cruiser%20Massage%20Chair%20%28Offer%20Price%3A%20%E2%82%B93%2C50%2C000%29.%20Please%20share%20booking%20and%20delivery%20details." target="_blank" rel="noopener noreferrer" class="gold-gradient text-navy font-extrabold text-xs sm:text-sm py-2.5 rounded-xl text-center hover:opacity-95 transition">SHOP NOW</a>
+            <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%2C%20I%20would%20like%20more%20information%20about%20the%20Moon%20Cruiser%20Massage%20Chair%20%28features%2C%20warranty%2C%20and%20demo%20details%29." target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 text-white border border-white/25 font-bold text-xs sm:text-sm py-2.5 rounded-xl text-center transition">MORE INFO</a>
+          </div>
+        </div>
+      </article>
+    </div>
     <div id="emptyState" class="hidden text-center py-12 bg-white rounded-2xl border border-gold/30">
       <p class="text-neutral-600 font-medium">No models match your search. Try clearing the filter.</p>
     </div>
   </main>
 
-  <!-- Comparison Section (15 Massage Chairs) -->
+  <!-- Comparison Section (Statically Pre-Rendered) -->
   <section id="compare" class="bg-creamDark/60 border-y border-gold/30 py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
@@ -175,9 +615,8 @@
           Scroll horizontally on mobile to compare all 15 models
         </div>
       </div>
-
       <div class="overflow-x-auto rounded-2xl border border-gold/40 shadow-sm bg-white">
-        <table id="compareTable" class="w-full text-xs sm:text-sm border-collapse min-w-[1050px]"></table>
+        <table id="compareTable" class="w-full text-xs sm:text-sm border-collapse min-w-[1050px]"><thead><tr class="bg-navy text-white"><th class="text-left p-3 font-bold text-gold sticky left-0 bg-navy z-10 min-w-[200px]">Feature / Specification</th><th class="p-2.5 text-center font-bold ">R6</th><th class="p-2.5 text-center font-bold ">R7 Neo</th><th class="p-2.5 text-center font-bold bg-amber-950/60 text-gold">R8 Pro★</th><th class="p-2.5 text-center font-bold ">R9</th><th class="p-2.5 text-center font-bold bg-amber-950/60 text-gold">R10★</th><th class="p-2.5 text-center font-bold ">Q5</th><th class="p-2.5 text-center font-bold bg-amber-950/60 text-gold">Q7 2.0★</th><th class="p-2.5 text-center font-bold ">RX3</th><th class="p-2.5 text-center font-bold ">Space W.</th><th class="p-2.5 text-center font-bold ">RX5 Elite</th><th class="p-2.5 text-center font-bold bg-amber-950/60 text-gold">Twister★</th><th class="p-2.5 text-center font-bold ">RX7</th><th class="p-2.5 text-center font-bold ">Moon W.</th><th class="p-2.5 text-center font-bold ">Monster X</th><th class="p-2.5 text-center font-bold ">Moon C.</th></tr></thead><tbody><tr class="bg-creamDark text-navy font-bold"><td colspan="16" class="px-3 py-2 text-xs uppercase tracking-wider">Core Track &amp; Recline Mechanisms</td></tr><tr class="bg-cream/60 border-b border-gold/15"><td class="p-2.5 font-semibold text-neutral-800 sticky left-0 bg-cream/60 z-10 border-r border-gold/20">Eye Massager Airbag</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td></tr><tr class="bg-white border-b border-gold/15"><td class="p-2.5 font-semibold text-neutral-800 sticky left-0 bg-white z-10 border-r border-gold/20">Fixed Roller Massage</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td></tr><tr class="bg-cream/60 border-b border-gold/15"><td class="p-2.5 font-semibold text-neutral-800 sticky left-0 bg-cream/60 z-10 border-r border-gold/20">SL Track System</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td></tr><tr class="bg-white border-b border-gold/15"><td class="p-2.5 font-semibold text-neutral-800 sticky left-0 bg-white z-10 border-r border-gold/20">Dual SL Track System</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center text-neutral-300">—</td></tr><tr class="bg-cream/60 border-b border-gold/15"><td class="p-2.5 font-semibold text-neutral-800 sticky left-0 bg-cream/60 z-10 border-r border-gold/20">Zero Gravity Recline</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td></tr><tr class="bg-white border-b border-gold/15"><td class="p-2.5 font-semibold text-neutral-800 sticky left-0 bg-white z-10 border-r border-gold/20">Heating &amp; Bluetooth Audio</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td></tr><tr class="bg-creamDark text-navy font-bold"><td colspan="16" class="px-3 py-2 text-xs uppercase tracking-wider">Airbag Compression &amp; Smart Controls</td></tr><tr class="bg-white border-b border-gold/15"><td class="p-2.5 font-semibold text-neutral-800 sticky left-0 bg-white z-10 border-r border-gold/20">Headrest Airbag</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td></tr><tr class="bg-cream/60 border-b border-gold/15"><td class="p-2.5 font-semibold text-neutral-800 sticky left-0 bg-cream/60 z-10 border-r border-gold/20">Thigh Belts Massage</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td></tr><tr class="bg-white border-b border-gold/15"><td class="p-2.5 font-semibold text-neutral-800 sticky left-0 bg-white z-10 border-r border-gold/20">Voice Commands Control</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td></tr><tr class="bg-cream/60 border-b border-gold/15"><td class="p-2.5 font-semibold text-neutral-800 sticky left-0 bg-cream/60 z-10 border-r border-gold/20">AI Body Scan &amp; Wireless Charge</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td></tr><tr class="bg-white border-b border-gold/15"><td class="p-2.5 font-semibold text-neutral-800 sticky left-0 bg-white z-10 border-r border-gold/20">Tablet Control Console</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td></tr><tr class="bg-creamDark text-navy font-bold"><td colspan="16" class="px-3 py-2 text-xs uppercase tracking-wider">Lower Body, Leg &amp; Advanced Therapy</td></tr><tr class="bg-white border-b border-gold/15"><td class="p-2.5 font-semibold text-neutral-800 sticky left-0 bg-white z-10 border-r border-gold/20">Calf Rollers &amp; Calf Rubbing</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td></tr><tr class="bg-cream/60 border-b border-gold/15"><td class="p-2.5 font-semibold text-neutral-800 sticky left-0 bg-cream/60 z-10 border-r border-gold/20">Full Body Stretch Therapy</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td></tr><tr class="bg-white border-b border-gold/15"><td class="p-2.5 font-semibold text-neutral-800 sticky left-0 bg-white z-10 border-r border-gold/20">Individual Leg Movement</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center font-bold text-emerald-700">✓</td></tr><tr class="bg-cream/60 border-b border-gold/15"><td class="p-2.5 font-semibold text-neutral-800 sticky left-0 bg-cream/60 z-10 border-r border-gold/20">Feet Twisting</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td></tr><tr class="bg-white border-b border-gold/15"><td class="p-2.5 font-semibold text-neutral-800 sticky left-0 bg-white z-10 border-r border-gold/20">Hands Acupressure</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center text-neutral-300">—</td></tr><tr class="bg-cream/60 border-b border-gold/15"><td class="p-2.5 font-semibold text-neutral-800 sticky left-0 bg-cream/60 z-10 border-r border-gold/20">Feet Tapping Therapy</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center text-neutral-300">—</td></tr><tr class="bg-white border-b border-gold/15"><td class="p-2.5 font-semibold text-neutral-800 sticky left-0 bg-white z-10 border-r border-gold/20">Hand Movements</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center font-bold text-emerald-700">✓</td></tr><tr class="bg-creamDark text-navy font-bold"><td colspan="16" class="px-3 py-2 text-xs uppercase tracking-wider">Ergonomics, Capsule Design &amp; Warranty</td></tr><tr class="bg-white border-b border-gold/15"><td class="p-2.5 font-semibold text-neutral-800 sticky left-0 bg-white z-10 border-r border-gold/20">Capsule Design Chair</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center text-neutral-300">—</td></tr><tr class="bg-cream/60 border-b border-gold/15"><td class="p-2.5 font-semibold text-neutral-800 sticky left-0 bg-cream/60 z-10 border-r border-gold/20">Auto Height Adjustment</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td></tr><tr class="bg-white border-b border-gold/15"><td class="p-2.5 font-semibold text-neutral-800 sticky left-0 bg-white z-10 border-r border-gold/20">Posture Correctness Rollers</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center text-neutral-300">—</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td></tr><tr class="bg-cream/60 border-b border-gold/15"><td class="p-2.5 font-semibold text-neutral-800 sticky left-0 bg-cream/60 z-10 border-r border-gold/20">Total Warranty</td><td class="p-2 text-center font-medium text-neutral-700">2 Yrs</td><td class="p-2 text-center font-medium text-neutral-700">2 Yrs</td><td class="p-2 text-center font-medium text-neutral-700">2 Yrs</td><td class="p-2 text-center font-medium text-neutral-700">2 Yrs</td><td class="p-2 text-center font-medium text-neutral-700">2 Yrs</td><td class="p-2 text-center font-medium text-neutral-700">2 Yrs</td><td class="p-2 text-center font-medium text-neutral-700">2 Yrs</td><td class="p-2 text-center font-medium text-neutral-700">2 Yrs</td><td class="p-2 text-center font-medium text-neutral-700">2 Yrs</td><td class="p-2 text-center font-medium text-neutral-700">2 Yrs</td><td class="p-2 text-center font-bold text-emerald-700">4 Yrs</td><td class="p-2 text-center font-bold text-emerald-700">4 Yrs</td><td class="p-2 text-center font-bold text-emerald-700">4 Yrs</td><td class="p-2 text-center font-bold text-emerald-700">4 Yrs</td><td class="p-2 text-center font-bold text-emerald-700">4 Yrs</td></tr><tr class="bg-white border-b border-gold/15"><td class="p-2.5 font-semibold text-neutral-800 sticky left-0 bg-white z-10 border-r border-gold/20">Free Delivery &amp; GST Included</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td><td class="p-2 text-center font-bold text-emerald-700">✓</td></tr></tbody></table>
       </div>
       <p class="text-xs text-neutral-600 mt-3">
         ★ Top Picks: <strong>R8 Pro, R10, Q7 2.0, Twister</strong> • Futuristic: <strong>Space Walker, Moon Walker</strong> • Flagship: <strong>Monster X</strong> • Next-Gen Robotic: <strong>Moon Cruiser</strong>
@@ -196,7 +635,6 @@
         </p>
         <p class="text-xs text-cream/60 mt-3">GST Included • Free Pan-India Delivery • 2 &amp; 4 Year Warranty</p>
       </div>
-
       <div class="space-y-2.5">
         <div class="text-sm font-bold text-gold uppercase tracking-wider">Call &amp; WhatsApp</div>
         <div>
@@ -217,7 +655,6 @@
           </a>
         </div>
       </div>
-
       <div class="space-y-3">
         <div class="text-sm font-bold text-gold uppercase tracking-wider">Quick Links</div>
         <div class="flex flex-col gap-2 text-sm text-cream/85">
@@ -234,100 +671,48 @@
   </footer>
 
   <script>
-    const WA_PRIMARY = '918319950609';
+    (function () {
+      let activeFilter = 'all';
+      let searchQuery = '';
+      const cards = Array.from(document.querySelectorAll('.product-card'));
+      const empty = document.getElementById('emptyState');
 
-    const PRODUCTS = [
-      {
-        id: 'x1', name: 'X1 Office Chair', category: 'office', tag: '', warranty: 'GST Included',
-        mrp: '₹50,000', offer: '₹25,000',
-        desc: 'Combines premium comfort with built-in massage functionality, soft PU leather, 6D adjustable armrests, and integrated lumbar support.',
-        specs: ['6D Adjustable Armrests', 'Adjustable Massage & Lumbar Support', 'Class-3 BIFMA Gas Lift & Chrome Base']
-      },
-      {
-        id: 'x2', name: 'X2 Office Chair', category: 'office', tag: '', warranty: 'GST Included',
-        mrp: '₹56,000', offer: '₹28,000',
-        desc: 'Premium ergonomic chair with soft PU leather, high-resilience foam, 3-position tilt lock, and 3-mode massage with lumbar support.',
-        specs: ['3-Mode Massage & Lumbar Support', 'BIFMA-Certified Gas Lift', 'Soft PU Leather & High-Resilience Foam']
-      },
-      {
-        id: 'x3', name: 'X3 Office Chair', category: 'office', tag: '', warranty: 'GST Included',
-        mrp: '₹64,000', offer: '₹32,000',
-        desc: 'Protein-style PU leather upholstery with high-density foam, polished chrome 5-star base, and integrated 3-mode lumbar massage.',
-        specs: ['3-Mode Massage & Lumbar Support', 'Premium Protein-Style PU Leather', 'BIFMA-Certified Class-3 Gas Lift']
-      },
-      {
-        id: 'r6', name: 'R6 Massage Chair', category: 'massage', tag: '', warranty: '2 Yrs Warranty',
-        mrp: '₹1,00,000', offer: '₹50,000',
-        desc: 'Solid wooden frame with comprehensive 4D massage, therapeutic heating, eye massage airbag, and targeted thigh massage (90–100 kg capacity).',
-        specs: ['Comprehensive Full Body 4D Massage', 'Targeted Thigh Massage', 'Soothing Eye Massage']
-      },
-      {
-        id: 'r7-neo', name: 'R7 Neo Massage Chair', category: 'massage', tag: '', warranty: '2 Yrs Warranty',
-        mrp: '₹1,30,000', offer: '₹65,000',
-        desc: 'Sleek metal frame (up to 150 kg) for personal or commercial use with fixed roller massage, zero gravity, Bluetooth audio, and heating.',
-        specs: ['Dynamic Airbag Massage Technology', 'Advanced Fixed Roller Massage', 'Ergonomic Zero Gravity Positioning']
-      },
-      {
-        id: 'r8-pro', name: 'R8 Pro Massage Chair', category: 'massage', tag: '★ TOP PICK', filterTags: ['top-pick'], warranty: '2 Yrs Warranty',
-        mrp: '₹1,40,000', offer: '₹70,000',
-        desc: 'Upgraded faux leather, enhanced thigh massage straps, quick-access shortcut keys, 4D full-body massage, and zero gravity recline.',
-        specs: ['Thigh Massage Strap', 'Quick-Access Shortcut Keys', 'Premium Faux Leather']
-      },
-      {
-        id: 'r10', name: 'R10 Massage Chair', category: 'massage', tag: '★ TOP PICK', filterTags: ['top-pick'], warranty: '2 Yrs Warranty',
-        mrp: '₹1,80,000', offer: '₹90,000',
-        desc: '7D massage with intelligent AI body scan, advanced SL track, U-shaped head massage, navy blue leather, and convenient voice control.',
-        specs: ['Advanced SL Track System', 'Convenient Voice Control', 'Intelligent AI Body Scan']
-      },
-      {
-        id: 'r9', name: 'R9 Massage Chair', category: 'massage', tag: '', warranty: '2 Yrs Warranty',
-        mrp: '₹1,88,000', offer: '₹94,000',
-        desc: 'Commercial-grade all-black PU leather with 7D massage, SL track, butterfly head massage, wireless mobile charging, and AI body scan.',
-        specs: ['SL Track & Zero Gravity', 'AI Body Scan & Wireless Charge', 'Voice Control & Bluetooth Audio']
-      },
-      {
-        id: 'q5', name: 'Q5 Massage Chair', category: 'massage', tag: '', warranty: '2 Yrs Warranty',
-        mrp: '₹2,40,000', offer: '₹1,20,000',
-        desc: 'Compact SL-track 7D massage chair from neck to lower body with zero gravity, therapeutic heating, and dynamic airbag compression.',
-        specs: ['Compact SL Track System', 'AI Body Scan & Voice Control', 'Zero Gravity & Heating Therapy']
-      },
-      {
-        id: 'q7', name: 'Q7 2.0 Massage Chair', category: 'massage', tag: '★ TOP PICK', filterTags: ['top-pick'], warranty: '2 Yrs Warranty',
-        mrp: '₹2,60,000', offer: '₹1,30,000',
-        desc: 'High-tech 7D massage with Android-based touchscreen, calf rubbing & rollers, TikTok/Reels controller, and full body stretch therapy.',
-        specs: ['Calf Massage with Rubbing Motion', 'TikTok/Reels Controller', 'Android-Based Touchscreen Interface']
-      },
-      {
-        id: 'rx3', name: 'RX-3 Massage Chair', category: 'massage', tag: '', warranty: '2 Yrs Warranty',
-        mrp: '₹2,80,000', offer: '₹1,40,000',
-        desc: 'Advanced Dual SL Track system for superior coverage, tri-motion calf rubbing, calf massage rollers, and 7D full-body therapy.',
-        specs: ['Dual SL Track System', 'Tri-Motion Calf Rubbing', 'Calf Massage Rollers']
-      },
-      {
-        id: 'space-walker', name: 'Space Walker Massage Chair', category: 'massage', tag: '★ FUTURISTIC', filterTags: ['futuristic'], warranty: '2 Yrs Warranty',
-        mrp: '₹3,10,000', offer: '₹1,55,000',
-        desc: '127 cm SL-Type rail with 5 massage techniques, carbon-fiber waist heat, 360° enclosed foot massage, and individual leg movement.',
-        specs: ['Individual Leg Movement', '127 cm SL Track & 360° Foot Massage', 'Tablet Control & AI Body Scan']
-      },
-      {
-        id: 'rx5-elite', name: 'RX-5 Elite Massage Chair', category: 'massage', tag: '', warranty: '2 Yrs Warranty',
-        mrp: '₹3,40,000', offer: '₹1,70,000',
-        desc: 'Automatic leg stretching, tri-motion calf rubbing, feet scraping, posture correctness rollers, and auto height adjustment.',
-        specs: ['Full Body Stretching', 'Tri-Motion Calf Rubbing', 'Feet Scraping & Auto Height']
-      },
-      {
-        id: 'twister', name: 'RX Twister Massage Chair', category: 'massage', tag: '★ TOP PICK', filterTags: ['top-pick', '4yr'], warranty: '4 Yrs Warranty',
-        mrp: '₹3,80,000', offer: '₹1,90,000',
-        desc: 'Flexible SL track with 4D feet twisting system, hands acupressure, advanced calf therapy, capsule design, and 4-year warranty.',
-        specs: ['4D Feet Twisting', 'Flexible SL Track', 'Advanced Calf Therapy']
-      },
-      {
-        id: 'rx7', name: 'RX-7 Massage Chair', category: 'massage', tag: '', filterTags: ['4yr'], warranty: '4 Yrs Warranty',
-        mrp: '₹4,00,000', offer: '₹2,00,000',
-        desc: 'Futuristic capsule aesthetic with 7D massage, SL track, AI body scan, voice control, tablet console, and 4-year extended warranty.',
-        specs: ['Futuristic Capsule Design', 'Intelligent AI Body Scan', 'Convenient Voice Control']
-      },
-      {
-        id: 'moon-walker', name: 'Moon Walker Massage Chair', category: 'massage', tag: '★ FUTURISTIC', filterTags: ['futuristic', '4yr'], warranty: '4 Yrs Warranty',
-        mrp: '₹4,60,000', offer: '₹2,30,000',
-        desc: 'Futuristic capsule design with individual leg movement, 
+      function applyFilters() {
+        const q = searchQuery.trim().toLowerCase();
+        let visible = 0;
+        cards.forEach(card => {
+          const tags = (card.dataset.tags || '').split(',');
+          const text = card.dataset.search || '';
+          const matchFilter = activeFilter === 'all' || tags.includes(activeFilter);
+          const matchQuery = !q || text.includes(q);
+          const show = matchFilter && matchQuery;
+          card.style.display = show ? '' : 'none';
+          if (show) visible++;
+        });
+        if (empty) empty.classList.toggle('hidden', visible > 0);
+      }
+
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          activeFilter = btn.dataset.filter;
+          document.querySelectorAll('.filter-btn').forEach(b => {
+            b.classList.remove('bg-navy', 'text-gold', 'border-navy', 'font-bold');
+            b.classList.add('bg-white', 'text-neutral-700', 'border-gold/35', 'font-semibold');
+          });
+          btn.classList.remove('bg-white', 'text-neutral-700', 'border-gold/35', 'font-semibold');
+          btn.classList.add('bg-navy', 'text-gold', 'border-navy', 'font-bold');
+          applyFilters();
+        });
+      });
+
+      const searchInput = document.getElementById('searchInput');
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value;
+          applyFilters();
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
