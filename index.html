@@ -8,6 +8,33 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Floating Compare Reopen Pill -->
+  <button id="floatingCompareBtn" type="button"
+          class="hidden fixed bottom-5 right-5 z-40 gold-gradient text-navy font-extrabold text-xs sm:text-sm px-4 py-3 rounded-full shadow-xl border-2 border-navy flex items-center gap-2 hover:opacity-95 transition">
+    <span>Compare Models</span>
+    <span id="floatingCompareCount" class="bg-navy text-gold px-2 py-0.5 rounded-full text-xs">2</span>
+  </button>
+
+  <!-- Right-Side Slide-Over Compare Drawer -->
+  <div id="compareBackdrop" class="hidden fixed inset-0 bg-black/50 backdrop-blur-xs z-50 transition-opacity"></div>
+  <aside id="compareDrawer" aria-label="Model Comparison Drawer"
+         class="fixed inset-y-0 right-0 z-50 w-full max-w-md sm:max-w-lg bg-cream border-l-2 border-gold shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+    <div class="bg-navy text-cream px-5 py-4 flex items-center justify-between border-b border-gold/40">
+      <div>
+        <div class="text-xs font-bold uppercase tracking-wider text-gold">Live Comparison</div>
+        <h3 id="drawerTitle" class="text-base sm:text-lg font-extrabold">Selected Models (2/3)</h3>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="drawerResetBtn" type="button" class="text-xs font-semibold text-cream/80 hover:text-gold px-2.5 py-1 rounded border border-white/20">Reset</button>
+        <button id="closeDrawerBtn" type="button" aria-label="Close comparison drawer" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 text-white font-bold flex items-center justify-center">✕</button>
+      </div>
+    </div>
+
+    <div id="drawerChips" class="px-5 py-3 bg-creamDark/70 border-b border-gold/30 flex flex-wrap gap-2"></div>
+    <div id="drawerBody" class="flex-1 overflow-y-auto p-5 space-y-4"></div>
+  </aside>
+
   <script>
     tailwind.config = {
       theme: {
@@ -66,7 +93,7 @@
         <a href="https://wa.me/918319950609?text=Hello%20AMTY%20Global%20Indore%2C%20I%20would%20like%20to%20book%20a%20free%20massage%20chair%20demo%20at%20your%20showroom."
            target="_blank" rel="noopener noreferrer"
            class="bg-navy text-gold border border-gold/60 hover:bg-navySoft px-3.5 py-2 rounded-lg text-xs sm:text-sm font-bold transition">
-          WhatsApp
+          WhatsApp Demo
         </a>
       </div>
     </div>
@@ -108,16 +135,16 @@
         </p>
         <div class="grid grid-cols-2 gap-3 text-sm">
           <a href="tel:+918319950609" class="bg-navy border border-gold/30 rounded-xl p-3 hover:border-gold transition">
-            <div class="text-[11px] text-cream/60">Call</div>
+            <div class="text-[11px] text-cream/60">Call / WhatsApp 1</div>
             <div class="font-bold text-gold mt-0.5">8319950609</div>
           </a>
           <a href="tel:+918349106609" class="bg-navy border border-gold/30 rounded-xl p-3 hover:border-gold transition">
-            <div class="text-[11px] text-cream/60">Call</div>
+            <div class="text-[11px] text-cream/60">Call / WhatsApp 2</div>
             <div class="font-bold text-gold mt-0.5">8349106609</div>
           </a>
         </div>
         <div class="text-xs text-cream/70 pt-1">
-          
+          Every <strong>Shop Now</strong> or <strong>More Info</strong> button opens WhatsApp with your selected model pre-filled.
         </div>
       </div>
     </div>
@@ -798,19 +825,122 @@
         return `https://wa.me/918319950609?text=${encodeURIComponent(msg)}`;
       }
 
+      const drawer = document.getElementById('compareDrawer');
+      const backdrop = document.getElementById('compareBackdrop');
+      const closeDrawerBtn = document.getElementById('closeDrawerBtn');
+      const drawerResetBtn = document.getElementById('drawerResetBtn');
+      const drawerTitle = document.getElementById('drawerTitle');
+      const drawerChips = document.getElementById('drawerChips');
+      const drawerBody = document.getElementById('drawerBody');
+      const floatingBtn = document.getElementById('floatingCompareBtn');
+      const floatingCount = document.getElementById('floatingCompareCount');
+
+      function openDrawer() {
+        if (!drawer || !backdrop) return;
+        backdrop.classList.remove('hidden');
+        drawer.classList.remove('translate-x-full');
+      }
+
+      function closeDrawer() {
+        if (!drawer || !backdrop) return;
+        drawer.classList.add('translate-x-full');
+        backdrop.classList.add('hidden');
+      }
+
+      if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', closeDrawer);
+      if (backdrop) backdrop.addEventListener('click', closeDrawer);
+      if (floatingBtn) floatingBtn.addEventListener('click', openDrawer);
+      if (drawerResetBtn) {
+        drawerResetBtn.addEventListener('click', () => {
+          selectedModels = ['R8 Pro Massage Chair', 'Q7 2.0 Massage Chair'];
+          renderCompare();
+        });
+      }
+
+      function buildComparisonHTML(items, compact) {
+        if (items.length < 2) {
+          return `
+            <div class="bg-white rounded-2xl border border-gold/40 p-5 text-center space-y-2">
+              <p class="text-sm text-neutral-700 font-semibold">${items.length === 1 ? `<strong>${items[0].short}</strong> selected (1/3).` : 'No models selected yet.'}</p>
+              <p class="text-xs text-neutral-600">Click <strong>+ Add to Compare</strong> on ${items.length === 1 ? '1 or 2 more massage chairs' : '2 or 3 massage chairs'} to view the side-by-side text comparison.</p>
+            </div>`;
+        }
+
+        const sorted = [...items].sort((a, b) => a.priceNum - b.priceNum);
+        const lowest = sorted[0];
+        const highest = sorted[sorted.length - 1];
+        const diff = (highest.priceNum - lowest.priceNum).toLocaleString('en-IN');
+        const shared = items[0].features.filter(f => items.every(m => m.features.includes(f)));
+
+        const summaryHtml = `
+          <div class="bg-white rounded-2xl border border-gold/40 p-5 shadow-sm space-y-2.5">
+            <div class="text-xs font-bold uppercase tracking-wider text-goldDark">Text Comparison (${items.length} Models)</div>
+            <p class="text-sm text-neutral-800 leading-relaxed">
+              Comparing <strong>${items.map(m => `${m.short} (${m.offer})`).join(' vs ')}</strong>.
+              Price gap between <strong>${lowest.short}</strong> and <strong>${highest.short}</strong> is <strong>₹${diff}</strong>.
+              ${highest.warranty === '4 Years' && lowest.warranty === '2 Years'
+                ? `Stepping up to <strong>${highest.short}</strong> also upgrades warranty from <strong>2 Years</strong> to <strong>4 Years</strong>.`
+                : `All selected models include <strong>${lowest.warranty} Warranty</strong>, <strong>5% GST</strong>, and <strong>Free Pan-India Delivery</strong>.`}
+            </p>
+            <p class="text-xs text-neutral-600">
+              <strong>Shared features:</strong> ${shared.length ? shared.join(', ') : '5% GST Included, Free Pan-India Delivery'}.
+            </p>
+          </div>
+        `;
+
+        const gridClass = compact ? 'space-y-4' : `grid ${items.length === 3 ? 'md:grid-cols-3' : 'md:grid-cols-2'} gap-5`;
+        const cardsHtml = `
+          <div class="${gridClass}">
+            ${items.map(m => {
+              const uniqueToThis = m.features.filter(f => items.some(other => other.name !== m.name && !other.features.includes(f)));
+              return `
+                <div class="bg-white rounded-2xl border border-gold/40 p-4 sm:p-5 shadow-sm flex flex-col justify-between space-y-3">
+                  <div class="space-y-2.5">
+                    <div class="flex items-start justify-between gap-2 border-b border-gold/20 pb-2.5">
+                      <div>
+                        <h4 class="text-base sm:text-lg font-extrabold text-navy">${m.name}</h4>
+                        <div class="text-xs text-neutral-500 mt-0.5">${m.warranty} • ${m.track}</div>
+                      </div>
+                      <div class="text-right shrink-0">
+                        <div class="text-[11px] text-neutral-400 line-through">${m.mrp}</div>
+                        <div class="text-lg font-extrabold text-goldDark">${m.offer}</div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="text-[11px] font-bold uppercase tracking-wider text-navy mb-0.5">Best For</div>
+                      <p class="text-xs sm:text-sm text-neutral-700">${m.bestFor}</p>
+                    </div>
+                    <div>
+                      <div class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">Key Additions / Standouts</div>
+                      ${uniqueToThis.length
+                        ? `<ul class="space-y-1 text-xs sm:text-sm text-neutral-800">${uniqueToThis.map(u => `<li class="flex items-start gap-1.5"><span class="text-emerald-600 font-bold">✓</span><span>${u}</span></li>`).join('')}</ul>`
+                        : `<p class="text-xs sm:text-sm text-neutral-600">Covers all shared baseline features at the lowest price in this set.</p>`
+                      }
+                    </div>
+                  </div>
+                  <a href="${waBuyUrl(m)}" target="_blank" rel="noopener noreferrer"
+                     class="gold-gradient text-navy font-extrabold text-xs py-2.5 px-4 rounded-xl text-center block hover:opacity-95 transition">
+                    Enquire / Buy ${m.short} on WhatsApp
+                  </a>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        `;
+        return summaryHtml + cardsHtml;
+      }
+
       function renderCompare() {
-        // Update picker pills
         if (pickerEl) {
           pickerEl.innerHTML = COMPARE_DATA.map(m => {
             const active = selectedModels.includes(m.name);
             return `<button type="button" data-pick="${m.name}" class="pick-btn px-3.5 py-1.5 rounded-full text-xs font-bold border transition ${active ? 'bg-navy text-gold border-navy shadow-sm' : 'bg-white text-neutral-700 border-gold/40 hover:border-navy'}">${m.short} (${m.offer})</button>`;
           }).join('');
           pickerEl.querySelectorAll('.pick-btn').forEach(btn => {
-            btn.addEventListener('click', () => toggleModel(btn.dataset.pick));
+            btn.addEventListener('click', () => toggleModel(btn.dataset.pick, false));
           });
         }
 
-        // Sync "+ Add to Compare" card buttons
         document.querySelectorAll('.compare-card-btn').forEach(btn => {
           const active = selectedModels.includes(btn.dataset.model);
           btn.textContent = active ? '✓ Selected for Compare' : '+ Add to Compare';
@@ -821,87 +951,29 @@
           btn.classList.toggle('text-navy', !active);
         });
 
-        if (!outputEl) return;
         const items = selectedModels.map(n => COMPARE_DATA.find(m => m.name === n)).filter(Boolean);
 
-        if (items.length < 2) {
-          outputEl.innerHTML = `
-            <div class="bg-white rounded-2xl border border-gold/40 p-6 text-center">
-              <p class="text-sm sm:text-base text-neutral-700 font-medium">Select at least <strong>2 massage chairs</strong> above (up to 3) to see a side-by-side text comparison.</p>
-            </div>`;
-          return;
+        if (outputEl) outputEl.innerHTML = buildComparisonHTML(items, false);
+        if (drawerTitle) drawerTitle.textContent = `Selected Models (${items.length}/3)`;
+        if (floatingBtn && floatingCount) {
+          floatingCount.textContent = String(items.length);
+          floatingBtn.classList.toggle('hidden', items.length === 0);
         }
-
-        const sorted = [...items].sort((a, b) => a.priceNum - b.priceNum);
-        const lowest = sorted[0];
-        const highest = sorted[sorted.length - 1];
-        const diff = (highest.priceNum - lowest.priceNum).toLocaleString('en-IN');
-
-        // Shared features across all selected
-        const shared = items[0].features.filter(f => items.every(m => m.features.includes(f)));
-
-        const summaryHtml = `
-          <div class="bg-white rounded-2xl border border-gold/40 p-6 shadow-sm space-y-3">
-            <div class="text-xs font-bold uppercase tracking-wider text-goldDark">Text-Based Comparison Summary (${items.length} Models Selected)</div>
-            <p class="text-sm sm:text-base text-neutral-800 leading-relaxed">
-              You are comparing <strong>${items.map(m => `${m.name} (${m.offer})`).join(' vs ')}</strong>.
-              The price difference between <strong>${lowest.short}</strong> and <strong>${highest.short}</strong> is <strong>₹${diff}</strong>.
-              ${highest.warranty === '4 Years' && lowest.warranty === '2 Years'
-                ? `Moving up to <strong>${highest.short}</strong> also doubles your coverage from <strong>2 Years</strong> to a <strong>4-Year Extended Warranty</strong>.`
-                : `All selected models include <strong>${lowest.warranty} Warranty</strong>, <strong>5% GST</strong>, and <strong>Free Pan-India Delivery</strong>.`}
-            </p>
-            <p class="text-xs sm:text-sm text-neutral-600">
-              <strong>Shared across all selected models:</strong> ${shared.length ? shared.join(', ') : '5% GST Included, Free Pan-India Delivery'}.
-            </p>
-          </div>
-        `;
-
-        const cardsHtml = `
-          <div class="grid ${items.length === 3 ? 'md:grid-cols-3' : 'md:grid-cols-2'} gap-5">
-            ${items.map(m => {
-              const uniqueToThis = m.features.filter(f => items.some(other => other.name !== m.name && !other.features.includes(f)));
-              return `
-                <div class="bg-white rounded-2xl border border-gold/40 p-5 shadow-sm flex flex-col justify-between space-y-4">
-                  <div class="space-y-3">
-                    <div class="flex items-start justify-between gap-2 border-b border-gold/20 pb-3">
-                      <div>
-                        <h3 class="text-lg font-extrabold text-navy">${m.name}</h3>
-                        <div class="text-xs text-neutral-500 mt-0.5">${m.warranty} Warranty • ${m.track}</div>
-                      </div>
-                      <div class="text-right">
-                        <div class="text-[11px] text-neutral-400 line-through">${m.mrp}</div>
-                        <div class="text-xl font-extrabold text-goldDark">${m.offer}</div>
-                      </div>
-                    </div>
-
-                    <div>
-                      <div class="text-xs font-bold uppercase tracking-wider text-navy mb-1">Best For</div>
-                      <p class="text-sm text-neutral-700">${m.bestFor}</p>
-                    </div>
-
-                    <div>
-                      <div class="text-xs font-bold uppercase tracking-wider text-emerald-700 mb-1">What This Model Adds / Stands Out For</div>
-                      ${uniqueToThis.length
-                        ? `<ul class="space-y-1 text-sm text-neutral-800">${uniqueToThis.map(u => `<li class="flex items-start gap-1.5"><span class="text-emerald-600 font-bold">✓</span><span>${u}</span></li>`).join('')}</ul>`
-                        : `<p class="text-sm text-neutral-600">Covers all the shared baseline features at the most accessible price point in this comparison.</p>`
-                      }
-                    </div>
-                  </div>
-
-                  <a href="${waBuyUrl(m)}" target="_blank" rel="noopener noreferrer"
-                     class="gold-gradient text-navy font-extrabold text-xs sm:text-sm py-2.5 px-4 rounded-xl text-center block hover:opacity-95 transition">
-                    Enquire / Buy ${m.short} on WhatsApp
-                  </a>
-                </div>
-              `;
-            }).join('')}
-          </div>
-        `;
-
-        outputEl.innerHTML = summaryHtml + cardsHtml;
+        if (drawerChips) {
+          drawerChips.innerHTML = items.map(m => `
+            <span class="inline-flex items-center gap-1.5 bg-navy text-gold text-xs font-bold px-3 py-1 rounded-full">
+              <span>${m.short}</span>
+              <button type="button" data-remove="${m.name}" class="remove-chip text-white/80 hover:text-white font-bold">✕</button>
+            </span>
+          `).join('');
+          drawerChips.querySelectorAll('.remove-chip').forEach(btn => {
+            btn.addEventListener('click', () => toggleModel(btn.dataset.remove, false));
+          });
+        }
+        if (drawerBody) drawerBody.innerHTML = buildComparisonHTML(items, true);
       }
 
-      function toggleModel(name) {
+      function toggleModel(name, shouldOpenDrawer) {
         if (selectedModels.includes(name)) {
           selectedModels = selectedModels.filter(m => m !== name);
         } else {
@@ -911,17 +983,12 @@
           selectedModels.push(name);
         }
         renderCompare();
+        if (shouldOpenDrawer) openDrawer();
       }
 
       document.querySelectorAll('.compare-card-btn').forEach(btn => {
         btn.addEventListener('click', () => {
-          toggleModel(btn.dataset.model);
-          if (selectedModels.length >= 2) {
-            const compSec = document.getElementById('compare');
-            if (compSec && selectedModels.length === 2) {
-              // keep smooth UX without jarring scroll on first click
-            }
-          }
+          toggleModel(btn.dataset.model, true);
         });
       });
 
